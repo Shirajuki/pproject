@@ -178,7 +178,7 @@ footer>a{
 }
 #title>button:hover, #title>button:active {
   transform: skew(0deg, 3deg) translateY(3px);
-  box-shadow: 0 0 #0d4a17;
+  box-shadow: 0 2px #0d4a17;
 }
 /* BUTTON */
 button {
@@ -201,7 +201,7 @@ button {
 }
 nav button:hover, nav button:active {
   transform: translateY(3px);
-  box-shadow: 0 0 #0d4a17;
+  box-shadow: 0 2px #0d4a17;
 }
 /* TEXT */
 /* ARTICLES */
