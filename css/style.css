@@ -159,7 +159,7 @@ footer>a{
   margin: 0 auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,calc(-50% - var(--padding)*0.25)) skew(0deg, -3deg);
+  transform: translate(-50%,calc(-50% - var(--padding)*-0.25)) skew(0deg, -3deg);
   text-align: center;
   padding: 5%;
   border-radius: 100px 0 100px 0;
