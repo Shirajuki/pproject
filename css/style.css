@@ -368,3 +368,42 @@ div ul li a:not(.abtn):hover::before {
     display: none;
   }
 }
+
+.calendar {
+	margin: 20px;
+	padding: 10px;
+	position: relative;
+	border-top: solid #ddd 1px;
+	border-bottom: solid #ddd 1px;
+}
+
+.calendar p {
+	font-size: 30px;
+	position: absolute; 
+	min-width: 20%;
+	top: 50%;
+	transform: translateY(-50%);
+	border-right: solid gray 1px;
+}
+
+.calendar ul li {
+	list-style: disc;
+  text-align: left;
+  font-weight: 100;
+  position: relative;
+	left: 30%;
+}
+
+.filter {
+	margin: 20px;
+	padding: 10px;
+}
+
+.filter input {
+	margin: 0 0 0 20px;
+}
+
+.separator {
+	margin: 10px 0 10px 0; 
+	border-top: solid gray 1px; 
+}
