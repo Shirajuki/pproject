@@ -1,0 +1,87 @@
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header id="header" class="">
+      <nav>
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo" style="width:100%; max-width:150px;" />
+        </a>
+        <div>
+          <ul class="right">
+            <li class="dropdown">
+      				<a href="javascript:void(0)" class="nav_list"><br/>Info ▼ </a>
+      				<div class="dropdown-content">
+      					<a href="javascript:void(0)">About</a>
+                <a href="javascript:void(0)">Contact us</a>
+      				</div>
+      			</li>
+            <li><a class="nav_list" href="gallery.html"><br/>Gallery</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>News</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Events</a></li>
+            <li><a class="nav_list" href="calendar.html"><br/>Calendar</a></li>
+            <li><a class="abtn nav_list" href="#"><br/><button>Register</button></a></li>
+            <li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">&#9776;</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+			<article style="width:50%; padding: 4%; background-color: rgba(255, 255, 255, 0.9);">
+				<h1 style="text-align: center;">Contact information</h1>
+				<div id="contact" style="margin: 20px; display: flex;">
+					<article><p>👤</p>Here is some contact information</article>
+					<article><p>📧</p>Email: <a href="mailto: test@email.com">test@email.com</a></article>
+					<article><p>🏠</p>Location: Gressveien 14, 7010 Trondheim<span style="font-size: 50px;"></span></article>
+				</div>
+			</article>
+      
+			
+    </main>
+    <br/>
+    <div class="wrapper">
+      <footer>
+        <p>Lawnmower Racing AS</p>
+        <p>Gressveien 14, 7010 Trondheim</p>
+        <a href="javascript:void(0);">Kontakt oss</a>
+        <a href="javascript:void(0);">Om oss</a>
+      </footer>
+    </div>
+    <a href="#">
+      <button id="scrollUpBtn" title="Go to top">▲</button>
+    </a>
+    <script type="text/javascript">
+    // Mobile Responsive dropdown navigation
+    // function myFunction() {
+    //   setTimeout(() => {
+    //     document.getElementById('mobile').classList.toggle('responsive');
+    //     document.getElementById('mobile').classList.toggle('hidden');
+    //   },200)
+    // }
+    // Sticky navigation
+    const navbar = document.getElementById('header');
+    function stickyNavigation() {
+        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        navbar.classList.add("sticky");
+    }
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = scrollFunction;
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("scrollUpBtn").style.opacity = 1;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
+            stickyNavigation();
+        } else {
+            document.getElementById("scrollUpBtn").style.opacity = 0;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
+            // document.body.style.paddingTop = '70px';
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+  </body>
+</html>

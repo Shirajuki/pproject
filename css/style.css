@@ -41,6 +41,9 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+	background-image: url(../img/calendar-img.jpg); 
+	background-size: cover;
+	background-attachment: fixed;
 }
 /* HEADER */
 header {
