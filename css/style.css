@@ -368,7 +368,7 @@ div ul li a:not(.abtn):hover::before {
     display: none;
   }
 }
-
+/* ASD */
 .calendar {
 	margin: 20px;
 	padding: 10px;
@@ -376,16 +376,14 @@ div ul li a:not(.abtn):hover::before {
 	border-top: solid #ddd 1px;
 	border-bottom: solid #ddd 1px;
 }
-
 .calendar p {
 	font-size: 30px;
-	position: absolute; 
+	position: absolute;
 	min-width: 20%;
 	top: 50%;
 	transform: translateY(-50%);
 	border-right: solid gray 1px;
 }
-
 .calendar ul li {
 	list-style: disc;
   text-align: left;
@@ -393,17 +391,91 @@ div ul li a:not(.abtn):hover::before {
   position: relative;
 	left: 30%;
 }
-
 .filter {
 	margin: 20px;
 	padding: 10px;
 }
-
 .filter input {
 	margin: 0 0 0 20px;
 }
-
 .separator {
-	margin: 10px 0 10px 0; 
-	border-top: solid gray 1px; 
+	margin: 10px 0 10px 0;
+	border-top: solid gray 1px;
+}
+/* ADDED BY SYNNE */
+/* NYHETER, INNHOLD */
+.nyhet{
+  display: flex;
+  flex-direction: column;
+}
+.nyhet_heading{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.nyhet_heading h3{
+  color: #006400;
+}
+.span_date{
+  color: #97d797;
+  text-shadow: 0.5px 0.5px #B9B367;
+}
+/* ADDED BY SYNNE */
+/* PÅMELDINGSSKJEMA */
+.skjema{
+  position: relative;
+  padding: 20px 12px 10px 20px;
+  margin: 10px auto;
+}
+.skjema label{
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+}
+.inputs{
+  position: relative;
+  margin-top: 7px;
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+}
+textarea{
+  font-family: inherit;
+}
+#range_out{
+  margin-left: 10px;
+  width: 47px;
+  text-align: center;
+}
+.registrer_btn{
+  background: #51a200;
+  margin-top: 20px;
+	padding: 10px;
+	border: none;
+	color: #fff;
+
+  line-height: 1.1em;
+  text-align: center;
+  font-size: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.registrer_btn:hover{
+  background: #428400;
+}
+#registrering_mottatt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  width: 42%;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
