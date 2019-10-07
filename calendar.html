@@ -36,56 +36,63 @@
       <article style="width:60%; padding: 4%;">
         <h1 style="text-align: center;">Calendar</h1>
 				<p style="font-weight: 900;">Filter:</p>
-				<form class="filter">
-					Place:
-					<input type="checkbox" name="test" value="test">Gløshaugen
-					<input type="checkbox" name="test" value="test">plass1
-					<input type="checkbox" name="test" value="test">plass2
-					<hr class="separator">
-					Type:
-					<input type="checkbox" name="test" value="test"><span style="color: red;">Training</span>
-					<input type="checkbox" name="test" value="test"><span style="color: blue;">Event</span>
-				</form>
+				<div id="filter-wrap">
+					<form class="filter">
+						<div id="input" style="min-width: 50px;">Place:</div>
+						<div id="input"><input type="checkbox" name="test" value="test">Gløshaugen</div>
+						<div id="input"><input type="checkbox" name="test" value="test">place1</div>
+						<div id="input"><input type="checkbox" name="test" value="test">place2</div>
+						
+					</form>
+					<form class="filter">
+						<div id="input" style="min-width: 50px;">Type:</div>
+						<div id="input"><input type="checkbox" name="test" value="test"><span style="border-bottom: solid #90dd90 2px;">Training</span></div>
+						<div id="input"><input type="checkbox" name="test" value="test"><span style="border-bottom: solid #ffa0a0 2px;">Event</span></div>
+					</form>
+				</div>
 				<h2>Uke 40</h2>
 				<div class="calendar">
 					<p>05.10</p>
 					<ul>
-						<li><span style="color: blue;">Event</span>...</li>
-						<li><span style="color: red;">Training</span>...
-								Place: ... Time: ...</li>
+						<li class="event">Event... *Short title explaining the event* *The title is a link to the 
+						equivalent event post on the event.html page* <p>*Place and Time*</p></li>
+						<li class="event">Welcome party for new members! Free pizza... <p>Solsiden</br>Time: 14.15</p></li>
+						<li class="training">Training: drifting. Instructor: Harald Gress<p>Gløshaugen</br>Time: 18.00</p></li>
 					</ul>
 				</div>
 				<h2>Uke 41</h2>
 				<div class="calendar">
-					<p>07.10</p>
+					<p>08.10</p>
 					<ul>
-						<li><span style="color: red;">Training</span>...</li>
+						<li class="event">Event...<p>*Time and place*</p></li>
+						<li class="training">Training...<p>*Time and place*</p></li>
 					</ul>
 				</div>
 				<div class="calendar">
 					<p>11.10</p>
 					<ul>
-						<li><span style="color: blue;">Event</span>...</li>
-						<li><span style="color: red;">Training</span>...
-								Place: ... Time: ...</li>
+						<li class="event">Event...<p>test</p></li>
+						<li class="training">Training...
+								Place: ... Time: ...<p>test</p></li>
 					</ul>
 				</div>
 				<h2>Uke 42</h2>
 				<div class="calendar">
-					<p>17.10</p>
+					<p>13.10</p>
 					<ul>
-						<li><span style="color: blue;">Event</span>...</li>
-						<li><span style="color: red;">Training</span>...
-								Place: ... Time: ...</li>
+						<li class="event">Event...<p>test</p></li>
+						<li class="training">Training...
+								Place: ... Time: ...<p>test</p></li>
 					</ul>
 				</div>
 				<div class="calendar">
-					<p>19.10</p>
+					<p>17.10</p>
 					<ul>
-						<li><span style="color: blue;">Event</span>...</li>
-						<li><span style="color: red;">Training</span>...
-								Place: ... Time: ...</li>
+						<li class="event">Event...<p>test</p></li>
+						<li class="training">Training...
+								Place: ... Time: ...<p>test</p></li>
 					</ul>
+				</div>
 				</div>
       <!--<p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. In pellentesque massa placerat duis ultricies lacus sed. Magna eget est lorem ipsum dolor. A arcu cursus vitae congue mauris rhoncus. In mollis nunc sed id semper. Facilisis magna etiam tempor orci eu lobortis. Ante metus dictum at tempor commodo ullamcorper a. Sociis natoque penatibus et magnis dis parturient. Ante in nibh mauris cursus mattis molestie. Eu non diam phasellus vestibulum lorem sed. Pulvinar etiam non quam lacus.
