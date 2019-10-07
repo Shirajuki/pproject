@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header id="header" class="">
+      <nav>
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo" style="width:100%; max-width:150px;" />
+        </a>
+        <div>
+          <ul class="right">
+            <li class="dropdown">
+      				<a href="javascript:void(0)" class="nav_list"><br/>Info ▼ </a>
+      				<div class="dropdown-content">
+      					<a href="javascript:void(0)">dropdown1</a>
+                <a href="javascript:void(0)">dropdown2</a>
+                <a href="javascript:void(0)">dropdown3</a>
+      				</div>
+      			</li>
+            <li><a class="nav_list" href="gallery.html"><br/>Gallery</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>News</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Events</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Calendar</a></li>
+            <li><a class="abtn nav_list" href="#"><br/><button>Register</button></a></li>
+            <li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">&#9776;</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!--CONTENT GOES HERE-->
+    <main>
+    <!--
+      <div class="sidenav">
+        <h4>Scroll til:</h4>
+        <ul>
+          <li><a href="#aapning">Åpning av ny bane</a></li>
+          <li><a href="#streik">Streik med fagforeningen</a></li>
+          <li><a href="#velkommen">Velkommen til ny medlemmer!</a></li>
+        </ul>
+      </div>
+    -->
+
+      <article class="nyheter_innhold">
+        <h1>Nyheter</h1>
+        <br><hr><br>
+        <section class="nyhet">
+          <div class="nyhet_heading" id="aapning">
+            <h3>Åpning av ny bane</h3><span class="span_date">6. oktober 2019</span>
+          </div>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </section>
+        <br><hr><br>
+        <section class="nyhet" id="streik">
+          <div class="nyhet_heading">
+            <h3>Streik med fagforeningen</h3><span class="span_date">29. september 2019</span>
+          </div>
+          <p>Nunc id cursus mi, id facilisis risus. Suspendisse sollicitudin, ipsum vitae rutrum ullamcorper, arcu sem tincidunt nisl, sit amet dignissim dui massa ut orci. Cras in velit vel lacus accumsan tristique eget convallis eros. Vestibulum eu pulvinar metus. Cras risus leo, tristique non nunc vel, venenatis venenatis nulla. Quisque nec dolor fringilla, mollis odio nec, malesuada ipsum. Quisque fringilla velit eu massa sagittis fermentum nec sit amet orci. Duis sed leo tellus. Orci   varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pulvinar at tellus elementum aliquam. Proin posuere auctor leo laoreet pharetra. Curabitur arcu lorem, volutpat eu turpis et, tempus tempor ante. Nam vitae dui lectus. Maecenas egestas id neque sed vulputate.</p>
+        </section>
+        <br><hr><br>
+        <section class="nyhet" id="velkommen">
+          <div class="nyhet_heading">
+            <h3>Velkommen til nye medlemmer!</h3><span class="span_date">15. september 2019</span>
+          </div>
+          <p>Maecenas euismod porttitor magna, condimentum blandit eros eleifend sit amet. Aliquam pharetra, libero vitae auctor dictum, sapien orci mollis enim, sit amet auctor ipsum arcu non augue. Mauris eget auctor velit, at tincidunt sem. Quisque vel leo sed felis tincidunt molestie. Suspendisse scelerisque nunc vitae velit aliquam viverra. Pellentesque purus orci, eleifend et sagittis at, fringilla ac lorem. Aliquam erat volutpat. Nulla facilisi. Sed venenatis, nunc eget egestas fringilla, tellus nisl viverra nulla, fermentum faucibus enim lectus aliquam est. Duis sodales tellus sed ipsum condimentum, at cursus ligula porttitor. Duis cursus elit porta sem semper, id fermentum nibh dignissim. Mauris finibus dolor urna, id blandit sapien cursus non.</p>
+        </section>
+      </article>
+    </main>
+
+
+
+
+
+
+    <br/>
+    <div class="wrapper">
+      <footer>
+        <br/>
+        <p>Made with <3 by project group 2</p>
+        <a href="javascript:void(0);">Kontakt oss</a>
+        <a href="javascript:void(0);">Om oss</a>
+      </footer>
+    </div>
+
+    <a href="#">
+      <button id="scrollUpBtn" title="Go to top">▲</button>
+    </a>
+
+
+<!--
+////////////////////////////////////////////////////
+                  JAVASCRIPT
+////////////////////////////////////////////////////
+-->
+    <script type="text/javascript">
+    // Mobile Responsive dropdown navigation
+    // function myFunction() {
+    //   setTimeout(() => {
+    //     document.getElementById('mobile').classList.toggle('responsive');
+    //     document.getElementById('mobile').classList.toggle('hidden');
+    //   },200)
+    // }
+    // Sticky navigation
+    const navbar = document.getElementById('header');
+    function stickyNavigation() {
+        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        navbar.classList.add("sticky");
+    }
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = scrollFunction;
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("scrollUpBtn").style.opacity = 1;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
+            stickyNavigation();
+        } else {
+            document.getElementById("scrollUpBtn").style.opacity = 0;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
+            // document.body.style.paddingTop = '70px';
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+<!--
+///////////////////////////////////////////////////////
+-->
+
+
+  </body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header id="header" class="">
+      <nav>
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo" style="width:100%; max-width:150px;" />
+        </a>
+        <div>
+          <ul class="right">
+            <li class="dropdown">
+      				<a href="javascript:void(0)" class="nav_list"><br/>Info ▼ </a>
+      				<div class="dropdown-content">
+      					<a href="javascript:void(0)">dropdown1</a>
+                <a href="javascript:void(0)">dropdown2</a>
+                <a href="javascript:void(0)">dropdown3</a>
+      				</div>
+      			</li>
+            <li><a class="nav_list" href="gallery.html"><br/>Gallery</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>News</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Events</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Calendar</a></li>
+            <li><a class="abtn nav_list" href="#"><br/><button>Register</button></a></li>
+            <li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">&#9776;</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+
+<!--CONTENT OF PAGE, REGISTER-->
+    <main id="registrering_mottatt">
+      <h1>Takk!</h1>
+      <p>Registreringen er mottatt.</p>
+    </main>
+
+
+
+    <br/>
+    <div class="wrapper">
+      <footer>
+        <br/>
+        <p>Made with <3 by project group 2</p>
+        <a href="javascript:void(0);">Kontakt oss</a>
+        <a href="javascript:void(0);">Om oss</a>
+      </footer>
+    </div>
+
+    <a href="#">
+      <button id="scrollUpBtn" title="Go to top">▲</button>
+    </a>
+
+
+<!--
+////////////////////////////////////////////////////
+                  JAVASCRIPT
+////////////////////////////////////////////////////
+-->
+    <script type="text/javascript">
+    // Mobile Responsive dropdown navigation
+    // function myFunction() {
+    //   setTimeout(() => {
+    //     document.getElementById('mobile').classList.toggle('responsive');
+    //     document.getElementById('mobile').classList.toggle('hidden');
+    //   },200)
+    // }
+    // Sticky navigation
+    const navbar = document.getElementById('header');
+    function stickyNavigation() {
+        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        navbar.classList.add("sticky");
+    }
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = scrollFunction;
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("scrollUpBtn").style.opacity = 1;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
+            stickyNavigation();
+        } else {
+            document.getElementById("scrollUpBtn").style.opacity = 0;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
+            // document.body.style.paddingTop = '70px';
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+<!--
+///////////////////////////////////////////////////////
+-->
+
+
+  </body>
+</html>
