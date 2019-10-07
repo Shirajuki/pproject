@@ -337,6 +337,9 @@ div ul li a:not(.abtn):hover::before {
 	#contact {
 		flex-direction: column;
 	}
+	.filter {
+		flex-direction: column;
+	}
 }
 @media (max-width: 660px) {
   #title>h1 {
@@ -397,25 +400,58 @@ div ul li a:not(.abtn):hover::before {
 	border-top: solid #ddd 1px;
 	border-bottom: solid #ddd 1px;
 }
-.calendar p {
+
+.calendar >	 p {
 	font-size: 30px;
-	position: absolute;
 	min-width: 20%;
+	border-right: solid gray 1px;
 	top: 50%;
 	transform: translateY(-50%);
-	border-right: solid gray 1px;
+	position: absolute; 
 }
+
+.calendar ul li p {
+	background-color: rgba(255,255,255,0.8);
+	padding: 0 10px 0 10px;
+	min-width: 100px;
+	margin-left: 20px;
+	height: 100%;
+}
+
 .calendar ul li {
+	display: flex;
+	justify-content: space-between;
 	list-style: disc;
   text-align: left;
   font-weight: 100;
   position: relative;
-	left: 30%;
-}
-.filter {
-	margin: 20px;
+	left: 25%;
+	width: 70%;
 	padding: 10px;
 }
+
+.event {
+	background-color: #ffa0a0;
+}
+
+.training {
+	background-color: #90dd90;
+}
+
+.filter {
+	display: flex;
+	padding: 10px;
+}
+
+#filter-wrap {
+	margin: 10px 0 30px 10px;
+}
+
+#input {
+	min-width: 150px;
+	margin: 5px;
+}
+
 .filter input {
 	margin: 0 0 0 20px;
 }
@@ -520,3 +556,4 @@ textarea{
 	font-size: 50px;
 	margin-bottom: 20px;
 }
+
