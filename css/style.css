@@ -420,7 +420,7 @@ div ul li a:not(.abtn):hover::before {
 	margin: 0 0 0 20px;
 }
 .separator {
-	margin: 10px 0 10px 0;
+	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
 /* ADDED BY SYNNE */
@@ -518,4 +518,5 @@ textarea{
 #contact article p {
 	text-align: center;
 	font-size: 50px;
+	margin-bottom: 20px;
 }
