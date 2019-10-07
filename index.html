@@ -1,0 +1,118 @@
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header id="header" class="">
+      <nav>
+        <a href="index.html">
+          <img src="img/logo.png" alt="logo" style="width:100%; max-width:150px;" />
+        </a>
+        <div>
+          <ul class="right">
+            <li class="dropdown">
+      				<a href="javascript:void(0)" class="nav_list"><br/>Info ▼ </a>
+      				<div class="dropdown-content">
+      					<a href="javascript:void(0)">dropdown1</a>
+                <a href="javascript:void(0)">dropdown2</a>
+                <a href="javascript:void(0)">dropdown3</a>
+      				</div>
+      			</li>
+            <li><a class="nav_list" href="gallery.html"><br/>Gallery</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>News</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br/>Events</a></li>
+            <li><a class="nav_list" href="calendar.html"><br/>Calendar</a></li>
+            <li><a class="abtn nav_list" href="#"><br/><button>Register</button></a></li>
+            <li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">&#9776;</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div id="screen">
+        <div class="screen">
+          <img id="fallback_image" src="img/gress.jpg" width="1363px" height="767px">
+          <div id="title">
+            <h1>Lawnmower Racing</h1>
+            <button class="btn">Bli med!</button>
+          </div>
+        </div>
+      </div>
+      <section class="">
+        <article>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+
+      <section>
+        <article class="column">
+          <h1>Arrangementer</h1>
+          <ol>
+            <li><strong>Arrangement tittel her</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+            <li><strong>Arrangement tittel her</strong> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</li>
+          </ol>
+        </article>
+        <article class="column">
+          <h1>Kalender</h1>
+          <div>
+            <p>27. [Trening] Lorem ipsum dolor ...</p>
+            <p>28. [Arrangement] Lorem ipsum dolor sit amet ...</p>
+            <p>29. [Trening] Lorem ipsum dolor ...</p>
+            <p>30. [Trening] Lorem ipsum dolor ...</p>
+          </div>
+          <a href="javascript:void(0);" id="heleKalender">se hele.</a>
+        </article>
+      </section>
+
+      <section class="">
+        <article>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        </article>
+      </section>
+    </main>
+    <br/>
+    <div class="wrapper">
+      <footer>
+        <p>Lawnmower Racing AS</p>
+        <p>Gressveien 14, 7010 Trondheim</p>
+        <a href="javascript:void(0);">Kontakt oss</a>
+        <a href="javascript:void(0);">Om oss</a>
+      </footer>
+    </div>
+    <a href="#">
+      <button id="scrollUpBtn" title="Go to top">▲</button>
+    </a>
+    <script type="text/javascript">
+    // Mobile Responsive dropdown navigation
+    // function myFunction() {
+    //   setTimeout(() => {
+    //     document.getElementById('mobile').classList.toggle('responsive');
+    //     document.getElementById('mobile').classList.toggle('hidden');
+    //   },200)
+    // }
+    // Sticky navigation
+    const navbar = document.getElementById('header');
+    function stickyNavigation() {
+        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        navbar.classList.add("sticky");
+    }
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = scrollFunction;
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("scrollUpBtn").style.opacity = 1;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
+            stickyNavigation();
+        } else {
+            document.getElementById("scrollUpBtn").style.opacity = 0;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
+            // document.body.style.paddingTop = '70px';
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+  </body>
+</html>
