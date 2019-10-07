@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title>Lawnmower racing</title>
+
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body style="background-image: url(img/calendar-img.jpg); background-size: cover;">
+	<div style="position: absolute; width: 100%; height: 100%; background-color: rgba(40,40,40,0.75);"></div>
+    <header id="header" class="">
+      <nav>
+        <a href="index.html">
+          <img src="img/logo.png" alt="LMR" style="width:100%; max-width:150px;">
+        </a>
+        <div>
+          <ul class="right">
+            <li class="dropdown">
+      				<a href="javascript:void(0)" class="nav_list"><br/>Info ▼ </a>
+      				<div class="dropdown-content">
+      					<a href="javascript:void(0)">About us</a>
+                <a href="javascript:void(0)">Contact us</a>
+      				</div>
+      			</li>
+            <li><a class="nav_list" href="javascript:void(0);"><br>Gallery</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br>News</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br>Events</a></li>
+            <li><a class="nav_list" href="javascript:void(0);"><br>Calendar</a></li>
+            <li><a class="abtn nav_list" href="http://folk.ntnu.no/jonnynl/mockup/#"><br><button id="sign_up">Join us</button></a></li>
+            <li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">☰</a></li>
+          </ul>
+        </div>
+      </nav>
+		</header>
+		<main>
+      <article style="width:50%; padding: 4%; background-color: rgba(255, 255, 255, 0.9);">
+        <h1>About us</h1>
+        <h2>The team</h2>
+        <p>123</p>
+        <h2>Lawnmower Racing</h2>
+        <p>123</p>
+
+	</article>  <!--
+		***
+		KODE HER
+		***
+		-->
+    </main>
+    <br>
+    <div class="wrapper">
+      <footer>
+        <p>Lawnmower Racing AS</p>
+        <p>Gressveien 14, 7010 Trondheim</p>
+        <a href="javascript:void(0);">Contact us/a>
+        <a href="javascript:void(0);">About us</a>
+      </footer>
+    </div>
+    <a href="#">
+      <button id="scrollUpBtn" title="Go to top" style="opacity: 0; pointer-events: none;">▲</button>
+    </a>
+    <script type="text/javascript">
+    // Mobile Responsive dropdown navigation
+    // function myFunction() {
+    //   setTimeout(() => {
+    //     document.getElementById('mobile').classList.toggle('responsive');
+    //     document.getElementById('mobile').classList.toggle('hidden');
+    //   },200)
+    // }
+    // Sticky navigation
+    const navbar = document.getElementById('header');
+    function stickyNavigation() {
+        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
+        navbar.classList.add("sticky");
+    }
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = scrollFunction;
+    function scrollFunction() {
+        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+            document.getElementById("scrollUpBtn").style.opacity = 1;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
+            stickyNavigation();
+        } else {
+            document.getElementById("scrollUpBtn").style.opacity = 0;
+            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
+            // document.body.style.paddingTop = '70px';
+            navbar.classList.remove("sticky");
+        }
+    }
+    </script>
+
+
+</body></html>
