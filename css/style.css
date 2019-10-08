@@ -41,7 +41,7 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-	background-image: url(../img/calendar-img.jpg); 
+	background-image: url(../img/calendar-img.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -310,22 +310,18 @@ div ul li a:not(.abtn):hover::before {
   }
 }
 /* EVENT */
-
-
 #event{
   width: 80%;
   margin: 0 auto;
   background-color: rgba(255,255,255,0.95);
   padding: 35px;
 }
-
 #event h1{
   margin: 20px;
   text-align: center;
   border-bottom: 2px black solid;
   padding: 20px;
 }
-
 #event h2{
   border-bottom: 2px black solid;
 }
@@ -340,7 +336,6 @@ div ul li a:not(.abtn):hover::before {
 #event_nav{
   display: flex;
 }
-
 #event_nav > button{
   flex-basis: 25px;
   flex-grow: 1;
@@ -351,24 +346,32 @@ div ul li a:not(.abtn):hover::before {
   margin: 0;
   text-align: center;
   border-radius: 0;
+  transition: background 1s;
 }
-
-#event_nav > button:hover{
+#event_nav>button:hover{
   background-color: #2d6a37;
 }
-#event_nav ul li a{
-  display: none;
-    padding: 3px;
+#event_nav button div {
+  transition: all 1s;
 }
-#event_nav button:hover ul li a{
+.event_nav_drop {
   display: block;
-  margin: auto;
-  padding: 10px;
-  scroll-padding: 10px;
-  font-size: medium;
-  background-color: inherit;
+  position: absolute;
+  background-color: #2d6a37;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.event_nav_drop ul li{
+  padding: 6px 0 10px 0;
+}
+#event_nav button:hover .event_nav_drop{
   color: #f1f1f1;
-  border-radius: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* QUERY */
@@ -461,16 +464,14 @@ div ul li a:not(.abtn):hover::before {
 	border-top: solid #ddd 1px;
 	border-bottom: solid #ddd 1px;
 }
-
 .calendar >	 p {
 	font-size: 30px;
 	min-width: 20%;
 	border-right: solid gray 1px;
 	top: 50%;
 	transform: translateY(-50%);
-	position: absolute; 
+	position: absolute;
 }
-
 .calendar ul li p {
 	background-color: rgba(255,255,255,0.8);
 	padding: 0 10px 0 10px;
@@ -478,7 +479,6 @@ div ul li a:not(.abtn):hover::before {
 	margin-left: 20px;
 	height: 100%;
 }
-
 .calendar ul li {
 	display: flex;
 	justify-content: space-between;
@@ -490,29 +490,23 @@ div ul li a:not(.abtn):hover::before {
 	width: 70%;
 	padding: 10px;
 }
-
 .event {
 	background-color: #ffa0a0;
 }
-
 .training {
 	background-color: #90dd90;
 }
-
 .filter {
 	display: flex;
 	padding: 10px;
 }
-
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
-
 #input {
 	min-width: 150px;
 	margin: 5px;
 }
-
 .filter input {
 	margin: 0 0 0 20px;
 }
@@ -617,4 +611,3 @@ textarea{
 	font-size: 50px;
 	margin-bottom: 20px;
 }
-
