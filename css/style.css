@@ -309,6 +309,67 @@ div ul li a:not(.abtn):hover::before {
     grid-template-columns: repeat(6, 1fr);
   }
 }
+/* EVENT */
+
+
+#event{
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.95);
+  padding: 35px;
+}
+
+#event h1{
+  margin: 20px;
+  text-align: center;
+  border-bottom: 2px black solid;
+  padding: 20px;
+}
+
+#event h2{
+  border-bottom: 2px black solid;
+}
+.date, .practice{
+  text-align: right;
+  padding: 10px 10px 5px 10px;
+}
+#event article{
+  height: 20%;
+  padding: 25px;
+}
+#event_nav{
+  display: flex;
+}
+
+#event_nav > button{
+  flex-basis: 25px;
+  flex-grow: 1;
+  padding: 9px;
+  color: #fbfafb;
+  background-color: #4c8738;
+  border: none;
+  margin: 0;
+  text-align: center;
+  border-radius: 0;
+}
+
+#event_nav > button:hover{
+  background-color: #2d6a37;
+}
+#event_nav ul li a{
+  display: none;
+    padding: 3px;
+}
+#event_nav button:hover ul li a{
+  display: block;
+  margin: auto;
+  padding: 10px;
+  scroll-padding: 10px;
+  font-size: medium;
+  background-color: inherit;
+  color: #f1f1f1;
+  border-radius: 0;
+}
 
 /* QUERY */
 @media (max-width: 850px) {
