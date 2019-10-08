@@ -530,26 +530,119 @@ div ul li a:not(.abtn):hover::before {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
+
+
+
+
+
+
+
+
+
+
 /* ADDED BY SYNNE */
-/* NYHETER, INNHOLD */
-.nyhet{
+/* NYHETER: INNHOLD */
+.news_page_content{
+    background: #fff;
+    padding: 10px;
+    margin: 50px auto;
+    width: 92%;
+    padding: 1%;
+}
+.nyheter_innhold{
+  /*border: 1px solid green;
+  background: blanchedalmond;*/
+  position: relative;
+  margin-left: 20%;
+  margin-top: 10px;
+  width: 79.5%;
+}
+.nyhetsartikkel{
+  /*border: 1px solid red;*/
   display: flex;
   flex-direction: column;
 }
+
+
+/* NYHETSOVERSKRIFTENE */
 .nyhet_heading{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.nyhet_heading h3{
-  color: #006400;
+  /*border: 1px solid blue;*/
+  color: #2d6a37;
 }
 .span_date{
-  color: #97d797;
-  text-shadow: 0.5px 0.5px #B9B367;
+  color: lightgrey;
+  font-size: 0.7em;
+  /*border: 1px solid pink;*/
 }
+
+
+
+
+
+
+
+/* SIDENAV */
+.sidenav__inner{
+  /*border: 1px solid black;
+  background: lightblue;*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 47.5%;
+  width: 15%;
+  margin-top: 10px;
+  margin-left: 0.7%;
+  color: #2d6a37;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+}
+#hr_overskrift{
+  border: 0.7px solid #2d6a37;
+}
+.sidenav__inner a{
+  margin: 10px;
+  color: #2d6a37;
+  line-height: 1;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+}
+.sidenav__inner p{
+  color: #2d6a37;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sidenav__inner a:hover{
+  color: lightgrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
+.form_page_content{
+  background: #fff;
+  width: 50%;
+}
+.form_page_content h1{
+  color: #2d6a37;
+}
 .skjema{
   position: relative;
   padding: 20px 12px 10px 20px;
@@ -572,17 +665,19 @@ div ul li a:not(.abtn):hover::before {
 }
 textarea{
   font-family: inherit;
+  width: 90%;
 }
 #range_out{
   margin-left: 10px;
   width: 47px;
   text-align: center;
 }
-.registrer_btn{
-  background: #51a200;
+.submit_btn{
+  background: #2d6a37;
   margin-top: 20px;
 	padding: 10px;
 	border: none;
+  border-radius: 8px;
 	color: #fff;
 
   line-height: 1.1em;
@@ -592,8 +687,8 @@ textarea{
   font-weight: 500;
   cursor: pointer;
 }
-.registrer_btn:hover{
-  background: #428400;
+.submit_btn:hover{
+  background: #0d4a17;
 }
 #registrering_mottatt{
   display: flex;
