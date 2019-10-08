@@ -41,7 +41,7 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-	background-image: url(../img/calendar-img.jpg); 
+	background-image: url(../img/calendar-img.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -310,22 +310,18 @@ div ul li a:not(.abtn):hover::before {
   }
 }
 /* EVENT */
-
-
 #event{
   width: 80%;
   margin: 0 auto;
   background-color: rgba(255,255,255,0.95);
   padding: 35px;
 }
-
 #event h1{
   margin: 20px;
   text-align: center;
   border-bottom: 2px black solid;
   padding: 20px;
 }
-
 #event h2{
   border-bottom: 2px black solid;
 }
@@ -340,7 +336,6 @@ div ul li a:not(.abtn):hover::before {
 #event_nav{
   display: flex;
 }
-
 #event_nav > button{
   flex-basis: 25px;
   flex-grow: 1;
@@ -351,24 +346,32 @@ div ul li a:not(.abtn):hover::before {
   margin: 0;
   text-align: center;
   border-radius: 0;
+  transition: background 1s;
 }
-
-#event_nav > button:hover{
+#event_nav>button:hover{
   background-color: #2d6a37;
 }
-#event_nav ul li a{
-  display: none;
-    padding: 3px;
+#event_nav button div {
+  transition: all 1s;
 }
-#event_nav button:hover ul li a{
+.event_nav_drop {
   display: block;
-  margin: auto;
-  padding: 10px;
-  scroll-padding: 10px;
-  font-size: medium;
-  background-color: inherit;
+  position: absolute;
+  background-color: #2d6a37;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 999;
+}
+.event_nav_drop ul li{
+  padding: 6px 0 10px 0;
+}
+#event_nav button:hover .event_nav_drop{
   color: #f1f1f1;
-  border-radius: 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 /* QUERY */
@@ -462,15 +465,15 @@ div ul li a:not(.abtn):hover::before {
 	border-bottom: solid #ddd 1px;
 }
 
-.calendar >	 p {
+
+.calendar >	p {
 	font-size: 30px;
 	min-width: 20%;
 	border-right: solid gray 1px;
 	top: 50%;
 	transform: translateY(-50%);
-	position: absolute; 
+	position: absolute;
 }
-
 .calendar ul li p {
 	background-color: rgba(255,255,255,0.8);
 	padding: 0 10px 0 10px;
@@ -478,7 +481,6 @@ div ul li a:not(.abtn):hover::before {
 	margin-left: 20px;
 	height: 100%;
 }
-
 .calendar ul li {
 	display: flex;
 	justify-content: space-between;
@@ -491,14 +493,19 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
 }
 
+
+.week {
+	font-weight: 100;
+	font-size: 30px;
+	text-align: center;
+}
+
 .event {
 	background-color: #ffa0a0;
 }
-
 .training {
 	background-color: #90dd90;
 }
-
 .filter {
 	display: flex;
 	padding: 10px;
@@ -507,39 +514,143 @@ div ul li a:not(.abtn):hover::before {
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
-
 #input {
 	min-width: 150px;
 	margin: 5px;
+
+.input span {
+	margin: 0 0 0 5px;
 }
 
+#filter-wrap {
+	margin: 10px 0 30px 10px;
+}
+
+.input {
+	min-width: 130px;
+
+}
 .filter input {
 	margin: 0 0 0 20px;
 }
+
 .separator {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
+
+
+
+
+
+
+
+
+
+
 /* ADDED BY SYNNE */
-/* NYHETER, INNHOLD */
-.nyhet{
+/* NYHETER: INNHOLD */
+.news_page_content{
+    background: #fff;
+    padding: 10px;
+    margin: 50px auto;
+    width: 92%;
+    padding: 1%;
+}
+.nyheter_innhold{
+  /*border: 1px solid green;
+  background: blanchedalmond;*/
+  position: relative;
+  margin-left: 20%;
+  margin-top: 10px;
+  width: 79.5%;
+}
+.nyhetsartikkel{
+  /*border: 1px solid red;*/
   display: flex;
   flex-direction: column;
 }
+
+
+/* NYHETSOVERSKRIFTENE */
 .nyhet_heading{
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-}
-.nyhet_heading h3{
-  color: #006400;
+  /*border: 1px solid blue;*/
+  color: #2d6a37;
 }
 .span_date{
-  color: #97d797;
-  text-shadow: 0.5px 0.5px #B9B367;
+  color: lightgrey;
+  font-size: 0.7em;
+  /*border: 1px solid pink;*/
 }
+
+
+
+
+
+
+
+/* SIDENAV */
+.sidenav__inner{
+  /*border: 1px solid black;
+  background: lightblue;*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 47.5%;
+  width: 15%;
+  margin-top: 10px;
+  margin-left: 0.7%;
+  color: #2d6a37;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+}
+#hr_overskrift{
+  border: 0.7px solid #2d6a37;
+}
+.sidenav__inner a{
+  margin: 10px;
+  color: #2d6a37;
+  line-height: 1;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+}
+.sidenav__inner p{
+  color: #2d6a37;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sidenav__inner a:hover{
+  color: lightgrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
+.form_page_content{
+  background: #fff;
+  width: 50%;
+}
+.form_page_content h1{
+  color: #2d6a37;
+}
 .skjema{
   position: relative;
   padding: 20px 12px 10px 20px;
@@ -562,17 +673,19 @@ div ul li a:not(.abtn):hover::before {
 }
 textarea{
   font-family: inherit;
+  width: 90%;
 }
 #range_out{
   margin-left: 10px;
   width: 47px;
   text-align: center;
 }
-.registrer_btn{
-  background: #51a200;
+.submit_btn{
+  background: #2d6a37;
   margin-top: 20px;
 	padding: 10px;
 	border: none;
+  border-radius: 8px;
 	color: #fff;
 
   line-height: 1.1em;
@@ -582,8 +695,8 @@ textarea{
   font-weight: 500;
   cursor: pointer;
 }
-.registrer_btn:hover{
-  background: #428400;
+.submit_btn:hover{
+  background: #0d4a17;
 }
 #registrering_mottatt{
   display: flex;
@@ -618,3 +731,38 @@ textarea{
 	margin-bottom: 20px;
 }
 
+/*OLGA SIN ABOUT*/
+#about h1{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid black;
+}
+#artikler h2{
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#artikler p{
+  margin-bottom: 25px;
+}
+#artikler{
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin:auto;
+}
+#bilder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 80%;
+  margin:auto;
+}
+#bilder img{
+  margin-top: 50px;
+  max-width: 45%;
+  max-height: 45%;
+  border-radius: 50%;
+}
