@@ -373,6 +373,9 @@ div ul li a:not(.abtn):hover::before {
   visibility: visible;
   opacity: 1;
 }
+#event_nav .event_nav_drop ul li a:hover{
+  color: #f1f1f1
+}
 
 /* QUERY */
 @media (max-width: 850px) {
