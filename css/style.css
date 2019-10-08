@@ -520,6 +520,7 @@ div ul li a:not(.abtn):hover::before {
 #input {
 	min-width: 150px;
 	margin: 5px;
+}
 
 .input span {
 	margin: 0 0 0 5px;
@@ -541,15 +542,6 @@ div ul li a:not(.abtn):hover::before {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
-
-
-
-
-
-
-
-
-
 
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
@@ -708,6 +700,7 @@ textarea{
   flex-direction: column;
   position: relative;
 
+  background-color: rgba(255,255,255,0.95);
   width: 42%;
   margin: 40px auto;
   padding: 20px;
