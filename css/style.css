@@ -237,7 +237,7 @@ article {
   margin: 50px auto;
   padding: 1%;
   box-shadow: 0 0 2px 2px black; */
-	background-color: rgba(255,255,255,0.95);
+	background-color: rgba(255,255,255,0.8);
   position: relative;
   width: 92%;
   margin: 50px auto;
@@ -312,7 +312,7 @@ div ul li a:not(.abtn):hover::before {
 /* EVENT */
 #event{
   /* width: 80%; */
-  background-color: rgba(255,255,255,0.95);
+  background-color: rgba(255,255,255,0.90);
   /* padding: 35px; */
 }
 #event h1{
