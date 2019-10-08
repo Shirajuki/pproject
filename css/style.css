@@ -41,7 +41,7 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-	background-image: url(../img/calendar-img.jpg); 
+	background-image: url(../img/calendar-img.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 }
@@ -468,7 +468,7 @@ div ul li a:not(.abtn):hover::before {
 	border-right: solid gray 1px;
 	top: 50%;
 	transform: translateY(-50%);
-	position: absolute; 
+	position: absolute;
 }
 
 .calendar ul li p {
@@ -723,3 +723,38 @@ textarea{
 	margin-bottom: 20px;
 }
 
+/*OLGA SIN ABOUT*/
+#about h1{
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid black;
+}
+#artikler h2{
+  text-align: center;
+  margin-bottom: 25px;
+  margin-top: 25px;
+}
+
+#artikler p{
+  margin-bottom: 25px;
+}
+#artikler{
+  display: flex;
+  flex-direction: column;
+  max-width: 80%;
+  margin:auto;
+}
+#bilder{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  max-width: 80%;
+  margin:auto;
+}
+#bilder img{
+  margin-top: 50px;
+  max-width: 45%;
+  max-height: 45%;
+  border-radius: 50%;
+}
