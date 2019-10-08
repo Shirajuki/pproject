@@ -1,4 +1,4 @@
-:root {
+﻿:root {
   --padding: 70px;
   --base-color: #000;
   --bg-color: #fff;
@@ -41,6 +41,9 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
+	background-image: url(../img/calendar-img.jpg); 
+	background-size: cover;
+	background-attachment: fixed;
 }
 /* HEADER */
 header {
@@ -102,6 +105,7 @@ div ul li a {
   color: white;
   padding: 0 10px;
   text-align: left;
+  cursor: pointer;
 }
 div ul li a:not(.abtn) {
   padding: 5px 10px 0 10px;
@@ -141,6 +145,7 @@ footer>a{
   /* padding-top: var(--padding); */
   overflow: hidden;
   transform: translateY(calc(var(--padding) * -1));
+	box-shadow: 0 0 20px 10px rgba(0,0,0,0.5);
 }
 .screen {
   position: relative;
@@ -152,7 +157,6 @@ footer>a{
   display: block;
   height: auto;
   min-width: 100%;
-  opacity: 0.85;
 }
 #title {
   position: absolute;
@@ -233,7 +237,7 @@ article {
   margin: 50px auto;
   padding: 1%;
   box-shadow: 0 0 2px 2px black; */
-
+	background-color: rgba(255,255,255,0.95);
   position: relative;
   width: 92%;
   margin: 50px auto;
@@ -279,19 +283,94 @@ div ul li a:not(.abtn):hover::before {
 }
 /* Gallery */
 .gallery {
+  display: block;
+  margin: 10px auto 0 auto;
+  width: 80%;
+}
+.gallery>div {
   display: flex;
-  flex-wrap: row wrap;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.columns {
-  flex: 33%;
-  max-width: 33%;
-  margin: 1%;
+.gallery img {
+  width: 150px;
+  height: 150px;
+  margin: 5px;
 }
-.columns img {
-  margin-top: 8px;
-  max-width: 100%;
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .img-grid {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+/* EVENT */
+
+
+#event{
+  width: 80%;
+  margin: 0 auto;
+  background-color: rgba(255,255,255,0.95);
+  padding: 35px;
+}
+
+#event h1{
+  margin: 20px;
+  text-align: center;
+  border-bottom: 2px black solid;
+  padding: 20px;
+}
+
+#event h2{
+  border-bottom: 2px black solid;
+}
+.date, .practice{
+  text-align: right;
+  padding: 10px 10px 5px 10px;
+}
+#event article{
+  height: 20%;
+  padding: 25px;
+}
+#event_nav{
+  display: flex;
+}
+
+#event_nav > button{
+  flex-basis: 25px;
+  flex-grow: 1;
+  padding: 9px;
+  color: #fbfafb;
+  background-color: #4c8738;
+  border: none;
+  margin: 0;
+  text-align: center;
+  border-radius: 0;
+}
+
+#event_nav > button:hover{
+  background-color: #2d6a37;
+}
+#event_nav ul li a{
+  display: none;
+    padding: 3px;
+}
+#event_nav button:hover ul li a{
+  display: block;
+  margin: auto;
+  padding: 10px;
+  scroll-padding: 10px;
+  font-size: medium;
+  background-color: inherit;
+  color: #f1f1f1;
+  border-radius: 0;
+}
+
 /* QUERY */
 @media (max-width: 850px) {
   video {
@@ -316,6 +395,12 @@ div ul li a:not(.abtn):hover::before {
     width: 93%;
     margin: 5% auto;
   }
+	#contact {
+		flex-direction: column;
+	}
+	.filter {
+		flex-direction: column;
+	}
 }
 @media (max-width: 660px) {
   #title>h1 {
@@ -368,7 +453,7 @@ div ul li a:not(.abtn):hover::before {
     display: none;
   }
 }
-
+/* ASD */
 .calendar {
 	margin: 20px;
 	padding: 10px;
@@ -377,26 +462,64 @@ div ul li a:not(.abtn):hover::before {
 	border-bottom: solid #ddd 1px;
 }
 
-.calendar p {
+.calendar >	p {
 	font-size: 30px;
-	position: absolute; 
 	min-width: 20%;
+	border-right: solid gray 1px;
 	top: 50%;
 	transform: translateY(-50%);
-	border-right: solid gray 1px;
+	position: absolute; 
+}
+
+.calendar ul li p {
+	background-color: rgba(255,255,255,0.8);
+	padding: 0 10px 0 10px;
+	min-width: 100px;
+	margin-left: 20px;
+	height: 100%;
 }
 
 .calendar ul li {
+	display: flex;
+	justify-content: space-between;
 	list-style: disc;
   text-align: left;
   font-weight: 100;
   position: relative;
-	left: 30%;
+	left: 25%;
+	width: 70%;
+	padding: 10px;
+}
+
+.week {
+	font-weight: 100;
+	font-size: 30px;
+	text-align: center;
+}
+
+.event {
+	background-color: #ffa0a0;
+}
+
+.training {
+	background-color: #90dd90;
 }
 
 .filter {
-	margin: 20px;
+	display: flex;
 	padding: 10px;
+}
+
+.input span {
+	margin: 0 0 0 5px;
+}
+
+#filter-wrap {
+	margin: 10px 0 30px 10px;
+}
+
+.input {
+	min-width: 130px;
 }
 
 .filter input {
@@ -404,6 +527,199 @@ div ul li a:not(.abtn):hover::before {
 }
 
 .separator {
-	margin: 10px 0 10px 0; 
-	border-top: solid gray 1px; 
+	margin: 15px 0 15px 0;
+	border-top: solid gray 1px;
 }
+
+
+
+
+
+
+
+
+
+
+/* ADDED BY SYNNE */
+/* NYHETER: INNHOLD */
+.news_page_content{
+    background: #fff;
+    padding: 10px;
+    margin: 50px auto;
+    width: 92%;
+    padding: 1%;
+}
+.nyheter_innhold{
+  /*border: 1px solid green;
+  background: blanchedalmond;*/
+  position: relative;
+  margin-left: 20%;
+  margin-top: 10px;
+  width: 79.5%;
+}
+.nyhetsartikkel{
+  /*border: 1px solid red;*/
+  display: flex;
+  flex-direction: column;
+}
+
+
+/* NYHETSOVERSKRIFTENE */
+.nyhet_heading{
+  /*border: 1px solid blue;*/
+  color: #2d6a37;
+}
+.span_date{
+  color: lightgrey;
+  font-size: 0.7em;
+  /*border: 1px solid pink;*/
+}
+
+
+
+
+
+
+
+/* SIDENAV */
+.sidenav__inner{
+  /*border: 1px solid black;
+  background: lightblue;*/
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  height: 47.5%;
+  width: 15%;
+  margin-top: 10px;
+  margin-left: 0.7%;
+  color: #2d6a37;
+  background-color: #f6f6f6;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.3)
+}
+#hr_overskrift{
+  border: 0.7px solid #2d6a37;
+}
+.sidenav__inner a{
+  margin: 10px;
+  color: #2d6a37;
+  line-height: 1;
+  font-weight: normal;
+  font-style: italic;
+  text-decoration: none;
+}
+.sidenav__inner p{
+  color: #2d6a37;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.sidenav__inner a:hover{
+  color: lightgrey;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ADDED BY SYNNE */
+/* PÅMELDINGSSKJEMA */
+.form_page_content{
+  background: #fff;
+  width: 50%;
+}
+.form_page_content h1{
+  color: #2d6a37;
+}
+.skjema{
+  position: relative;
+  padding: 20px 12px 10px 20px;
+  margin: 10px auto;
+}
+.skjema label{
+  margin: 0 0 3px 0;
+  padding: 0px;
+  display: block;
+  font-weight: bold;
+}
+.inputs{
+  position: relative;
+  margin-top: 7px;
+  box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	border:1px solid #BEBEBE;
+	padding: 7px;
+}
+textarea{
+  font-family: inherit;
+  width: 90%;
+}
+#range_out{
+  margin-left: 10px;
+  width: 47px;
+  text-align: center;
+}
+.submit_btn{
+  background: #2d6a37;
+  margin-top: 20px;
+	padding: 10px;
+	border: none;
+  border-radius: 8px;
+	color: #fff;
+
+  line-height: 1.1em;
+  text-align: center;
+  font-size: 20px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.submit_btn:hover{
+  background: #0d4a17;
+}
+#registrering_mottatt{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+
+  width: 42%;
+  margin: 40px auto;
+  padding: 20px;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#contact {
+	margin: 0;
+	text-align: center;
+	display: flex;
+	position: relative;
+}
+
+#contact article {
+	margin: 15px;
+	padding: 15px;
+	text-align: justify;
+	min-width: 150px;
+}
+
+#contact article p {
+	text-align: center;
+	font-size: 50px;
+	margin-bottom: 20px;
+}
+
