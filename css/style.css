@@ -254,7 +254,7 @@ p {
 }
 /* NAV HOVER */
 li>a:hover {
-  color: var(--theme-color1);
+  color: white;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
