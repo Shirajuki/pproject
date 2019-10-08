@@ -401,7 +401,7 @@ div ul li a:not(.abtn):hover::before {
 	border-bottom: solid #ddd 1px;
 }
 
-.calendar >	 p {
+.calendar >	p {
 	font-size: 30px;
 	min-width: 20%;
 	border-right: solid gray 1px;
@@ -430,6 +430,12 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
 }
 
+.week {
+	font-weight: 100;
+	font-size: 30px;
+	text-align: center;
+}
+
 .event {
 	background-color: #ffa0a0;
 }
@@ -443,18 +449,22 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
 }
 
+.input span {
+	margin: 0 0 0 5px;
+}
+
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
 
-#input {
-	min-width: 150px;
-	margin: 5px;
+.input {
+	min-width: 130px;
 }
 
 .filter input {
 	margin: 0 0 0 20px;
 }
+
 .separator {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
