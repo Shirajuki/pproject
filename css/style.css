@@ -547,7 +547,6 @@ div ul li a:not(.abtn):hover::before {
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
 .news_page_content{
-    background-color: rgba(255,255,255,0.8);
     padding: 10px;
     margin: 50px auto;
     width: 92%;
