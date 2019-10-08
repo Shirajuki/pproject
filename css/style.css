@@ -316,7 +316,7 @@ div ul li a:not(.abtn):hover::before {
   /* padding: 35px; */
 }
 #event h1{
-  margin: 20px;
+  margin: 20px 4%;
   text-align: center;
   border-bottom: 2px black solid;
   padding: 20px;
