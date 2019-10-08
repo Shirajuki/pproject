@@ -254,7 +254,7 @@ p {
 }
 /* NAV HOVER */
 li>a:hover {
-  color: var(--theme-color1);
+  color: white;
   cursor: pointer;
   -webkit-transition: color 0.3s;
   transition: color 0.3s;
@@ -374,7 +374,7 @@ div ul li a:not(.abtn):hover::before {
   opacity: 1;
 }
 #event_nav .event_nav_drop ul li a:hover{
-  color: #f1f1f1
+  color: #f1f1f1;
 }
 
 /* QUERY */
@@ -520,6 +520,7 @@ div ul li a:not(.abtn):hover::before {
 #input {
 	min-width: 150px;
 	margin: 5px;
+}
 
 .input span {
 	margin: 0 0 0 5px;
@@ -542,19 +543,10 @@ div ul li a:not(.abtn):hover::before {
 	border-top: solid gray 1px;
 }
 
-
-
-
-
-
-
-
-
-
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
 .news_page_content{
-    background: #fff;
+    background-color: rgba(255,255,255,0.95);
     padding: 10px;
     margin: 50px auto;
     width: 92%;
@@ -573,8 +565,6 @@ div ul li a:not(.abtn):hover::before {
   display: flex;
   flex-direction: column;
 }
-
-
 /* NYHETSOVERSKRIFTENE */
 .nyhet_heading{
   /*border: 1px solid blue;*/
@@ -585,13 +575,6 @@ div ul li a:not(.abtn):hover::before {
   font-size: 0.7em;
   /*border: 1px solid pink;*/
 }
-
-
-
-
-
-
-
 /* SIDENAV */
 .sidenav__inner{
   /*border: 1px solid black;
@@ -604,7 +587,7 @@ div ul li a:not(.abtn):hover::before {
   margin-top: 10px;
   margin-left: 0.7%;
   color: #2d6a37;
-  background-color: #f6f6f6;
+  background-color: rgba(246,246,246,0.95);
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3)
@@ -630,25 +613,10 @@ div ul li a:not(.abtn):hover::before {
 .sidenav__inner a:hover{
   color: lightgrey;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
 .form_page_content{
-  background: #fff;
+  background-color: rgba(255,255,255,0.95);
   width: 50%;
 }
 .form_page_content h1{
@@ -708,6 +676,7 @@ textarea{
   flex-direction: column;
   position: relative;
 
+  background-color: rgba(255,255,255,0.95);
   width: 42%;
   margin: 40px auto;
   padding: 20px;
