@@ -42,7 +42,7 @@
 						<div class="input"><input type="checkbox" name="test" value="test"><span>Gløshaugen</span></div>
 						<div class="input"><input type="checkbox" name="test" value="test"><span>Location1</span></div>
 						<div class="input"><input type="checkbox" name="test" value="test"><span>Location2</span></div>
-						
+
 					</form>
 					<form class="filter">
 						<div class="input" style="min-width: 50px;">Type:</div>
@@ -54,7 +54,7 @@
 				<div class="calendar">
 					<p>05.10</p>
 					<ul>
-						<li class="event">Event... *Short title explaining the event* *The title is a link to the 
+						<li class="event">Event... *Short title explaining the event* *The title is a link to the
 						equivalent event post on the event.html page* <p>*Location and Time*</p></li>
 						<li class="event">Welcome party for new members! Free pizza... <p>Solsiden</br>Time: 14.15</p></li>
 						<li class="training">Training: drifting. Instructor: Harald Gress<p>Gløshaugen</br>Time: 18.00</p></li>
@@ -123,35 +123,5 @@
     <a href="#">
       <button id="scrollUpBtn" title="Go to top" style="opacity: 0; pointer-events: none;">▲</button>
     </a>
-    <script type="text/javascript">
-    // Mobile Responsive dropdown navigation
-    // function myFunction() {
-    //   setTimeout(() => {
-    //     document.getElementById('mobile').classList.toggle('responsive');
-    //     document.getElementById('mobile').classList.toggle('hidden');
-    //   },200)
-    // }
-    // Sticky navigation
-    const navbar = document.getElementById('header');
-    function stickyNavigation() {
-        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
-        navbar.classList.add("sticky");
-    }
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = scrollFunction;
-    function scrollFunction() {
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            document.getElementById("scrollUpBtn").style.opacity = 1;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
-            stickyNavigation();
-        } else {
-            document.getElementById("scrollUpBtn").style.opacity = 0;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
-            // document.body.style.paddingTop = '70px';
-            navbar.classList.remove("sticky");
-        }
-    }
-    </script>
-
-
+    <script src="js/navscroll.js" charset="utf-8"></script>
 </body></html>

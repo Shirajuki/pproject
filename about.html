@@ -64,35 +64,5 @@
     <a href="#">
       <button id="scrollUpBtn" title="Go to top" style="opacity: 0; pointer-events: none;">▲</button>
     </a>
-    <script type="text/javascript">
-    // Mobile Responsive dropdown navigation
-    // function myFunction() {
-    //   setTimeout(() => {
-    //     document.getElementById('mobile').classList.toggle('responsive');
-    //     document.getElementById('mobile').classList.toggle('hidden');
-    //   },200)
-    // }
-    // Sticky navigation
-    const navbar = document.getElementById('header');
-    function stickyNavigation() {
-        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
-        navbar.classList.add("sticky");
-    }
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = scrollFunction;
-    function scrollFunction() {
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            document.getElementById("scrollUpBtn").style.opacity = 1;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
-            stickyNavigation();
-        } else {
-            document.getElementById("scrollUpBtn").style.opacity = 0;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
-            // document.body.style.paddingTop = '70px';
-            navbar.classList.remove("sticky");
-        }
-    }
-    </script>
-
-
+    <script src="js/navscroll.js" charset="utf-8"></script>
 </body></html>
