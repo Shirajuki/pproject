@@ -19,7 +19,24 @@ console.log(calendarHomepage,eventsHomepage);
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   let yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
-};*/
+};*/for (let i = 0; i < calendar.length; i++) {
+		date = new Date(calendar[i].dato)
+		if (date.getWeekNumber() != week) {
+			week = date.getWeekNumber()
+			string += `</ul></div>`
+			string += `<h2 class="week">Week ${week}</h2>`
+		}
+		if (date.getDate() != day || date.getMonth() != month) {
+			day = date.getDate()
+			string += `<div class="calendar"><p>${date.getMonth()}/${day}</p><ul>`
+		}
+		string += `<li class="${calendar[i].type}">${calendar[i].informasjon}`
+		+ `<p>Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
+		if (date.getDate() != day) {
+			string += `</ul></div>`
+		}
+		month = date.getMonth()
+	}
 document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toLocaleDateString("nb-NO")}`;
 // Post calendar
 calendarHomepage.innerHTML = "";

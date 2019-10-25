@@ -36,18 +36,15 @@
         <h1 style="text-align: center; font-size: 50px; text-align: center; margin-bottom: 25px; border-bottom: 1.5px solid black;">Calendar</h1>
 				<p style="font-weight: 900;">Filter:</p>
 				<div id="filter-wrap">
-					<form class="filter">
+					<div id="filter">
 						<div class="input" style="min-width: 50px;">Location:</div>
-						<div class="input"><input type="checkbox" name="test" value="test"><span>Gløshaugen</span></div>
-						<div class="input"><input type="checkbox" name="test" value="test"><span>Location1</span></div>
-						<div class="input"><input type="checkbox" name="test" value="test"><span>Location2</span></div>
-
-					</form>
-					<form class="filter">
+						<div class="input"><input id="gloeshaugenCheckbox" type="checkbox" name="test" value="test"><label for="gloeshaugenCheckbox">Gløshaugen</label for=""></div>
+						<div class="input"><input id="solsidenCheckbox" type="checkbox" name="test" value="test"><label for="solsidenCheckbox">Solsiden</label for=""></div>
+						<div class="input"><input id="tyholtCheckbox" type="checkbox" name="test" value="test"><label for="tyholtCheckbox">Tyholt</label for=""></div>
 						<div class="input" style="min-width: 50px;">Type:</div>
-						<div class="input"><input id="practiceCheckbox" type="checkbox" name="test" checked><span style="border-bottom: solid #a0dda0 3px;">Training</span></div>
-						<div class="input"><input id="eventCheckbox" type="checkbox" name="test" checked><span style="border-bottom: solid #b0b0ff 3px;">Event</span></div>
-					</form>
+						<div class="input"><input id="practiceCheckbox" type="checkbox" name="test" checked><label for="practiceCheckbox" style="border-bottom: solid #a0dda0 3px;">Practice</label for=""></div>
+						<div class="input"><input id="eventCheckbox" type="checkbox" name="test" checked><label for="eventCheckbox" style="border-bottom: solid #b0b0ff 3px;">Event</label for=""></div>
+					</div>
 				</div>
 				
 				<div id="calendarElements">
@@ -68,7 +65,7 @@
     </a>
     <script src="js/navscroll.js" charset="utf-8"></script>
     <script src="js/calendar.js" charset="utf-8"></script>
-		<script>loadCalendar()</script>
+		<script>loadCalendar(calendar);checkboxes()</script>
 </body></html>
 
 <!--<h2 class="week">Week 40</h2>

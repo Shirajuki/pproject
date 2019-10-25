@@ -511,8 +511,7 @@ div ul li a:not(.abtn):hover::before {
 	display: none;
 	background-color: #b0ddb0;
 }
-.filter {
-	display: flex;
+#filter {
 	padding: 10px;
 }
 
@@ -524,7 +523,7 @@ div ul li a:not(.abtn):hover::before {
 	margin: 5px;
 }
 
-.input span {
+#filter label {
 	margin: 0 0 0 5px;
 }
 
@@ -536,7 +535,7 @@ div ul li a:not(.abtn):hover::before {
 	min-width: 130px;
 }
 
-.filter input {
+#filter input {
 	margin: 0 0 0 20px;
 }
 
@@ -767,9 +766,6 @@ textarea{
     margin: 5% auto;
   }
 	#contact {
-		flex-direction: column;
-	}
-	.filter {
 		flex-direction: column;
 	}
 }
