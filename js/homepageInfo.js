@@ -1,14 +1,25 @@
+window.onload = () => {
+  setTimeout(() => {
+    document.getElementById("loader").style.visibility = "hidden";
+    document.getElementById("loader").style.opacity = 0;
+    document.getElementById("main").style.display = "block";
+  },300)
+  setTimeout(() => {
+    document.getElementById("loader").style.display = "none";
+  },800)
+}
+
 const calendarHomepage = document.getElementById('calendarHomepage');
 const eventsHomepage = document.getElementById('eventsHomepage');
 console.log(calendarHomepage,eventsHomepage);
 // Calculate week number
-Date.prototype.getWeekNumber = function() {
+/*Date.prototype.getWeekNumber = function() {
   let d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
   let dayNum = d.getUTCDay() || 7;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   let yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
-};
+};*/
 document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toLocaleDateString("nb-NO")}`;
 // Post calendar
 calendarHomepage.innerHTML = "";

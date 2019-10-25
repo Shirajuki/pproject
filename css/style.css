@@ -5,13 +5,16 @@
   --theme-color: #2d6a37;
   --theme-color1: #d10000;
 }
+
 * {
   margin: 0;
   padding: 0;
 }
+
 h1 {
   margin: 0;
 }
+
 #scrollUpBtn {
   display: block;
   position: fixed;
@@ -563,7 +566,8 @@ div ul li a:not(.abtn):hover::before {
 .event {
 	background-color: #c0c0ff;
 }
-.training {
+.practice {
+	display: none;
 	background-color: #b0ddb0;
 }
 .filter {
@@ -589,8 +593,8 @@ div ul li a:not(.abtn):hover::before {
 
 .input {
 	min-width: 130px;
-
 }
+
 .filter input {
 	margin: 0 0 0 20px;
 }
