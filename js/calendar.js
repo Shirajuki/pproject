@@ -9,11 +9,8 @@ const calendar = [
     link:"2019-10-05-welcome-party",
     tag: "social"
   },
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-11", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar() { // !!Does not check for the same date in different years!! (help)
@@ -32,8 +29,9 @@ function loadCalendar() { // !!Does not check for the same date in different yea
 			string += `<h2 class="week">Week ${week}</h2>`
 		}
 		if (date.getDate() != day || date.getMonth() != month) {
-			day = date.getDate()
-			string += `<div class="calendar"><p>${date.getMonth()}/${day}</p><ul>`
+			
+			
+			string += `<div class="calendar"><p>${date.getMonth()}/${date.getDate()}</p><ul>`
 		}
 		string += `<li class="${calendar[i].type}">${calendar[i].informasjon}`
 		+ `<p>Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
@@ -42,6 +40,8 @@ function loadCalendar() { // !!Does not check for the same date in different yea
 		}
 		month = date.getMonth()
 	}
+	day = date.getDate()
+	
 	calendarId.innerHTML += string
 }
 
