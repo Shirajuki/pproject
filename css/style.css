@@ -618,11 +618,11 @@ div ul li a:not(.abtn):hover::before {
 }
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
-.registrationform_page_content{
+#registrationform_page_content{
   background-color: rgba(255,255,255,0.8);
   width: 50%;
 }
-.registrationform_page_content h1{
+#registrationform_page_content h1{
   color: #2d6a37;
 }
 .skjema{
@@ -678,6 +678,7 @@ textarea{
   align-items: center;
   flex-direction: column;
   position: relative;
+  text-align: center;
 
   background-color: rgba(255,255,255,0.8);
   width: 42%;
