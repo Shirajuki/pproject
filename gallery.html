@@ -31,29 +31,22 @@
         </div>
       </nav>
     </header>
-    <main>
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <div>
+        <a id="kryss">&times;</a>
+        <div id="imageZoom">
+          <img class='img' id='zoom' src="https://dummyimage.com/800x500/000/fff">
+        </div>
+      </div>
+    </div>
+    <main id="main">
       <section>
         <article>
           <h1 style="text-align: center; font-size: 50px; text-align: center; margin-bottom: 25px; border-bottom: 1.5px solid black;">Gallery</h1>
           <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
           <div class="gallery">
-            <div class="">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
-              <img src="https://dummyimage.com/150x150/000/fff">
+            <div id="imageGallery">
               <img src="https://dummyimage.com/150x150/000/fff">
             </div>
           </div>
@@ -76,34 +69,7 @@
     <a href="#">
       <button id="scrollUpBtn" title="Go to top">▲</button>
     </a>
-    <script type="text/javascript">
-    // Mobile Responsive dropdown navigation
-    // function myFunction() {
-    //   setTimeout(() => {
-    //     document.getElementById('mobile').classList.toggle('responsive');
-    //     document.getElementById('mobile').classList.toggle('hidden');
-    //   },200)
-    // }
-    // Sticky navigation
-    const navbar = document.getElementById('header');
-    function stickyNavigation() {
-        // document.body.style.paddingTop = navbar.offsetHeight + 'px';
-        navbar.classList.add("sticky");
-    }
-    // When the user scrolls down 20px from the top of the document, show the button
-    window.onscroll = scrollFunction;
-    function scrollFunction() {
-        if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
-            document.getElementById("scrollUpBtn").style.opacity = 1;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "all";
-            stickyNavigation();
-        } else {
-            document.getElementById("scrollUpBtn").style.opacity = 0;
-            document.getElementById("scrollUpBtn").style.pointerEvents = "none";
-            // document.body.style.paddingTop = '70px';
-            navbar.classList.remove("sticky");
-        }
-    }
-    </script>
+    <script src="js/navscroll.js" charset="utf-8"></script>
+    <script src="js/imageGallery.js" charset="utf-8"></script>
   </body>
 </html>
