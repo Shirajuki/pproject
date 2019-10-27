@@ -34,10 +34,10 @@ function loadCalendar(calendar) { // !!Does not check for the same date in diffe
 		}
 		if (date.getDate() != day || date.getMonth() != month) {
 			day = date.getDate()
-			string += `<div class="calendar"><p>${date.getMonth()}/${day}</p><ul>`
+			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth()}/${day}</div></p><ul>`
 		}
-		string += `<li class="${calendar[i].type}">${calendar[i].informasjon}`
-		+ `<p>Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
+		string += `<li class="${calendar[i].type}"><p>${calendar[i].informasjon}</p>`
+		+ `<p class="timeAndLocation">Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
 		if (date.getDate() != day) {
 			string += `</ul></div>`
 		}
