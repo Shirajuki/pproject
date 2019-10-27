@@ -718,6 +718,7 @@ textarea{
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
 
+/*CONTACT*/
 #contact {
 	margin: 0;
 	text-align: center;
@@ -735,6 +736,18 @@ textarea{
 	text-align: center;
 	font-size: 50px;
 	margin-bottom: 20px;
+}
+
+#contart{
+  width: 60%;
+  padding: 4%;
+}
+
+#contart h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid black;
 }
 
 /*OLGA SIN ABOUT*/
@@ -871,6 +884,12 @@ textarea{
   #cal {
     width: 80%;
   }
+
+  #contart{
+    width:80%;
+
+  }
+
 }
   /* Bigger than Phones(tablet) */
   @media only screen and (min-width: 750px) {
