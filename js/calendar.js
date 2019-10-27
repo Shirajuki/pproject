@@ -54,33 +54,30 @@ Date.prototype.getWeekNumber = function() {
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
 
-function isPractice(type) {
-	return type.type != "practice"
-} 
+function checkType(object) {
+  return function(element) {
+		if ((object.id).includes(element.type) == true) {
+			return false
+		} else {
+			return true
+		}
+  }
+}
 
-function isEvent(type) {
-	return type.type != "event"
-} 
 
 function checkboxes() {
 	let filter = document.querySelectorAll("#filter div input")
 	console.log(filter)
-	for (let i = 0; i < filter.length; i++) {
+	let newCalendar = calendar
+ 	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
 		  if (this.checked == false) {
-				if (this.id == "practiceCheckbox") {
-					loadCalendar(calendar.filter(isPractice))
-				}
-				if (this.id == "eventCheckbox") {
-					loadCalendar(calendar.filter(isEvent))
-				}
+				newCalendar = newCalendar.filter(checkType(this))
 			} else {
-				if (this.id == "practiceCheckbox") {
-					loadCalendar(calendar)
-				}
-				if (this.id == "eventCheckbox") {
-					loadCalendar(calendar)
-				}
+				newCalendar = calendar
+			}
+			if (newCalendar.length > 0) {
+				loadCalendar(newCalendar)
 			}
 		})
 	}
