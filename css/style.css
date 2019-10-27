@@ -469,6 +469,10 @@ div ul li a:not(.abtn):hover::before {
 }
 
 /* ASD */
+#cal{
+  width:60%;
+  padding:4%;
+}
 .calendar {
 	display: flex;
 	justify-content: space-between;
@@ -837,6 +841,10 @@ textarea{
 	.calendar ul {
 		width: 100%;
 	}
+
+  #cal {
+    width: 70%;
+  }
 }
 /*Phones?*/
 @media (max-width: 660px) {
@@ -858,6 +866,10 @@ textarea{
 
   .inputflex{
     margin-bottom: 25px;
+  }
+
+  #cal {
+    width: 80%;
   }
 }
   /* Bigger than Phones(tablet) */
