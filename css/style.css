@@ -744,7 +744,11 @@ textarea{
   max-height: 45%;
   border-radius: 50%;
 }
-
+#about article{
+  width:60%;
+  padding:4%;
+  background-color: rgba(255, 255, 255, 0.90);
+}
 /* QUERY la vær nederst*/
 @media (max-width: 850px) {
   .dropdown-content {
@@ -775,7 +779,22 @@ textarea{
 	#contact {
 		flex-direction: column;
 	}
+  #bilder {
+    flex-direction:column;
+    max-width: 100%;
+    align-items: center;
+
+  }
+  #bilder img{
+    margin-top: 20px;
+    max-width: 50%;
+    max-height: 50%;
+  }
+  #about article{
+    width:80%;
+  }
 }
+/*Phones?*/
 @media (max-width: 660px) {
   #title>h1 {
     font-size: 1.7rem;
@@ -786,18 +805,10 @@ textarea{
   #title {
     padding: 10% 20%;
   }
-  #bilder {
-    flex-direction:column;
-    max-width: 100%;
-    align-items: center;
-
+  #about p{
+    font-size: 0.9em;
   }
-  #bilder img{
-    margin-top: 20px;
-    max-width: 60%;
-    max-height: 60%;
-  }
-  }
+}
   /* Bigger than Phones(tablet) */
   @media only screen and (min-width: 750px) {
     .img-grid {
