@@ -10,10 +10,10 @@ const calendar = [
     tag: "social"
   },
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
+  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar(calendar) { // !!Does not check for the same date in different years!! (help)
@@ -55,7 +55,7 @@ Date.prototype.getWeekNumber = function() {
 
 function checkType(object) {
   return function(element) {
-		if ((object.id).includes(element.type) == true) {
+		if (object.id.includes(element.type) == true || object.id.includes(element.sted)) {
 			return false
 		} else {
 			return true
@@ -70,14 +70,14 @@ function checkboxes() {
 	let newCalendar = calendar
  	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
-		  if (this.checked == false) {
-				newCalendar = newCalendar.filter(checkType(this))
-			} else {
-				newCalendar = calendar
+			newCalendar = calendar
+			for (let j = 0; j < filter.length; j++) {
+				if (filter[j].checked == false) {
+					newCalendar = newCalendar.filter(checkType(filter[j]))
+					console.log(newCalendar)
+				}
 			}
-			if (newCalendar.length > 0) {
-				loadCalendar(newCalendar)
-			}
+		  loadCalendar(newCalendar)
 		})
 	}
 }
