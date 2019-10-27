@@ -26,7 +26,6 @@ function loadCalendar(calendar) { // !!Does not check for the same date in diffe
 	let string = ''
 	for (let i = 0; i < calendar.length; i++) {
 		date = new Date(calendar[i].dato)
-	
 		if (date.getWeekNumber() != week) {
 			week = date.getWeekNumber()
 			string += `</ul></div>`
