@@ -573,10 +573,7 @@ div ul li a:not(.abtn):hover::before {
 	margin: 0 0 0 20px;
 }
 
-.separator {
-	margin: 15px 0 15px 0;
-	border-top: solid gray 1px;
-}
+
 
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
@@ -720,16 +717,15 @@ textarea{
 
 /*CONTACT*/
 #contact {
-	margin: 0;
 	text-align: center;
 	display: flex;
-	position: relative;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 #contact article {
 	margin: 15px;
 	padding: 15px;
-	min-width: 150px;
 }
 
 #contact article p {
@@ -748,6 +744,11 @@ textarea{
   font-size: 50px;
   margin-bottom: 25px;
   border-bottom: 1.5px solid black;
+}
+
+.separator {
+	margin: 15px 0 15px 0;
+	border-top: solid gray 1px;
 }
 
 /*OLGA SIN ABOUT*/
@@ -819,7 +820,17 @@ textarea{
   }
 	#contact {
 		flex-direction: column;
+    align-items: center;
 	}
+
+  #contact article{
+    width: 80%;
+  }
+
+  #contarticle{
+    width:70%;
+  }
+
   #bilder {
     flex-direction:column;
     max-width: 100%;
