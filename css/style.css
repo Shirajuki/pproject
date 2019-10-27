@@ -537,14 +537,22 @@ div ul li a:not(.abtn):hover::before {
 
 #filter {
 	padding: 10px;
+  display: flex;
+  flex-direction: row;
 }
 
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
+
+.inputflex{
+  margin-right: 50px;
+}
 #input {
 	min-width: 150px;
 	margin: 5px;
+  display:flex;
+  justify-content: row;
 }
 
 #filter label {
