@@ -34,10 +34,10 @@ function loadCalendar(calendar) { // !!Does not check for the same date in diffe
 		}
 		if (date.getDate() != day || date.getMonth() != month) {
 			day = date.getDate()
-			string += `<div class="calendar"><p>${date.getMonth()}/${day}</p><ul>`
+			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth()}/${day}</div></p><ul>`
 		}
-		string += `<li class="${calendar[i].type}">${calendar[i].informasjon}`
-		+ `<p>Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
+		string += `<li class="${calendar[i].type}"><p>${calendar[i].informasjon}</p>`
+		+ `<p class="timeAndLocation">Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
 		if (date.getDate() != day) {
 			string += `</ul></div>`
 		}
@@ -54,33 +54,30 @@ Date.prototype.getWeekNumber = function() {
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
 
-function isPractice(type) {
-	return type.type != "practice"
-} 
+function checkType(object) {
+  return function(element) {
+		if ((object.id).includes(element.type) == true) {
+			return false
+		} else {
+			return true
+		}
+  }
+}
 
-function isEvent(type) {
-	return type.type != "event"
-} 
 
 function checkboxes() {
 	let filter = document.querySelectorAll("#filter div input")
 	console.log(filter)
-	for (let i = 0; i < filter.length; i++) {
+	let newCalendar = calendar
+ 	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
 		  if (this.checked == false) {
-				if (this.id == "practiceCheckbox") {
-					loadCalendar(calendar.filter(isPractice))
-				}
-				if (this.id == "eventCheckbox") {
-					loadCalendar(calendar.filter(isEvent))
-				}
+				newCalendar = newCalendar.filter(checkType(this))
 			} else {
-				if (this.id == "practiceCheckbox") {
-					loadCalendar(calendar)
-				}
-				if (this.id == "eventCheckbox") {
-					loadCalendar(calendar)
-				}
+				newCalendar = calendar
+			}
+			if (newCalendar.length > 0) {
+				loadCalendar(newCalendar)
 			}
 		})
 	}
