@@ -819,13 +819,13 @@ textarea{
   #about article{
     width:80%;
   }
-	
+
 	.calendar ul li {
-		flex-direction: column; 
+		flex-direction: column;
 	}
-	
+
 	.calendar {
-		flex-direction: column; 
+		flex-direction: column;
 	}
 	.calendarDate > p {
 		position: static;
@@ -853,6 +853,13 @@ textarea{
   }
   #about p{
     font-size: 0.9em;
+  }
+  #filter{
+    flex-direction: column;
+  }
+
+  .inputflex{
+    margin-bottom: 25px;
   }
 }
   /* Bigger than Phones(tablet) */
