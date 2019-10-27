@@ -488,12 +488,14 @@ div ul li a:not(.abtn):hover::before {
 	margin-right: 30px;
 	border-right: solid gray 1px;
 	text-align: center;
-
-
+	position: relative;
 }
 
 .calendarDate >	p {
 	font-size: 30px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 .calendar ul {
@@ -816,6 +818,10 @@ textarea{
 	
 	.calendar {
 		flex-direction: column; 
+	}
+	.calendarDate > p {
+		position: static;
+		transform: none;
 	}
 	.calendarDate {
 		width: 100%;
