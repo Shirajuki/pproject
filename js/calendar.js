@@ -10,38 +10,45 @@ const calendar = [
     tag: "social"
   },
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-13", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-13", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar(calendar) { // !!Does not check for the same date in different years!! (help)
 	const calendarId = document.getElementById("calendarElements")
-	calendarId.innerHTML = ""
+	calendarId.innerHTML = ''
 	let date = ''
 	let month = -1
 	let week = -1
 	let day = -1
 	let string = ''
+	let change = -1
 	for (let i = 0; i < calendar.length; i++) {
 		date = new Date(calendar[i].dato)
 		if (date.getWeekNumber() != week) {
 			week = date.getWeekNumber()
-			string += `</ul></div>`
+			if (string != '') {
+				string += `</ul></div>`
+			}
 			string += `<h2 class="week">Week ${week}</h2>`
 		}
 		if (date.getDate() != day || date.getMonth() != month) {
 			day = date.getDate()
-			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth()}/${day}</div></p><ul>`
+			month = date.getMonth()
+			if (change === 1) {
+				string += `</ul></div>`
+			}
+			
+			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth() + 1}/${day}</p></div><ul>`
+			change = change*-1
 		}
 		string += `<li class="${calendar[i].type}"><p>${calendar[i].informasjon}</p>`
 		+ `<p class="timeAndLocation">Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
-		if (date.getDate() != day) {
-			string += `</ul></div>`
-		}
 		month = date.getMonth()
 	}
+	string += `</ul></div>`
 	calendarId.innerHTML += string
 }
 
