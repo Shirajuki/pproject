@@ -625,9 +625,10 @@ div ul li a:not(.abtn):hover::before {
 /* NYHETER: INNHOLD */
 .nyheter_innhold{
   position: relative;
-  margin-left: 20%;
+  left:20%;
   margin-top: 10px;
-  width: 79.5%;
+  margin-left: 2%;
+  width: 80%;
 }
 .nyhetsartikkel{
   display: flex;
@@ -635,18 +636,15 @@ div ul li a:not(.abtn):hover::before {
 }
 /* NYHETSOVERSKRIFTENE */
 .nyhet_heading{
-  /*border: 1px solid blue;*/
   color: #2d6a37;
 }
 .span_date{
   color: black;
   font-size: 0.7em;
-  /*border: 1px solid pink;*/
+
 }
 /* SIDENAV */
 .sidenav__inner{
-  /*border: 1px solid black;
-  background: lightblue;*/
   display: flex;
   flex-direction: column;
   position: fixed;
