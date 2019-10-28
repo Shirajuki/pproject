@@ -310,6 +310,14 @@ nav button:hover, nav button:active {
 }
 /* TEXT */
 /* ARTICLES */
+.pageTitle {
+	text-align: center;
+	font-size: 50px;
+	text-align: center;
+	margin-bottom: 25px;
+	border-bottom: 1.5px solid black;
+}
+
 section {
   width: 100%;
   display: flex;
