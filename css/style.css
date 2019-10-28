@@ -774,23 +774,27 @@ textarea{
 	text-align: center;
 	display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #contact article {
 	margin: 15px;
 	padding: 15px;
+  min-width: 168.71px;
 }
 
-#contact article p {
-	text-align: center;
-	font-size: 50px;
-	margin-bottom: 20px;
+.contacticon{
+  font-size: 50px;
+  margin-bottom: 20px;
 }
 
 #contarticle{
-  width: 60%;
+  width: 75%;
   padding: 4%;
+}
+.contactlabel{
+  font-size: 30px;
+  margin:0;
 }
 
 #contarticle h1{
