@@ -13,7 +13,7 @@ const calendar = [
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
   {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar(calendar) { // !!Does not check for the same date in different years!! (help)
@@ -62,7 +62,6 @@ function checkType(object) {
 		}
   }
 }
-
 
 function checkboxes() {
 	let filter = document.querySelectorAll("#filter div input")
