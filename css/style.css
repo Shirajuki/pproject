@@ -479,8 +479,6 @@ div ul li a:not(.abtn):hover::before {
 	width: 100%;
 	padding: 10px;
 	position: relative;
-	border-top: solid gray 1px;
-	border-bottom: solid gray 1px;
 	box-sizing: border-box;
 }
 
@@ -519,6 +517,9 @@ div ul li a:not(.abtn):hover::before {
 	font-size: 30px;
 	text-align: center;
 	margin: 20px;
+	border-top: solid gray 1px;
+	border-bottom: solid gray 1px;
+	padding: 10px;
 }
 
 .event {
