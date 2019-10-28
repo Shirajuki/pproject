@@ -40,7 +40,6 @@ function loadCalendar(calendar) { // !!Does not check for the same date in diffe
 			if (change === 1) {
 				string += `</ul></div>`
 			}
-			
 			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth() + 1}/${day}</p></div><ul>`
 			change = change*-1
 		}
@@ -87,10 +86,3 @@ function checkboxes() {
 		})
 	}
 }
-
-
-
-
-
-
-
