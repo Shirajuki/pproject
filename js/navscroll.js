@@ -1,10 +1,10 @@
 // Mobile Responsive dropdown navigation - JONNY CAN FIX THIS!
-// function myFunction() {
-//   setTimeout(() => {
-//     document.getElementById('mobile').classList.toggle('responsive');
-//     document.getElementById('mobile').classList.toggle('hidden');
-//   },200)
-// }
+function myFunction() {
+  setTimeout(() => {
+    document.getElementById('mobile').classList.toggle('responsivemb');
+    // document.getElementById('mobile').classList.toggle('hidden');
+  },200)
+}
 // Sticky navigation
 const navbar = document.getElementById('header');
 // When the user scrolls down 20px from the top of the document, show the button
