@@ -332,6 +332,13 @@ i {
   font-family: arial;
 }
 
+article h1{
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 25px;
+  border-bottom: 1.5px solid black;
+}
+
 article{
   background-color: rgba(255,255,255,0.9);
   position: relative;
@@ -513,7 +520,11 @@ div ul li a:not(.abtn):hover::before {
 #event_nav .event_nav_drop ul li a:hover{
   color: #f1f1f1;
 }
-
+#liste li{
+  margin-left: 10px;
+  margin-right: 10px;
+  /*li arva margin fra atricle li selectoren lenger opp så d bi skeivt*/
+}
 /* ASD */
 #cal{
   width:60%;
@@ -762,57 +773,43 @@ textarea{
   margin-bottom: 20px;
 }
 
-#contarticle{
-  width: 75%;
-  padding: 4%;
-}
 .contactlabel{
   font-size: 30px;
   margin:0;
-}
-
-#contarticle h1{
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 25px;
-  border-bottom: 1.5px solid black;
 }
 
 .separator {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
-
-/*OLGA SIN ABOUT*/
-article h1{
-  text-align: center;
-  font-size: 50px;
-  margin-bottom: 25px;
-  border-bottom: 1.5px solid black;
+#contarcticle{
+  /*fordi e får ikke til å skaler bakgrunnen med flex tingan så dem kjem utafor*/
+  width:75%;
 }
-#artikler h2{
+/*OLGA SIN ABOUT*/
+#aboutarticles h2{
   text-align: center;
   margin-bottom: 25px;
   margin-top: 25px;
 }
 
-#artikler p{
+#abourtarticles p{
   margin-bottom: 25px;
 }
-#artikler{
+#aboutarticles{
   display: flex;
   flex-direction: column;
   max-width: 90%;
   margin:auto;
 }
-#bilder{
+#images{
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   max-width: 80%;
   margin:auto;
 }
-#bilder img{
+#images img{
   margin-top: 50px;
   max-width: 45%;
   max-height: 45%;
@@ -859,22 +856,22 @@ article h1{
     width: 80%;
   }
 
-  #contarticle{
-    width:70%;
-  }
-
-  #bilder {
+  #images {
     flex-direction:column;
     max-width: 100%;
     align-items: center;
 
   }
-  #bilder img{
+  #images img{
     margin-top: 20px;
     max-width: 50%;
     max-height: 50%;
   }
   #about article{
+    width:80%;
+  }
+
+  .smallarticle{
     width:80%;
   }
 
@@ -898,9 +895,6 @@ article h1{
 		width: 100%;
 	}
 
-  #cal {
-    width: 70%;
-  }
 }
 /*Phones?*/
 @media (max-width: 660px) {
@@ -922,15 +916,6 @@ article h1{
 
   .inputflex{
     margin-bottom: 25px;
-  }
-
-  #cal {
-    width: 80%;
-  }
-
-  #contarticle{
-    width:80%;
-
   }
 
 }
