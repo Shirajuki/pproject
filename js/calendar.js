@@ -12,14 +12,14 @@ const calendar = [
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-13", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-11-13", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
-function loadCalendar(calendar) { // !!Does not check for the same date in different years!! (help)
+function loadCalendar(calendar) {
 	const calendarId = document.getElementById("calendarElements")
 	calendarId.innerHTML = ''
 	let date = ''
+	let year = -1
 	let month = -1
 	let week = -1
 	let day = -1
@@ -34,13 +34,14 @@ function loadCalendar(calendar) { // !!Does not check for the same date in diffe
 			}
 			string += `<h2 class="week">Week ${week}</h2>`
 		}
-		if (date.getDate() != day || date.getMonth() != month) {
+		if (date.getDate() != day || date.getMonth() != month || date.getFullYear() != year) {
 			day = date.getDate()
 			month = date.getMonth()
+			year = date.getFullYear() 
 			if (change === 1) {
 				string += `</ul></div>`
 			}
-			string += `<div class="calendar"><div class="calendarDate"><p>${date.getMonth() + 1}/${day}</p></div><ul>`
+			string += `<div class="calendar"><div class="calendarDate"><p>${month + 1}/${day}</p></div><ul>`
 			change = change*-1
 		}
 		string += `<li class="${calendar[i].type}"><p>${calendar[i].informasjon}</p>`
