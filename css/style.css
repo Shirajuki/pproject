@@ -888,6 +888,7 @@ textarea{
 	}
 	.calendarDate {
 		width: 100%;
+    margin:auto;
 		border-right: none;
 		border-bottom: solid gray 1px;
 	}
@@ -910,14 +911,10 @@ textarea{
   #about p{
     font-size: 0.9em;
   }
-  #filter{
-    flex-direction: column;
-  }
 
   .inputflex{
     margin-bottom: 25px;
   }
-
 }
   /* Bigger than Phones(tablet) */
   @media only screen and (min-width: 750px) {
@@ -925,7 +922,7 @@ textarea{
       grid-template-columns: repeat(2, 1fr);
     }
   }
-  /* Bigger than Phones(laptop / desktop) */
+  /* Bigge  r than Phones(laptop / desktop) */
   @media only screen and (min-width: 970px) {
     .img-grid {
       grid-template-columns: repeat(6, 1fr);
