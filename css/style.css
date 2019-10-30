@@ -546,6 +546,12 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
 	position: relative;
 	box-sizing: border-box;
+	animation: fade 0.5s linear;
+}
+
+@keyframes fade {
+	from {opacity: 0}
+	to {opacity: 1}
 }
 
 .calendarDate {
