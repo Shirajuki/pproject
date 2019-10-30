@@ -1,8 +1,8 @@
 const calendar = [
-  { 
+  {
     type: "event",
     title: "Welcome Party!",
-    informasjon: "Welcome party for new members! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", 
+    informasjon: "Welcome party for new members! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 		dato: "2019-10-05",
     tid: "14:15",
     sted: "Solsiden",
@@ -12,7 +12,7 @@ const calendar = [
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-07", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
+  {type: "event", title: "Drifting fun!", informasjon: "Drifting. Instructor: Harald Gress Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar(calendarList) {
@@ -39,7 +39,7 @@ function loadCalendar(calendarList) {
 		if (date.getDate() != day || date.getMonth() != month || date.getFullYear() != year) {
 			day = date.getDate()
 			month = date.getMonth()
-			year = date.getFullYear() 
+			year = date.getFullYear()
 			if (change === 1) {
 				string += `</ul></div>`
 			}

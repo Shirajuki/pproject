@@ -587,13 +587,16 @@ div ul li a:not(.abtn):hover::before {
 	display: none;
 	background-color: #b0ddb0;
 }
-
+.calendar ul li p:first-child {
+  /* width: 10px */
+}
 .timeAndLocation {
-	background-color: rgba(255,255,255,0.8);
-	padding: 0 10px 0 10px;
-	min-width: 100px;
-	margin: 10px;
-	height: 100%;
+  background-color: rgba(255,255,255,0.8);
+  padding: 0 10px 0 10px;
+  /* width: 50%; */
+  min-width: 180px;
+  margin: 10px;
+  height: 100%;
 }
 
 #filter {
@@ -660,7 +663,7 @@ div ul li a:not(.abtn):hover::before {
   display: flex;
   flex-direction: column;
   position: fixed;
-  height: 47.5%;
+  /* height: 47.5%; */
   width: 15%;
   margin-top: 10px;
   margin-left: 0.7%;
