@@ -1,21 +1,23 @@
 const calendar = [
-  { 
+  {
     type: "event",
     title: "Welcome Party!",
-    informasjon: "Welcome party for new members! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi asperiores assumenda deserunt doloribus eligendi iure odio ratione saepe sequi ullam. Asperiores debitis enim esse fugit itaque, neque odit suscipit voluptate!", 
+    informasjon: "Welcome party for new members! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 		dato: "2019-10-05",
     tid: "14:15",
     sted: "Solsiden",
     link:"2019-10-05-welcome-party",
     tag: "Social"
   },
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-05", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: "Practice"},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: "Practice"},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: "Practice"},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-07", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: "Practice"},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: "Practice"},
-  {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: "Fundraiser"},
+  {type: "event", title: "Drifting fun!", informasjon: "Drifting. Instructor: Harald Gress Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: "Social"},
+
 ];
 
-function loadCalendar(calendar) {
+function loadCalendar(calendarList) {
+	calendarList = sortByDate(calendarList)
 	const calendarId = document.getElementById("calendarElements")
 	calendarId.innerHTML = ''
 	let date = ''
@@ -25,8 +27,8 @@ function loadCalendar(calendar) {
 	let day = -1
 	let string = ''
 	let change = -1
-	for (let i = 0; i < calendar.length; i++) {
-		date = new Date(calendar[i].dato)
+	for (let i = 0; i < calendarList.length; i++) {
+		date = new Date(calendarList[i].dato)
 		if (date.getWeekNumber() != week) {
 			week = date.getWeekNumber()
 			if (string != '') {
@@ -37,15 +39,15 @@ function loadCalendar(calendar) {
 		if (date.getDate() != day || date.getMonth() != month || date.getFullYear() != year) {
 			day = date.getDate()
 			month = date.getMonth()
-			year = date.getFullYear() 
+			year = date.getFullYear()
 			if (change === 1) {
 				string += `</ul></div>`
 			}
 			string += `<div class="calendar"><div class="calendarDate"><p>${month + 1}/${day}</p></div><ul>`
 			change = change*-1
 		}
-		string += `<li class="${calendar[i].type}"><p>${calendar[i].informasjon}</p>`
-		+ `<p class="timeAndLocation">Time: ${calendar[i].tid}<br>Location: ${calendar[i].sted}</p></li>`
+		string += `<li class="${calendarList[i].type}"><p>${calendarList[i].informasjon}</p>`
+		+ `<p class="timeAndLocation">Time: ${calendarList[i].tid}<br>Location: ${calendarList[i].sted}</p></li>`
 		month = date.getMonth()
 	}
 	string += `</ul></div>`
@@ -70,9 +72,14 @@ function checkType(object) {
   }
 }
 
+function sortByDate(list) {
+	return list.sort(function (a, b) {
+		return (new Date(a.dato)) - (new Date(b.dato))
+	})
+}
+
 function checkboxes() {
 	let filter = document.querySelectorAll("#filter div input")
-	console.log(filter)
 	let newCalendar = calendar
  	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
@@ -80,13 +87,13 @@ function checkboxes() {
 			for (let j = 0; j < filter.length; j++) {
 				if (filter[j].checked == false) {
 					newCalendar = newCalendar.filter(checkType(filter[j]))
-					console.log(newCalendar)
 				}
 			}
 		  loadCalendar(newCalendar)
 		})
 	}
 }
+
 
 //events
 window.onload = skrivUtArtikkel;
@@ -250,3 +257,7 @@ function sorterTypeCompetition() {
 //Hente ut knapp til å sortre etter type=fundraiser, og tildele funksjon
 var sortCompetitionHTML = document.getElementById('sortCompetition');
 sortCompetitionHTML.addEventListener('click',sorterTypeCompetition); */
+
+loadCalendar(calendar)
+checkboxes()
+
