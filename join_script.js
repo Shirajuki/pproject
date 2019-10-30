@@ -25,4 +25,5 @@ document.getElementById("submit_btn").onclick = function(event){ //when the subm
 
   document.getElementById("registrationform_page_content").style.display = "none"; //the form is hidden
   document.getElementById("registrering_mottatt").style.display = "block"; //the submitted-message is shown
-}
+};
+
