@@ -9,14 +9,13 @@ const calendar = [
     link:"2019-10-05-welcome-party",
     tag: "social"
   },
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-07", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
-  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-06", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
+  {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-07", tid: "18:00", sted: "Tyholt", link:"javascript:void(0)", tag: ""},
   {type: "practice", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2019-10-12", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: ""},
   {type: "event", title: "", informasjon: "Drifting. Instructor: Harald Gress", dato: "2020-01-06", tid: "18:00", sted: "Solsiden", link:"javascript:void(0)", tag: ""},
 ];
 
 function loadCalendar(calendarList) {
-	console.log(calendarList)
 	calendarList = sortByDate(calendarList)
 	const calendarId = document.getElementById("calendarElements")
 	calendarId.innerHTML = ''
