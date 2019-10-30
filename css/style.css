@@ -269,7 +269,7 @@ footer>a{
   transition: font-size .5s;
   transform: skew(0deg, 3deg)
 }
-#title > button {
+#title > a >button {
   border: 2px solid black;
   margin-top: 20px;
   transition: padding .5s, color .3s;
