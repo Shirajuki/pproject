@@ -4,6 +4,7 @@ const calendar = [
 		title: "Welcome Party!",
 		informasjon: "Welcome party for new members! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiis cupiditate debitis delectus ea eligendi eum facilis inventore qui repellendus unde, vel. Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
 		dato: "2019-10-05",
+<<<<<<< HEAD
 		tid: "14:15",
 		sted: "Solsiden",
 		link:"2019-10-05-welcome-party",
@@ -16,9 +17,6 @@ const calendar = [
 	{type: "event", title: "Party at mine", informasjon: "We will have a great party at mine (near Gløshaugen) next friday in order to celebrate our great efforts so far this year", dato: "2019-10-29", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: "Social"},
 	{type: "event", title: "Lets make some money", informasjon: "During this week we have a fundraising event to raise some money for the club. More info to come", dato: "2019-10-30", tid: "18:00", sted: "Gløshaugen", link:"javascript:void(0)", tag: "Fundraiser"},
 	{type: "event", title: "Big competition in OSLO", informasjon: "The big racer competition is being held in Oslo on the 1.11.19. More information to come soon your way", dato: "2019-10-30", tid: "18:00", sted: "Oslo", link:"javascript:void(0)", tag: "Competition"},
-
-
-
 ];
 
 function loadCalendar(calendarList) {
@@ -175,4 +173,13 @@ sortDateHTML.onclick = skrivUtArtikkel;
 
 loadCalendar(calendar);
 checkboxes();
+
+
+//Hente ut knapp til å sortre etter type=fundraiser, og tildele funksjon
+var sortCompetitionHTML = document.getElementById('sortCompetition');
+sortCompetitionHTML.addEventListener('click',sorterTypeCompetition); */
+
+loadCalendar(calendar)
+checkboxes()
+
 
