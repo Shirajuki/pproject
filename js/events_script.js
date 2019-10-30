@@ -42,7 +42,7 @@ window.onload = skrivUtArtikkel;
 function skrivUtArtikkel(event) {
     event.preventDefault();
 
-    for (i = 0; i < data.length; i++){
+    for (i = 0; i <= data.length; i++){
        var type = data[i].type;
        var date = data[i].date;
        var title = data[i].title;
@@ -59,38 +59,38 @@ function skrivUtArtikkel(event) {
     }
 
 
-//Sorter type Practice
-function sorterTypePractice() {
-    var liPrac = [];
+//Sorter type
+function sorterType(type) {
+    var liType = [];
     for (i = 0; i < data.length; i++) {
         if (data[i].type == 'Practice') {
-            liPrac.push(data[i]);
+            liType.push(data[i]);
 
 
         }
 
     }
-    var liste = document.getElementById('liste')
+    var liste = document.getElementById('liste');
     liste.innerHTML = '';
     for (j = 0; j < data.length; j++) {
-        var type = liPrac[j].type;
-        var date = liPrac[j].date;
-        var title = liPrac[j].title;
-        var mainText = liPrac[j].mainText;
+        var type = liType[j].type;
+        var date = liType[j].date;
+        var title = liType[j].title;
+        var mainText = liType[j].mainText;
 
 
         var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">POSTED: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
-        var liPostPrac = document.createElement('li');
-        liPostPrac.innerHTML = articleEl;
-        liste.prepend(liPostPrac);
+        var liPostType = document.createElement('li');
+        liPostType.innerHTML = articleEl;
+        liste.prepend(liPostType);
     }
 }
 
+document.getElementById('sortPractice').onclick = function() {sorterType('Practice')};
 //Hente ut knapp til å sortere etter type=practice, og tildele funksjon
-var sortPracticeHTML = document.getElementById('sortPractice');
-sortPracticeHTML.addEventListener('click',sorterTypePractice);
 
 
+/*
 //Sortere type Social
 function sorterTypeSocial() {
     var liSoc = [];
@@ -181,4 +181,4 @@ function sorterTypeCompetition() {
 
 //Hente ut knapp til å sortre etter type=fundraiser, og tildele funksjon
 var sortCompetitionHTML = document.getElementById('sortCompetition');
-sortCompetitionHTML.addEventListener('click',sorterTypeCompetition);
+sortCompetitionHTML.addEventListener('click',sorterTypeCompetition);*/

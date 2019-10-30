@@ -24,6 +24,8 @@ for (let i = 0; i < calendar.length; i++) {
 eventsHomepage.innerHTML = "";
 for (let i = 0; i < calendar.length; i++) {
   if (new Date(calendar[i].dato) >= new Date("2000-1-1") && calendar[i].type == "event") {
-    eventsHomepage.innerHTML += `<li><strong>${calendar[i].title}:</strong> ${calendar[i].informasjon}</li>`;
+    let info = calendar[i].informasjon
+    if (info.length > 200) info = info.slice(0,200)+'...'
+    eventsHomepage.innerHTML += `<li><strong>${calendar[i].title}:</strong> ${info}</li>`;
   }
 }
