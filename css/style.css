@@ -5,16 +5,10 @@
   --theme-color: #2d6a37;
   --theme-color1: #d10000;
 }
-
 * {
   margin: 0;
   padding: 0;
 }
-
-h1 {
-  margin: 0;
-}
-
 #scrollUpBtn {
   display: block;
   position: fixed;
@@ -92,7 +86,6 @@ nav>a>img {
   position: absolute;
   top: -10px;
   padding: 0 10px;
-
 }
 nav>div>ul {
   display: flex;
@@ -231,7 +224,6 @@ footer>a{
   color:#11a341;
 	margin: 5px;
 }
-
 /* SCREEN/TITLE */
 #heleKalender {
   position: absolute;
@@ -279,7 +271,7 @@ footer>a{
   transform: skew(0deg, 3deg) translateY(3px);
   box-shadow: 0 2px #0d4a17;
 }
-/* BUTTON */
+/* BUTTONS */
 button {
   position: relative;
   box-shadow: 0 5px #0d4a17;
@@ -309,24 +301,15 @@ nav button:hover, nav button:active {
 	margin-bottom: 25px;
 	border-bottom: 1.5px solid black;
 }
-
 section {
   width: 100%;
   display: flex;
   justify-content: center;
 }
-.skew {
-  background-color: white;
-  transform: skew(0deg, -2deg);
-  padding: 2% 0;
-  margin: 5% 0;
-}
-
 main section > article {
 	padding: 1%;
 	width: 92%;
 }
-
 .column {
   float: left;
   width: 44%;
@@ -338,14 +321,12 @@ i {
   font-style: normal;
   font-family: arial;
 }
-
 article h1{
   text-align: center;
   font-size: 50px;
   margin-bottom: 25px;
   border-bottom: 1.5px solid black;
 }
-
 article{
   background-color: rgba(255,255,255,0.9);
   position: relative;
@@ -354,9 +335,6 @@ article{
   padding: 4%;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
 }
-
-
-
 .bigarticle{
   width: 80%;
 }
@@ -397,8 +375,7 @@ div ul li a:not(.abtn):hover::before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }
-
-/* Gallery */
+/* GALLERY */
 .gallery {
   display: block;
   margin: 20px auto 10px auto;
@@ -453,17 +430,7 @@ div ul li a:not(.abtn):hover::before {
 #kryss:hover {
   color: var(--theme-color1);
 }
-@keyframes zoom {
-  from {
-		transform: scale(0);
-	}
-  to {
-		transform: scale(1);
-	}
-}
-
-/* EVENT */
-
+/* EVENT PAGE */
 #event h2{
   border-bottom: 2px black solid;
 }
@@ -532,9 +499,8 @@ div ul li a:not(.abtn):hover::before {
 #liste li{
   margin-left: 10px;
   margin-right: 10px;
-  /*li arva margin fra atricle li selectoren lenger opp så d bi skeivt*/
 }
-/* ASD */
+/* CALENDAR PAGE */
 #cal{
   width:60%;
   padding:4%;
@@ -548,12 +514,6 @@ div ul li a:not(.abtn):hover::before {
 	box-sizing: border-box;
 	animation: fade 0.5s linear;
 }
-
-@keyframes fade {
-	from {opacity: 0}
-	to {opacity: 1}
-}
-
 .calendarDate {
 	width: 20%;
 	margin: 10px;
@@ -562,18 +522,15 @@ div ul li a:not(.abtn):hover::before {
 	text-align: center;
 	position: relative;
 }
-
 .calendarDate >	p {
 	font-size: 30px;
 	position: absolute;
 	top: 50%;
 	transform: translateY(-50%);
 }
-
 .calendar ul {
 	width: 80%;
 }
-
 .calendar ul li {
 	display: flex;
 	justify-content: space-between;
@@ -583,7 +540,6 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
 	margin: 10px 0 10px 0;
 }
-
 .week {
 	font-weight: 100;
 	font-size: 30px;
@@ -593,7 +549,6 @@ div ul li a:not(.abtn):hover::before {
 	border-bottom: solid gray 1px;
 	padding: 10px;
 }
-
 .event {
 	background-color: #c0c0ff;
 }
@@ -601,28 +556,21 @@ div ul li a:not(.abtn):hover::before {
 	display: none;
 	background-color: #b0ddb0;
 }
-.calendar ul li p:first-child {
-  /* width: 10px */
-}
 .timeAndLocation {
   background-color: rgba(255,255,255,0.8);
   padding: 0 10px 0 10px;
-  /* width: 50%; */
   min-width: 180px;
   margin: 10px;
   height: 100%;
 }
-
 #filter {
 	padding: 10px;
   display: flex;
   flex-direction: row;
 }
-
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
-
 .inputflex{
   margin-right: 50px;
 }
@@ -632,23 +580,18 @@ div ul li a:not(.abtn):hover::before {
   display:flex;
   justify-content: row;
 }
-
 #filter label {
 	margin: 0 0 0 5px;
 }
-
 #filter-wrap {
 	margin: 10px 0 30px 10px;
 }
-
 .input {
 	min-width: 130px;
 }
-
 #filter input {
 	margin: 0 0 0 20px;
 }
-
 
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
@@ -670,7 +613,6 @@ div ul li a:not(.abtn):hover::before {
 .span_date{
   color: black;
   font-size: 0.7em;
-
 }
 /* SIDENAV */
 .sidenav__inner{
@@ -779,29 +721,24 @@ textarea{
   flex-direction: row;
   justify-content: center;
 }
-
 #contact article {
 	margin: 15px;
 	padding: 15px;
   min-width: 168.71px;
 }
-
 .contacticon{
   font-size: 50px;
   margin-bottom: 20px;
 }
-
 .contactlabel{
   font-size: 30px;
   margin:0;
 }
-
 .separator {
 	margin: 15px 0 15px 0;
 	border-top: solid gray 1px;
 }
 #contarcticle{
-  /*fordi e får ikke til å skaler bakgrunnen med flex tingan så dem kjem utafor*/
   width:75%;
 }
 /*OLGA SIN ABOUT*/
@@ -810,7 +747,6 @@ textarea{
   margin-bottom: 25px;
   margin-top: 25px;
 }
-
 #abourtarticles p{
   margin-bottom: 25px;
 }
@@ -838,7 +774,7 @@ textarea{
   padding:4%;
   background-color: rgba(255, 255, 255, 0.90);
 }
-/* QUERY la vær nederst*/
+/* MEDIA QUERIES */
 @media (max-width: 850px) {
   .dropdown-content {
     display: none;
@@ -869,16 +805,13 @@ textarea{
 		flex-direction: column;
     align-items: center;
 	}
-
   #contact article{
     width: 80%;
   }
-
   #images {
     flex-direction:column;
     max-width: 100%;
     align-items: center;
-
   }
   #images img{
     margin-top: 20px;
@@ -888,15 +821,12 @@ textarea{
   #about article{
     width:80%;
   }
-
   .smallarticle{
     width:80%;
   }
-
 	.calendar ul li {
 		flex-direction: column;
 	}
-
 	.calendar {
 		flex-direction: column;
 	}
@@ -913,9 +843,7 @@ textarea{
 	.calendar ul {
 		width: 100%;
 	}
-
 }
-/*Phones?*/
 @media (max-width: 660px) {
   #title>h1 {
     font-size: 2.5rem;
@@ -929,20 +857,29 @@ textarea{
   #about p{
     font-size: 0.9em;
   }
-
   .inputflex{
     margin-bottom: 25px;
   }
 }
-  /* Bigger than Phones(tablet) */
-  @media only screen and (min-width: 750px) {
-    .img-grid {
-      grid-template-columns: repeat(2, 1fr);
-    }
+/* IMAGE MEDIA QUERY */
+/* Bigger than Phones(tablet) */
+@media only screen and (min-width: 750px) {
+  .img-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
-  /* Bigge  r than Phones(laptop / desktop) */
-  @media only screen and (min-width: 970px) {
-    .img-grid {
-      grid-template-columns: repeat(6, 1fr);
-    }
+}
+/* Bigger than Phones(laptop / desktop) */
+@media only screen and (min-width: 970px) {
+  .img-grid {
+    grid-template-columns: repeat(6, 1fr);
   }
+}
+/* KEYFRAMES */
+@keyframes zoom {
+  from { transform: scale(0); }
+  to { transform: scale(1); }
+}
+@keyframes fade {
+	from { opacity: 0 }
+	to { opacity: 1 }
+}
