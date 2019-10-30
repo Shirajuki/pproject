@@ -4,7 +4,7 @@ window.onload = skrivUtArtikkel;
 //Skrive ut alle artiklene som ligger lagret i "databasen"(data)
 function skrivUtArtikkel(event) {
 	event.preventDefault();
-
+	document.getElementById('liste').innerHTML = '';
 	for (i = 0; i < calendar.length; i++){
 		var type = calendar[i].tag;
 		var date = calendar[i].dato;

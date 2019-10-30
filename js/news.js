@@ -58,7 +58,6 @@ window.onload = function(){
     //console.log(li_element2);
   }
 }
-
 //chose to register date as just manual input string rather than the date (date obj.) it was "posted"/(added) because it was easier to write and the main focus of our site was elsewhere this time
 
 

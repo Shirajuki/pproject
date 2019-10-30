@@ -11,7 +11,7 @@ window.onload = () => {
 
 const calendarHomepage = document.getElementById('calendarHomepage');
 const eventsHomepage = document.getElementById('eventsHomepage');
-console.log(calendarHomepage,eventsHomepage);
+// console.log(calendarHomepage,eventsHomepage);
 document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toLocaleDateString("nb-NO")}`;
 // Post calendar
 calendarHomepage.innerHTML = "";
@@ -21,7 +21,6 @@ for (let i = 0; i < calendar.length; i++) {
     c++;
     calendarHomepage.innerHTML += `<p>${new Date(calendar[i].dato).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${calendar[i].type}] ${calendar[i].informasjon}</p>`;
   }
-  console.log(i)
   if (c >= 2) break;
 }
 // Post events
