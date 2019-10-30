@@ -595,18 +595,32 @@ div ul li a:not(.abtn):hover::before {
 
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
-.nyheter_innhold{
+.nyheter_innhold{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
   position: relative;
   left:20%;
   margin-top: 10px;
   margin-left: 2%;
   width: 80%;
 }
-.nyhetsartikkel{
+.nyhetsartikkel{ /*artikkelen lol*/
+  position: relative;
   display: flex;
   flex-direction: column;
+  text-align: left;
+  margin: 10px;
+  margin-bottom: 30px;
 }
-/* NYHETSOVERSKRIFTENE */
+.nyhetsartikkel span{ /*dato-stringen i hver artikkel*/
+  font-weight: 400;
+  color: #4d4d4d;
+}
+.nyhetsartikkel p{ /*innholdet i hver artikkel*/
+  font-weight: 400;
+}
+.nyhetsartikkel a{
+  color: blue;
+}
+/* NEWS HEADINGS */
 .nyhet_heading{
   color: #2d6a37;
 }
@@ -615,13 +629,15 @@ div ul li a:not(.abtn):hover::before {
   font-size: 0.7em;
 }
 /* SIDENAV */
-.sidenav__inner{
+/* TODO 1: Sidenaven blir så lang det er innhold, scrolles utafor sida og kuttes av. FIKS */
+/* TODO 2: Skrive nyheter på engelsk */
+/* NOTE: Burde kanskje kollapses til en hamburgermeny når skjermen blir for liten, vet ikke hvordan jeg gjøre det men har prøvd, så det kan hende det ser rart ut i html-en eller js-en til news */
+.sidenav_inner{
   display: flex;
   flex-direction: column;
   position: fixed;
-  /* height: 47.5%; */
   width: 15%;
-  margin-top: 10px;
+  margin-top: 32px;
   margin-left: 0.7%;
   color: #2d6a37;
   background-color: rgba(246,246,246,0.8);
@@ -629,29 +645,43 @@ div ul li a:not(.abtn):hover::before {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-#hr_overskrift{
-  border: 0.7px solid #2d6a37;
+.nyhet_heading h3::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
+  display: block;
+  content: " ";
+  margin-top: -100px;
+  height: 100px;
+  visibility: hidden;
+  pointer-events: none;
 }
-.sidenav__inner a{
-  margin: 10px;
+#hr_overskrift{ /*overskriften i sidenav*/
+  border: 0.8px solid black;
+}
+.sidenav_inner a{ /*linkene i sidenav*/
   color: #2d6a37;
   line-height: 1;
   font-weight: normal;
-  font-style: italic;
+  font-style: normal;
   text-decoration: none;
 }
-.sidenav__inner p{
+#navbar_liste{
+  margin-left: -10px; /*eliminerer space der punktene li tok opp plass*/
+}
+.sidenav_inner p{ /* overskriften i sidenav*/
   color: #2d6a37;
   font-weight: bold;
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin-top: 7px;
+  margin-bottom: 5px;
 }
-.sidenav__inner a:hover{
-  color: lightgrey;
+.sidenav_inner li>a:hover{ /*link i sidenav on hover*/
+  color: #2d6a37;
 }
+
+
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
+/* TODO: Skrive om alle variablene til engelsk */
 .skjema{
   position: relative;
   padding: 20px 12px 10px 20px;
