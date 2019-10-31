@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header id="header" class="">
+    </header>
+    <!-- LIGHTBOX -->
+    <div id="lightbox">
+      <div>
+        <a id="kryss">&times;</a>
+        <div id="imageZoom">
+          <img class='img' id='zoom' src="https://dummyimage.com/800x500/000/fff">
+        </div>
+      </div>
+    </div>
+    <main id="main">
+      <section>
+        <article class="bigarticle">
+          <h1>Gallery</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <div class="gallery">
+            <div id="imageGallery">
+              <img src="https://dummyimage.com/150x150/000/fff">
+            </div>
+          </div>
+        </article>
+      </section>
+      <div class="bigImg" style="display:none;position: absolute;top: 0;left: 0;width: 100%;z-index: 9999;height: 100%;background: rgba(0,0,0,0.8);">
+        <a style="color: white;position: absolute;width: auto;top: 40%;cursor: pointer;transition: background-color 1s ease, color 1s ease;border-radius: 20px;font-size: 4em;font-weight: bolder;color: white;padding: 20px;right: 0;top: 0;z-index: 99;">×</a>
+        <img src="https://dummyimage.com/800x500/000/fff" style="position: absolute;width: 100%;max-width: 800px;top: 50%;left: 50%;transform: translate(-50%,-50%);">
+      </div>
+    </main>
+    <div id="footer"></div>
+    <script src="js/navscroll.js" charset="utf-8"></script>
+    <script src="js/imageGallery.js" charset="utf-8"></script>
+  </body>
+</html>
