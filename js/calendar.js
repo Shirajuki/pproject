@@ -31,6 +31,7 @@ function loadCalendar(calendarList) {
 		string += `<li class="${calendarList[i].type}"><p>${calendarList[i].informasjon}</p>`
 			+ `<p class="timeAndLocation">Time: ${calendarList[i].tid}<br>Location: ${calendarList[i].sted}</p></li>`
 		month = date.getMonth()
+
 	}
 	string += `</ul></div>`;
 	calendarId.innerHTML += string
