@@ -50,8 +50,12 @@ function loadCalendar(calendarList) {
 			change = change*-1
 		}
 		string += `<li class="${calendarList[i].type}"><p>${calendarList[i].informasjon}</p>`
+<<<<<<< HEAD
 			+ `<p class="timeAndLocation">Time: ${calendarList[i].tid}<br>Location: ${calendarList[i].sted}</p></li>`
 		month = date.getMonth()
+=======
+		+ `<p class="timeAndLocation">Time: ${calendarList[i].tid}<br>Location: ${calendarList[i].sted}</p></li>`
+>>>>>>> 63fde87eb0ea1550d66d680e4d218e8c022690ef
 	}
 	string += `</ul></div>`;
 	calendarId.innerHTML += string
