@@ -1,5 +1,5 @@
 window.onload = function(){ //onload the submitted-message-div is hidden
-  document.getElementById("registrering_mottatt").style.display = "none";
+  document.getElementById("reg_recieved").style.display = "none";
 }
 
 document.getElementById("submit_btn").onclick = function(event){ //when the submit button is clicked => values are updated and shown in console
@@ -24,6 +24,5 @@ document.getElementById("submit_btn").onclick = function(event){ //when the subm
   console.log("Allergies: " + allergies);
 
   document.getElementById("registrationform_page_content").style.display = "none"; //the form is hidden
-  document.getElementById("registrering_mottatt").style.display = "block"; //the submitted-message is shown
+  document.getElementById("reg_recieved").style.display = "block"; //the submitted-message is shown
 };
-
