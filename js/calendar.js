@@ -28,9 +28,10 @@ function loadCalendar(calendarList) {
 			string += `<div class="calendar"><div class="calendarDate"><p>${month + 1}/${day}</p></div><ul>`
 			change = change*-1
 		}
-		string += `<li class="${calendarList[i].type}"><p>${calendarList[i].informasjon}</p>`
+		string += `<li class="${calendarList[i].type}"><p><b>${calendarList[i].title}</b><br>${calendarList[i].informasjon.slice(0,40)}...</p>`
 			+ `<p class="timeAndLocation">Time: ${calendarList[i].tid}<br>Location: ${calendarList[i].sted}</p></li>`
 		month = date.getMonth()
+
 	}
 	string += `</ul></div>`;
 	calendarId.innerHTML += string

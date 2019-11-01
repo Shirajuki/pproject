@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>Lawnmower racing</title>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+      <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <header id="header" class="">
+    </header>
+
+
+<!--CONTENT OF PAGE, REGISTER-->
+    <article class="smallarticle" id="registrationform_page_content">
+      <h1>Registration form</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+      <form class="skjema" method="get">
+        <label>Name: *<br><input type="text" placeholder="First name" name="first name" id="first_name_inp" class="inputs name" required autofocus> <input type="text" placeholder="Last name" name="last name" id="last_name_inp" class="inputs name" required></label><br>
+        <label>Study: *<br>
+          <select name="study" id="study_inp" class="inputs" required>
+            <option>---</option>
+            <option value="informatics">Informatics</option>
+            <option value="dragvoll">Dragvoll</option>
+            <option value="gløshaugen">Gløshaugen</option>
+          </select>
+        </label><br>
+        <label>Date of birth: *<br><input type="date" name="dateofbirth" id="dateofbirth_inp" class="inputs" required></label><br>
+        <label>E-mail: *<br><input type="email" placeholder="ex: name@example.com" name="email" id="email_inp" class="inputs" required></label><br>
+        <label>Phone number: *<br><input type="number" placeholder="ex: 99 92 24 44" maxlength="8" name="ph_number" id="ph_inp" class="inputs" required></label><br>
+        <label>How much do you like lawnmowers on a scale from 1 to 10? *<br>
+          <input type="range" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" id="range_inp" class="inputs" required/>
+          <input type="number" name="amountInput" min="0" max="10" value="0" oninput="this.form.amountRange.value=this.value" id="range_out" class="inputs" disabled/>
+        </label><br>
+        <label>Do you have any experience with lawnmower racing? If so tell us a bit about that.<br><textarea rows="4" cols="50"  maxlength="200" placeholder="Write here" name="experience" id="experience_inp" class="inputs"></textarea></label><br>
+        <label>Allergies:<br><textarea rows="2" cols="50"  maxlength="200" placeholder="Allergies" name="allergies" id="allergies_inp" class="inputs"></textarea></label><br>
+        <button class="btn" type="submit" id="submit_btn">Join us!</button>
+      </form>
+    </article>
+
+    <div id="registrering_mottatt">
+      <h1>Thank you!</h1>
+      <p>Your application was recieved.</p>
+    </div>
+
+    <div id="footer"></div>
+    <script src="js/navscroll.js" charset="utf-8"></script>
+    <script src="js/join.js"></script>
+  </body>
+</html>

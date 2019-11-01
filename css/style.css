@@ -597,14 +597,14 @@ div ul li a:not(.abtn):hover::before {
 }
 /* ADDED BY SYNNE */
 /* NYHETER: INNHOLD */
-.nyheter_innhold{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
+.news_content{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
   position: relative;
   left:20%;
   margin-top: 10px;
   margin-left: 2%;
   width: 80%;
 }
-.nyhetsartikkel{ /*artikkelen lol*/
+.newsarticle{ /*artikkelen lol*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -612,18 +612,18 @@ div ul li a:not(.abtn):hover::before {
   margin: 10px;
   margin-bottom: 30px;
 }
-.nyhetsartikkel span{ /*dato-stringen i hver artikkel*/
+.newsarticle span{ /*dato-stringen i hver artikkel*/
   font-weight: 400;
   color: #4d4d4d;
 }
-.nyhetsartikkel p{ /*innholdet i hver artikkel*/
+.newsarticle p{ /*innholdet i hver artikkel*/
   font-weight: 400;
 }
-.nyhetsartikkel a{
+.newsarticle a{
   color: blue;
 }
 /* NEWS HEADINGS */
-.nyhet_heading{
+.news_heading{
   color: #2d6a37;
 }
 .span_date{
@@ -647,7 +647,7 @@ div ul li a:not(.abtn):hover::before {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-.nyhet_heading h3::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
+.news_heading h3::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
   display: block;
   content: " ";
   margin-top: -100px;
@@ -655,7 +655,7 @@ div ul li a:not(.abtn):hover::before {
   visibility: hidden;
   pointer-events: none;
 }
-#hr_overskrift{ /*overskriften i sidenav*/
+#hr_title{ /*overskriften i sidenav*/
   border: 0.8px solid black;
 }
 .sidenav_inner a{ /*linkene i sidenav*/
@@ -665,7 +665,7 @@ div ul li a:not(.abtn):hover::before {
   font-style: normal;
   text-decoration: none;
 }
-#navbar_liste{
+#navbar_list{
   margin-left: -10px; /*eliminerer space der punktene li tok opp plass*/
 }
 .sidenav_inner p{ /* overskriften i sidenav*/
@@ -682,12 +682,12 @@ div ul li a:not(.abtn):hover::before {
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
 /* TODO: Skrive om alle variablene til engelsk */
-.skjema{
+.form{
   position: relative;
   padding: 20px 12px 10px 20px;
   margin: 10px auto;
 }
-.skjema label{
+.form label{
   margin: 0 0 3px 0;
   padding: 0px;
   display: block;
@@ -729,7 +729,7 @@ textarea{
 .submit_btn:hover{
   background: #0d4a17;
 }
-#registrering_mottatt{
+#reg_recieved{
   display: flex;
   justify-content: center;
   align-items: center;
