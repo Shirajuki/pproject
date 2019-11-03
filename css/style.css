@@ -246,6 +246,7 @@ footer>a{
 #fallback_image {
   display: block;
   height: auto;
+  min-height: 100%;
   min-width: 100%;
 }
 #title {
@@ -833,12 +834,6 @@ textarea{
   }
   .dropdown-content {
     display: none;
-  }
-  video {
-    display: none;
-  }
-  #fallback_image {
-    display: block;
   }
   .nav_list {
     display: none;
