@@ -66,24 +66,26 @@ function loadCalendar(calendarList) {
 	calendarId.innerHTML = string;
 }
 
-function checkType(object) {
-	return element => (object.id.includes(element.type) == true || object.id.includes(element.sted))
+function checkType(domId) {
+	return el => !(domId.includes(el.type) || domId.includes(el.sted.toLowerCase()))
 }
 function sortByDate(list) {
 	return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)))
 }
-function checkboxes() {
+function checkboxes(calendar) {
 	let filter = document.querySelectorAll("#filter div input");
 	let newCalendar = calendar;
 	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
 			newCalendar = calendar;
 			for (let j = 0; j < filter.length; j++) {
-				if (filter[j].checked == false) newCalendar = newCalendar.filter(checkType(filter[j]));
+				if (!filter[j].checked) {
+					newCalendar = newCalendar.filter(checkType(filter[j].id));
+				}
 			}
 			loadCalendar(newCalendar);
 		});
 	}
 }
-loadCalendar(calendar)
-checkboxes()
+loadCalendar(calendar);
+checkboxes(calendar);

@@ -591,6 +591,7 @@ div ul li a:not(.abtn):hover::before {
 }
 .input {
 	min-width: 130px;
+  margin-bottom: 5px;
 }
 #filter input {
 	margin: 0 0 0 20px;
