@@ -631,8 +631,7 @@ div ul li a:not(.abtn):hover::before {
   font-size: 0.7em;
 }
 /* SIDENAV */
-/* TODO 1: Sidenaven blir så lang det er innhold, scrolles utafor sida og kuttes av. FIKS */
-/* TODO 2: Skrive nyheter på engelsk */
+/* TODO: Skrive nyheter på engelsk */
 /* NOTE: Burde kanskje kollapses til en hamburgermeny når skjermen blir for liten, vet ikke hvordan jeg gjøre det men har prøvd, så det kan hende det ser rart ut i html-en eller js-en til news */
 /* - Jonny: fixed? */
 .sidenav_inner{
@@ -656,7 +655,7 @@ div ul li a:not(.abtn):hover::before {
   pointer-events: none;
 }
 #hr_title{ /*overskriften i sidenav*/
-  border: 0.8px solid black;
+  border: 0.1px solid black;
 }
 .sidenav_inner a{ /*linkene i sidenav*/
   color: #2d6a37;
@@ -681,7 +680,6 @@ div ul li a:not(.abtn):hover::before {
 }
 /* ADDED BY SYNNE */
 /* PÅMELDINGSSKJEMA */
-/* TODO: Skrive om alle variablene til engelsk */
 .form{
   position: relative;
   padding: 20px 12px 10px 20px;
