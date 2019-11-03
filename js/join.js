@@ -2,7 +2,7 @@ window.onload = function(){ //onload the submitted-message-div is hidden
   document.getElementById("reg_recieved").style.display = "none";
 }
 
-document.getElementById("submit_btn").onclick = function(event){ //when the submit button is clicked => values are updated and shown in console
+document.getElementById("form").onsubmit = function(event){ //when the submit button is clicked => values are updated and shown in console
   event.preventDefault();
   let first_name = document.getElementById("first_name_inp").value;
   let last_name = document.getElementById("last_name_inp").value;
@@ -25,4 +25,4 @@ document.getElementById("submit_btn").onclick = function(event){ //when the subm
 
   document.getElementById("registrationform_page_content").style.display = "none"; //the form is hidden
   document.getElementById("reg_recieved").style.display = "block"; //the submitted-message is shown
-}
+};
