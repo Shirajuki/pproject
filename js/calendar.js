@@ -14,7 +14,7 @@ function loadCalendar(calendarList) {
 		if (datecheck != date) {
 			date = datecheck;
 			string += `</ul></div>`;
-			string += `<div class="calendar"><div class="calendarDate"><p>${eldate.getMonth() + 1}/${eldate.getDate()}</p></div>`;
+			string += `<div class="calendar"><div class="calendarDate"><p>${eldate.getDate()}/${eldate.getMonth() + 1}</p></div>`;
 			string += '<ul>';
 		}
 		let info = (el.informasjon.length > 40) ? (el.informasjon.slice(0,40)+'...') : (el.informasjon);
@@ -27,9 +27,11 @@ function loadCalendar(calendarList) {
 function checkType(domId) {
 	return el => !(domId.includes(el.type) || domId.includes(el.sted.toLowerCase()))
 }
+
 function sortByDate(list) {
 	return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)))
 }
+
 function checkboxes(calendar) {
 	let filter = document.querySelectorAll("#filter div input");
 	let newCalendar = calendar;
@@ -45,5 +47,6 @@ function checkboxes(calendar) {
 		});
 	}
 }
+
 loadCalendar(calendar);
 checkboxes(calendar);
