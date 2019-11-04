@@ -36,7 +36,7 @@ function sortByDate(list) {
 	return list.sort((a, b) => new Date(b.dato) - (new Date(a.dato)))
 }
 
-function checkboxes(calendar) {
+function checkCheckboxes(calendar) {
 	let filter = document.querySelectorAll("#filter div input");
 	console.log(filter);
 	let newCalendar = calendar;
@@ -53,5 +53,21 @@ function checkboxes(calendar) {
 	}
 }
 
+function loadCheckboxes() {
+	let locations=document.querySelector("#locationBox")
+	let locationsfromdata=[]
+
+	for (item of calendar){
+		let loc=item.sted
+		if (locationsfromdata.includes(loc)===false){
+			locationsfromdata.push(loc)
+		}
+	}
+	for (place of locationsfromdata){
+		let label=place.toLowerCase().replace(" ","")+"Checkbox"
+		locations.innerHTML+='<div class="input"><input id='+label+" "+'type="checkbox" checked><label for='+label+'>'+place+'</label></div>'
+	}
+}
+loadCheckboxes()
 loadCalendar(calendar);
-checkboxes(calendar);
+checkCheckboxes(calendar);
