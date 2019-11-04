@@ -4,37 +4,37 @@ const articles = [
     title: "Welcome, new members!",
     id_3char: "welcome_new_members", //makes it easier to create short-forms to use for id and anchor links //other possible solution: using split to remove whitespace and characters that are not letter -> get first 6 letters to make id/anchor link
     date: "15. September 2019", //chose to register date as just manual input string rather than the date (date obj.) it was "posted"/(added) because it was easier to write and the main focus of our site was elsewhere this time + didn't have time
-    p_text: "Maecenas euismod porttitor magna, condimentum blandit eros eleifend sit amet. Aliquam pharetra, libero vitae auctor dictum, sapien orci mollis enim, sit amet auctor ipsum arcu non augue. Mauris eget auctor velit, at tincidunt sem. Quisque vel leo sed felis tincidunt molestie. Suspendisse scelerisque nunc vitae velit aliquam viverra. Pellentesque purus orci, eleifend et sagittis at, fringilla ac lorem. Aliquam erat volutpat. Nulla facilisi. Sed venenatis, nunc eget egestas fringilla, tellus nisl viverra nulla, fermentum faucibus enim lectus aliquam est. Duis sodales tellus sed ipsum condimentum, at cursus ligula porttitor. Duis cursus elit porta sem semper, id fermentum nibh dignissim. Mauris finibus dolor urna, id blandit sapien cursus non.",
+    p_text: "A new semester has started, and new members have joined us. It's time to (officially) welcome the new members! We, here at LMR, hope that you are enjoying practicing with our team and that you already love the sport as much as we do. Until now it has been quite hectic, but the practices will soon fall into their normal routine. We recommend all new players read the rulebook (which can be found online, just a google search away). We hope to see you all next practice, and on all the practices, competitions and social events after that!"
   },
   {
     title: "Greet the new coach!",
     id_3char: "greet_the_new_coach",
     date: "29. September 2019",
-    p_text: "Nunc id cursus mi, id facilisis risus. Suspendisse sollicitudin, ipsum vitae rutrum ullamcorper, arcu sem tincidunt nisl, sit amet dignissim dui massa ut orci. Cras in velit vel lacus accumsan tristique eget convallis eros. Vestibulum eu pulvinar metus. Cras risus leo, tristique non nunc vel, venenatis venenatis nulla. Quisque nec dolor fringilla, mollis odio nec, malesuada ipsum. Quisque fringilla velit eu massa sagittis fermentum nec sit amet orci. Duis sed leo tellus. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla pulvinar at tellus elementum aliquam. Proin posuere auctor leo laoreet pharetra. Curabitur arcu lorem, volutpat eu turpis et, tempus tempor ante. Nam vitae dui lectus. Maecenas egestas id neque sed vulputate.",
+    p_text: "We are very proud to introduce our new coach to the team! Ellen Klipp has extensive experience from coaching teams in the US and is dedicated to helping our team and athletes continue to grow and improve. Please give her a warm welcome in true LMR spirit!"
   },
   {
     title: "Tshirts available",
     id_3char: "tshirts_available",
     date: "6. October 2019",
-    p_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    p_text: "Finally they have arrived! The new team t-shirts are here and they are fantastic! If you don't believe it yet, they will be available at next practice, both to view and order one for yourself. You can also contact us on e-mail to order yours today! Get matching outfits for the whole team!"
   },
   {
-    title: "Rule change!",
+    title: "Rule change",
     id_3char: "rule_change",
     date: "22. October 2019",
-    p_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    p_text: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <a href='http://letsmow.com/rules-tech/official-rules/' target='_blank'>letsmow.com</a>"
   },
   {
     title: "Have YOU seen the spooky ghost?",
     id_3char: "spooky_scary",
     date: "31. October 2019",
-    p_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    p_text: "Halloween is upon us and so are the ghosts... This year, the ghost of the court, has been particularly fond of pranking us. Equipment have been 'misplaced' or hidden, mowers are starting up of their own, and one member of the staff even saw a mower taking off on its own! Even so, the most frightening sight was when a couple of our new athletes were on their way home. Taking the shortcut over the field, talking amongst each other, the wind suddenly started howling. All of a sudden they saw a ghostly shape on the court in front of them. The ghost, known as 'The Mower', sat on a ghost lawnmower, which took off faster than we have ever been able to on our own real lawnmowers, and disappeared... 'The Mower' have a history of pranking the team, and likes to freak out new members, but it has never done any real harm, so you don't need to worry! Walk safe and happy halloween!"
   },
   {
     title: "Competition qualification",
     id_3char: "competition_qualification",
     date: "10. November 2019",
-    p_text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    p_text: "Congratulations to some of our members that, this weekend, qualified for the national competition at Gresstun. Thank you for an amazing weekend and race, making it really interesting for the spectators to watch. We wish you all the best with upcoming practices and the new competition."
   }
 ]
 
