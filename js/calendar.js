@@ -35,6 +35,7 @@ function sortByDate(list) {
 
 function checkboxes(calendar) {
 	let filter = document.querySelectorAll("#filter div input");
+	console.log(filter);
 	let newCalendar = calendar;
 	for (let i = 0; i < filter.length; i++) {
 		filter[i].addEventListener("change", function() {
