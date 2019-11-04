@@ -24,7 +24,6 @@ function loadCalendar(calendarList) {
 		<p class="timeAndLocation">Time: ${el.tid}<br>Location: ${el.sted}</p></li>`;
 		wrap.appendChild(wrapList)
 		calendarId.appendChild(wrap)
-		console.log(wrap)
 	}	
 }
 
