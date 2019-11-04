@@ -313,7 +313,7 @@ section {
   justify-content: center;
 }
 main section > article {
-	padding: 4%;
+	padding: 1%;
 	width: 92%;
 }
 .column {
@@ -512,10 +512,6 @@ div ul li a:not(.abtn):hover::before {
   margin-right: 10px;
 }
 /* CALENDAR PAGE */
-#cal{
-  width:60%;
-  padding:4%;
-}
 .calendar {
 	display: flex;
 	justify-content: space-between;
@@ -800,11 +796,6 @@ textarea{
   max-width: 45%;
   max-height: 45%;
   border-radius: 50%;
-}
-#about article{
-  width:60%;
-  padding:4%;
-  background-color: rgba(255, 255, 255, 0.90);
 }
 /* MEDIA QUERIES */
 @media (max-width: 850px) {
