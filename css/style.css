@@ -663,14 +663,6 @@ div ul li a:not(.abtn):hover::before {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-.news_heading h2::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
-  display: block;
-  content: " ";
-  margin-top: -90px;
-  height: 90px;
-  visibility: hidden;
-  pointer-events: none;
-}
 #hr_title{ /*overskriften i sidenav*/
   text-decoration: underline;
 }
