@@ -21,6 +21,7 @@ function loadCalendar(calendarList) {
 		string += `<li class="${el.type}"><p><b>${el.title}</b><br>${info}</p>
 		<p class="timeAndLocation">Time: ${el.tid}<br>Location: ${el.sted}</p></li>`;
 	}
+	console.log(string)
 	calendarId.innerHTML = string;
 }
 

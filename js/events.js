@@ -1,4 +1,9 @@
 // INGVILD
+const sortSocialHTML = document.getElementById('sortSocial');
+const sortFundraiserHTML = document.getElementById('sortFundraiser');
+const sortCompetitionHTML = document.getElementById('sortCompetition');
+const sortDateHTML = document.getElementById('sortDate');
+const sortAlphHTML = document.getElementById('sortAlph');
 //events
 window.onload = printArticle;
 
@@ -6,23 +11,26 @@ window.onload = printArticle;
 //Skrive ut alle artiklene som ligger lagret i "databasen"(data)
 function printArticle(event) {
 	event.preventDefault();
-
+  
 	document.getElementById('list_event').innerHTML = '';
+  
 	for (i = 0; i < calendar.length; i++){
-		if(calendar[i].tag != 'Practice'){
-			var type = calendar[i].tag;
-			var date = calendar[i].dato;
-			var title = calendar[i].title;
-			var mainText = calendar[i].informasjon;
 
-			var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
-			var li = document.createElement('li');
+		if(calendar[i].tag != 'Practice'){
+			let type = calendar[i].tag;
+			let date = calendar[i].dato;
+			let title = calendar[i].title;
+			let mainText = calendar[i].informasjon;
+
+			let articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
+			let li = document.createElement('li');
 			li.innerHTML = articleEl;
 			document.getElementById('list_event').prepend(li);
 		}
 
 	}
 }
+
 //Sorter tag
 function sortType(tag) {
 	var liTag = [];
@@ -34,29 +42,27 @@ function sortType(tag) {
 		}}
 	var listHTML = document.getElementById('list_event');
 	listHTML.innerHTML = '';
-	for (j = 0; j < liTag.length; j++) {
-
-		var tag = liTag[j].tag;
-		var date = liTag[j].dato;
-		var title = liTag[j].title;
-		var mainText = liTag[j].informasjon;
-
-		var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+tag+'</p> <p class="mainText">'+mainText+'</p></article>';
-		var liPostTag = document.createElement('li');
-		liPostTag.innerHTML = articleEl;
-		listHTML.prepend(liPostTag);
+  
+  
+		let type = calendar[i].tag;
+		let date = calendar[i].dato;
+		let title = calendar[i].title;
+		let mainText = calendar[i].informasjon;
+	
+		
+		let articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
+		let li = document.createElement('li');
+		li.innerHTML = articleEl;
+		listHTML.prepend(li);
+		
 	}
-};
-
-var sortSocialHTML = document.getElementById('sortSocial');
-var sortFundraiserHTML = document.getElementById('sortFundraiser');
-var sortCompetitionHTML = document.getElementById('sortCompetition');
+}
 
 //Setter en funksjon til hver knapp
+sortSocialHTML.onclick = function(){sorterType('Social')};
+sortFundraiserHTML.onclick = function() { sorterType('Fundraiser')};
+sortCompetitionHTML.onclick = function () {sorterType('Competition')};
 
-sortSocialHTML.onclick = function(){sortType('Social')};
-sortFundraiserHTML.onclick = function() { sortType('Fundraiser')};
-sortCompetitionHTML.onclick = function () {sortType('Competition')};
 
 
 //sort by alphabet
@@ -69,19 +75,20 @@ function sortByAlpha() {
 		//Vet ikke helt hva denne linjen gjør eller hvorfor den ser sånn ut
 		return (textA > textB) ? -1: (textA < textB) ? 1: 0;
 	});
+  
 	var listHTML = document.getElementById('list_event');
 	listHTML.innerHTML = '';
 
 	for (i = 0; i < calendar.length; i++){
 		if(calendar[i].tag != 'Practice'){
-			var type = calendar[i].tag;
-			var date = calendar[i].dato;
-			var title = calendar[i].title;
-			var mainText = calendar[i].informasjon;
+			let type = calendar[i].tag;
+			let date = calendar[i].dato;
+			let title = calendar[i].title;
+			let mainText = calendar[i].informasjon;
 
 
-			var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
-			var li = document.createElement('li');
+			let articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
+			let li = document.createElement('li');
 			li.innerHTML = articleEl;
 			listHTML.prepend(li);
 		}}
@@ -105,14 +112,14 @@ function sortByDate() {
 
 	for (i = 0; i < calendar.length; i++){
 		if(calendar[i].tag != 'Practice'){
-			var type = calendar[i].tag;
-			var date = calendar[i].dato;
-			var title = calendar[i].title;
-			var mainText = calendar[i].informasjon;
+			let type = calendar[i].tag;
+			let date = calendar[i].dato;
+			let title = calendar[i].title;
+			let mainText = calendar[i].informasjon;
 
 
-			var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
-			var li = document.createElement('li');
+			let articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
+			let li = document.createElement('li');
 			li.innerHTML = articleEl;
 			listHTML.prepend(li);
 		}
@@ -122,3 +129,4 @@ function sortByDate() {
 
 var sortDateHTML = document.getElementById('sortDate');
 sortDateHTML.addEventListener('click', sortByDate);
+
