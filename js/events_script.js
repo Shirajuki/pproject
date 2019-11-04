@@ -4,39 +4,32 @@ var data =[
         date: '1.10.19',
         title: 'Group practice',
         mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiisate!'
-
     },
     {
         type: 'Social',
         date: '12.10.19',
         title: 'Party at mine',
         mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiisate!'
-
     },
     {
         type: 'Fundraiser',
         date: '21.10.19',
         title: 'Lets make some money',
         mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiisate!'
-
     },
     {
         type: 'Competition',
         date: '22.10.19',
         title: 'Big competition in Oslo',
         mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiisate!'
-
     },
     {
         type: 'Practice',
         date: '25.10.19',
         title: 'Group practice',
         mainText: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse ex nam quo reprehenderit. Ad alias amet at blanditiisate!'
-
     }
-    ];
-
-
+];
 window.onload = skrivUtArtikkel;
 //Skrive ut alle artiklene som ligger lagret i "databasen"(data)
 function skrivUtArtikkel(event) {

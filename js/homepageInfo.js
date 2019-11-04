@@ -12,7 +12,7 @@ window.onload = () => {
 const calendarHomepage = document.getElementById('calendarHomepage');
 const eventsHomepage = document.getElementById('eventsHomepage');
 // console.log(calendarHomepage,eventsHomepage);
-document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toLocaleDateString("nb-NO")}`;
+document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})}`;
 // Post calendar
 calendarHomepage.innerHTML = "";
 let c = 0

@@ -44,9 +44,11 @@ html, body {
   background: var(--bg-color);
   font-family: Arial, sans-serif;
   scroll-behavior: smooth;
-	background-image: url(../img/background.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+}
+body {
+  background-image: url(../img/background.jpg);
+  background-size: cover;
+  background-attachment: fixed;
 }
 /* HEADER */
 header {
@@ -112,8 +114,10 @@ div ul li a:not(.abtn) {
   padding: 5px 10px 0 10px;
 }
 .icon {
-  font-size:30px;
   display: none;
+  font-size:30px;
+  color: transparent;
+  text-shadow: 0 0 0 #fff;
 }
 .responsivemb {
   top: -200px;
@@ -246,6 +250,7 @@ footer>a{
 #fallback_image {
   display: block;
   height: auto;
+  min-height: 100%;
   min-width: 100%;
 }
 #title {
@@ -319,24 +324,27 @@ main section > article {
   height: 100%;
   min-height: 300px;
   margin: 1%;
+  background: linear-gradient(185deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 50%, rgba(0,255,34,.1) 100%);
+  box-shadow: 5px 5px 10px 0px rgba(20,100,54,.2);
 }
 i {
   font-style: normal;
   font-family: arial;
 }
-article h1{
+article h1 {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   margin-bottom: 25px;
   border-bottom: 1.5px solid black;
 }
-article{
+article {
   background-color: rgba(255,255,255,0.9);
   position: relative;
   width: 100%;
   margin: 50px auto;
   padding: 4%;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
 }
 .bigarticle{
   width: 80%;
@@ -420,6 +428,9 @@ div ul li a:not(.abtn):hover::before {
 	left: 50%;
   transform: translate(-50%,-50%);
 }
+#zoom {
+  width: 100%
+}
 #kryss {
   position: absolute;
   top: 10px;
@@ -460,6 +471,7 @@ div ul li a:not(.abtn):hover::before {
   background-color: #4c8738;
   border: none;
   margin: 0;
+  font-size: 1.2em;
   text-align: center;
   border-radius: 0;
   transition: background 1s;
@@ -504,10 +516,6 @@ div ul li a:not(.abtn):hover::before {
   margin-right: 10px;
 }
 /* CALENDAR PAGE */
-#cal{
-  width:60%;
-  padding:4%;
-}
 .calendar {
 	display: flex;
 	justify-content: space-between;
@@ -570,12 +578,10 @@ div ul li a:not(.abtn):hover::before {
 	padding: 10px;
   display: flex;
   flex-direction: row;
-}
-#filter-wrap {
-	margin: 10px 0 30px 10px;
+  flex-wrap: wrap;
 }
 .inputflex{
-  margin-right: 50px;
+  margin-right: 10px;
 }
 #input {
 	min-width: 150px;
@@ -591,25 +597,26 @@ div ul li a:not(.abtn):hover::before {
 }
 .input {
 	min-width: 130px;
+  margin-bottom: 5px;
 }
 #filter input {
 	margin: 0 0 0 20px;
 }
-/* ADDED BY SYNNE */
-/* NYHETER: INNHOLD */
+
+/* NEWS.HTML: CONTENT */
 .news_content{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
   position: relative;
-  left:20%;
+  left: 20%;
   margin-top: 10px;
-  margin-left: 2%;
   width: 80%;
 }
-.newsarticle{ /*artikkelen lol*/
+.newsarticle{ /*artikkelen obvs*/
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 0;
   margin-bottom: 30px;
 }
 .newsarticle span{ /*dato-stringen i hver artikkel*/
@@ -619,10 +626,11 @@ div ul li a:not(.abtn):hover::before {
 .newsarticle p{ /*innholdet i hver artikkel*/
   font-weight: 400;
 }
-.newsarticle a{
-  color: blue;
+.newsarticle a{ /*link i artikkel-teksten*/
+  color: green;
+  text-decoration: underline;
 }
-/* NEWS HEADINGS */
+/* NEWS.HTML: HEADINGS */
 .news_heading{
   color: #2d6a37;
 }
@@ -630,33 +638,29 @@ div ul li a:not(.abtn):hover::before {
   color: black;
   font-size: 0.7em;
 }
-/* SIDENAV */
-/* TODO 1: Sidenaven blir så lang det er innhold, scrolles utafor sida og kuttes av. FIKS */
-/* TODO 2: Skrive nyheter på engelsk */
-/* NOTE: Burde kanskje kollapses til en hamburgermeny når skjermen blir for liten, vet ikke hvordan jeg gjøre det men har prøvd, så det kan hende det ser rart ut i html-en eller js-en til news */
-/* - Jonny: fixed? */
+/* NEWS.HTML: SIDENAV */
 .sidenav_inner{
   display: inline-block;
   position: fixed;
   width: 15%;
-  margin-top: 32px;
-  margin-left: 0.7%;
+  margin-top: 0px;
+  margin-left: -1.5%;
   color: #2d6a37;
   background-color: rgba(246,246,246,0.8);
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-.news_heading h3::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
+.news_heading h2::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
   display: block;
   content: " ";
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -90px;
+  height: 90px;
   visibility: hidden;
   pointer-events: none;
 }
 #hr_title{ /*overskriften i sidenav*/
-  border: 0.8px solid black;
+  text-decoration: underline;
 }
 .sidenav_inner a{ /*linkene i sidenav*/
   color: #2d6a37;
@@ -679,9 +683,7 @@ div ul li a:not(.abtn):hover::before {
 .sidenav_inner li>a:hover{ /*link i sidenav on hover*/
   color: #2d6a37;
 }
-/* ADDED BY SYNNE */
-/* PÅMELDINGSSKJEMA */
-/* TODO: Skrive om alle variablene til engelsk */
+/* JOIN.HTML */
 .form{
   position: relative;
   padding: 20px 12px 10px 20px;
@@ -736,12 +738,13 @@ textarea{
   flex-direction: column;
   position: relative;
   text-align: center;
-
+	width: 42%;
+	/*
   background-color: rgba(255,255,255,0.8);
   width: 42%;
   margin: 40px auto;
   padding: 20px;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);*/
 }
 
 /*CONTACT*/
@@ -759,6 +762,8 @@ textarea{
 .contacticon{
   font-size: 50px;
   margin-bottom: 20px;
+  color: transparent;
+  text-shadow: 0 0 0 #000;
 }
 .contactlabel{
   font-size: 30px;
@@ -799,11 +804,6 @@ textarea{
   max-height: 45%;
   border-radius: 50%;
 }
-#about article{
-  width:60%;
-  padding:4%;
-  background-color: rgba(255, 255, 255, 0.90);
-}
 /* MEDIA QUERIES */
 @media (max-width: 850px) {
   .responsivemb {
@@ -823,6 +823,7 @@ textarea{
   }
   div.sidenav_inner {
     position: relative;
+    margin-left: auto;
     width: 100%;
   }
   div.news_content {
@@ -834,12 +835,6 @@ textarea{
   }
   .dropdown-content {
     display: none;
-  }
-  video {
-    display: none;
-  }
-  #fallback_image {
-    display: block;
   }
   .nav_list {
     display: none;
@@ -862,7 +857,10 @@ textarea{
     align-items: center;
 	}
   #contact article{
-    width: 80%;
+    width:80%;
+  }
+  #contarcticle{
+    width:80%;
   }
   #images {
     flex-direction:column;
@@ -873,9 +871,6 @@ textarea{
     margin-top: 20px;
     max-width: 50%;
     max-height: 50%;
-  }
-  #about article{
-    width:80%;
   }
   .smallarticle{
     width:80%;
@@ -910,11 +905,22 @@ textarea{
   #title {
     padding: 10% 20%;
   }
-  #about p{
+  #aboutarticles p{
     font-size: 0.9em;
   }
-  .inputflex{
-    margin-bottom: 25px;
+  #event_nav {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  #submit_btn {
+    margin: 0 auto;
+    width: 100%;
+  }
+  article li {
+    margin: 0;
+  }
+  #navbar_list {
+    margin: 10px 0 20px 20px;
   }
 }
 /* IMAGE MEDIA QUERY */
