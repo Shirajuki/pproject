@@ -855,7 +855,10 @@ textarea{
     align-items: center;
 	}
   #contact article{
-    width: 80%;
+    width:80%;
+  }
+  #contarcticle{
+    width:80%;
   }
   #images {
     flex-direction:column;
@@ -866,9 +869,6 @@ textarea{
     margin-top: 20px;
     max-width: 50%;
     max-height: 50%;
-  }
-  #about article{
-    width:80%;
   }
   .smallarticle{
     width:80%;
@@ -903,7 +903,7 @@ textarea{
   #title {
     padding: 10% 20%;
   }
-  #about p{
+  #aboutarticles p{
     font-size: 0.9em;
   }
   #event_nav {
