@@ -20,11 +20,11 @@ function loadCalendar(calendarList) {
 			var wrapList = document.createElement('ul');
 		}
 		let info = (el.informasjon.length > 40 && el.type != 'practice') ? (el.informasjon.slice(0,40)+'...') : (el.informasjon);
-		wrapList.innerHTML += `<li class="${el.type}"><p><b>${el.title}</b><br>${info}</p>
+		wrapList.innerHTML += `<li class="${el.type}"><p><b><a href="events.html#${el.link}" class="anchorCalendar">${el.title}</a></b>${info}</p>
 		<p class="timeAndLocation">Time: ${el.tid}<br>Location: ${el.sted}</p></li>`;
 		wrap.appendChild(wrapList)
 		calendarId.appendChild(wrap)
-	}	
+	}
 }
 
 function checkType(domId) {

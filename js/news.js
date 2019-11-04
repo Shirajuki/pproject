@@ -50,7 +50,7 @@ window.onload = function() {
   }
   //prints the anchor links in sidebar, only the latest news
   let navbar_list = document.getElementById("navbar_list");
-  let newest = articles.slice(-3) //the 3* latest articles (added to the bottom of the list "articles")
+  let newest = articles.slice(-3); //the 3* latest articles (added to the bottom of the list "articles")
   for(let j = 0; j<newest.length; j++) {
     let li_nav_element = document.createElement("li"); //declares new local variable, creates new element: li-node
     let a_element = '<a href="#' + newest[j].id_3char + '">' + newest[j].title + '</a>';

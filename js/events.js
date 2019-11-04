@@ -17,8 +17,15 @@ sortFundraiserHTML.onclick = function() { sortType('Fundraiser') };
 sortCompetitionHTML.onclick = function () { sortType('Competition') };
 // Her filterer jeg bort typen "practice"
 const filteredCalendar = calendar.filter(e => e.type != 'practice');
+// Redirect from calendar page
 //Print all the articles to the page
-window.onload = () => printArticle(filteredCalendar);
+window.onload = () => {
+	printArticle(filteredCalendar);
+	setTimeout(() => {
+		const hash = window.location.hash.slice(1,window.location.hash.length);
+		document.getElementById(hash).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+	},150);
+}
 
 // Ha parameter, for å printe fra gitt liste.
 function printArticle(list) {
