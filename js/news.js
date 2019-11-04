@@ -22,7 +22,7 @@ const articles = [
     title: "Rule change",
     id_3char: "rule_change",
     date: "22. October 2019",
-    p_text: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <a href='http://letsmow.com/rules-tech/official-rules/' target='_blank'>letsmow.com</a>"
+    p_text: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <span><a href='http://letsmow.com/rules-tech/official-rules/' target='_blank'>letsmow.com</a></span>"
   },
   {
     title: "Have YOU seen the spooky ghost?",
@@ -44,7 +44,7 @@ window.onload = function() {
   //prints the news articles: section and li-elements
   for(let i = 0; i<articles.length; i++) {
     let li_element = document.createElement("li"); //declares new local variable, creates new element: li-node
-    let sec_element = '<section class="newsarticle"><div class="news_heading"><h3 id="' + articles[i].id_3char +'">' + articles[i].title + '</h3><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section>';
+    let sec_element = '<section class="newsarticle"><div class="news_heading"><h2 id="' + articles[i].id_3char +'">' + articles[i].title + '</h2><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section>';
     li_element.innerHTML = sec_element;  //fills the li-element with content
     document.getElementById("list_with_articles").prepend(li_element); //writes to html-element with id list_with_articles, prepends the node to the start of the list
   }
