@@ -55,7 +55,7 @@ function sortType(tag) {
 		li.innerHTML = articleEl;
 		listHTML.prepend(li);
 		
-	}
+
 }
 
 //Setter en funksjon til hver knapp
@@ -94,7 +94,6 @@ function sortByAlpha() {
 		}}
 }
 
-var sortAlphHTML = document.getElementById('sortAlph');
 sortAlphHTML.addEventListener('click',sortByAlpha);
 
 
@@ -127,6 +126,5 @@ function sortByDate() {
 
 }
 
-var sortDateHTML = document.getElementById('sortDate');
 sortDateHTML.addEventListener('click', sortByDate);
 
