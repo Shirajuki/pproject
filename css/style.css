@@ -608,14 +608,15 @@ div ul li a:not(.abtn):hover::before {
   position: relative;
   left: 20%;
   margin-top: 10px;
-  width: 76%;
+  width: 80%;
 }
 .newsarticle{ /*artikkelen obvs*/
   position: relative;
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin: 10px;
+  margin-top: 10px;
+  margin-left: 0;
   margin-bottom: 30px;
 }
 .newsarticle span{ /*dato-stringen i hver artikkel*/
@@ -642,8 +643,8 @@ div ul li a:not(.abtn):hover::before {
   display: inline-block;
   position: fixed;
   width: 15%;
-  margin-top: 32px;
-  margin-left: 0.7%;
+  margin-top: 0px;
+  margin-left: -1.5%;
   color: #2d6a37;
   background-color: rgba(246,246,246,0.8);
   border-radius: 5px;
@@ -659,7 +660,7 @@ div ul li a:not(.abtn):hover::before {
   pointer-events: none;
 }
 #hr_title{ /*overskriften i sidenav*/
-  border: 0.1px solid black;
+  text-decoration: underline;
 }
 .sidenav_inner a{ /*linkene i sidenav*/
   color: #2d6a37;
@@ -822,6 +823,7 @@ textarea{
   }
   div.sidenav_inner {
     position: relative;
+    margin-left: auto;
     width: 100%;
   }
   div.news_content {
