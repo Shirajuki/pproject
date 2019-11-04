@@ -43,9 +43,9 @@ html, body {
   position: relative;
   background: var(--bg-color);
   font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
 }
 body {
-  scroll-behavior: smooth;
   background-image: url(../img/background.jpg);
   background-size: cover;
   background-attachment: fixed;
