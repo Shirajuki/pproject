@@ -17,14 +17,18 @@ sortFundraiserHTML.onclick = function() { sortType('Fundraiser') };
 sortCompetitionHTML.onclick = function () { sortType('Competition') };
 // Her filterer jeg bort typen "practice"
 const filteredCalendar = calendar.filter(e => e.type != 'practice');
-// Redirect from calendar page
-//Print all the articles to the page
+
+// On page load
 window.onload = () => {
+	//Print all the articles to the page
 	printArticle(filteredCalendar);
-	setTimeout(() => {
-		const hash = window.location.hash.slice(1,window.location.hash.length);
-		document.getElementById(hash).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
-	},150);
+	// Redirect from calendar page
+	if (window.location.hash.length > 0) {
+		setTimeout(() => {
+			const hash = window.location.hash.slice(1,window.location.hash.length);
+			document.getElementById(hash).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
+		},150);
+	}
 }
 
 // Ha parameter, for å printe fra gitt liste.
@@ -59,21 +63,16 @@ function sortType(tag) {
 // Det samme som sortType() Kan gjøres her også :)
 function sortByAlpha() {
 	// Ikke helt sikker på hvordan denne funker hehe
-	// Det er bare å gjøre om, så det blir lettere forståelig. Her kan man altså også bruke arrow functions som vist under, begge betyr det samme tho.
-	const liAlpha = filteredCalendar.sort(function (a,b) {
-		if (a.title.toUpperCase() < b.title.toUpperCase()) return 1;
-    if (a.title.toUpperCase() > b.title.toUpperCase()) return -1;
-    return 0;
-	});
+	// Det er bare å gjøre om, så det blir lettere forståelig. Her gjør jeg om første boktaven i tittelen om til ASCII tallet. Og sjekker deretter størrelse mellom dem. A(65) < B(66) for eksempel.
+	const liAlpha = filteredCalendar.sort((a,b) => b.title.toUpperCase().charCodeAt(0) - a.title.toUpperCase().charCodeAt(0));
 	printArticle(filteredCalendar);
 }
 
 //Sort the articles by when the event is happening
 function sortByDate() {
-	// XXX: Jonny her, Dette kalles en ternary operator og er gitt -> statement ? true : false. Her er det nested da, dermed får vi en if-else-statement
-	// Dette betyr om a.dato < b.dato så -1, ellers om a.data > b.dato så 1, ellers 0
+	// XXX: Jonny her, ternary operator er gitt -> statement ? true : false. Her er det nested da, dermed får vi en if-else-statement
 	// Bruk av arrow funksjon, og vi får one line! :D
-	// Det her er det samme som ovenfor altså i funksjon sortByAlpha()
-	const liDate = filteredCalendar.sort((a,b) => (new Date(a.dato) < new Date(b.dato)) ? 1 : ((new Date(a.dato) > new Date(b.dato)) ? -1 : 0));
+	// Det her er det samme som ovenfor, altså i funksjon sortByAlpha()
+	const liDate = filteredCalendar.sort((a,b) => new Date(b.dato) - new Date(a.dato));
 	printArticle(liDate);
 }

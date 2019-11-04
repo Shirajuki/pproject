@@ -74,7 +74,7 @@ nav {
   margin: 0 auto;
   background-color: rgba(0,0,0,0);
 }
-nav button {
+nav .button {
   position: relative;
   padding: 10px 15px;
   color: #fff;
@@ -133,7 +133,7 @@ div ul li a:not(.abtn) {
   transition: all .3s ease-in-out;
   z-index: -99;
 }
-#mobile div {
+#mobile ol {
   width: 93%;
   margin: 0 auto;
 }
@@ -146,7 +146,7 @@ div ul li a:not(.abtn) {
   display: block;
   color: white;
 }
-#mobile li a button {
+#mobile li .button {
   display: none;
 }
 .dropdown-content::before {
@@ -269,18 +269,18 @@ footer>a{
   transition: font-size .5s;
   transform: skew(0deg, 3deg)
 }
-#title > a >button {
+#title > form > .button {
   border: 2px solid black;
   margin-top: 20px;
   transition: padding .5s, color .3s;
   transform: skew(0deg, 3deg)
 }
-#title>button:hover, #title>button:active {
+#title > form > .button:hover, #title > form >.button:active {
   transform: skew(0deg, 3deg) translateY(3px);
   box-shadow: 0 2px #0d4a17;
 }
 /* BUTTONS */
-button {
+.button, button {
   position: relative;
   box-shadow: 0 5px #0d4a17;
   background-color: var(--theme-color);
@@ -296,7 +296,7 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
-nav button:hover, nav button:active {
+nav .button:hover, nav .button:active {
   transform: translateY(3px);
   box-shadow: 0 2px #0d4a17;
 }
@@ -821,7 +821,7 @@ textarea{
   .responsivemb {
     top: 70px !important;
   }
-  #mobile li a button {
+  #mobile li .button {
     display: block;
   }
   nav {
@@ -911,7 +911,7 @@ textarea{
   #title>h1 {
     font-size: 2.5rem;
   }
-  #title>button {
+  #title>.button {
     padding: 10px 20px;
   }
   #title {
