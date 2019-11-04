@@ -13,10 +13,12 @@ function skrivUtArtikkel(event) {
 		var mainText = calendar[i].informasjon;
 
 		//var liste = document.getElementById('liste');
-		var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
-		var li = document.createElement('li');
-		li.innerHTML = articleEl;
-		document.getElementById('liste').prepend(li);
+		if (calendar[i].type != 'practice') {
+			var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
+			var li = document.createElement('li');
+			li.innerHTML = articleEl;
+			document.getElementById('liste').prepend(li);
+		}
 	}
 }
 //Sorter tag
