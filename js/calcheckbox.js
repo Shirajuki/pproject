@@ -11,6 +11,5 @@ for (item of calendar){
 
 for (place of locationsfromdata){
   let label=place.toLowerCase().replace(" ","")+"Checkbox"
-  console.log(label);
   locations.innerHTML+='<div class="input"><input id='+label+" "+'type="checkbox" checked><label for='+label+'>'+place+'</label></div>'
 }
