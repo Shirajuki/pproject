@@ -600,16 +600,15 @@ div ul li a:not(.abtn):hover::before {
 #filter input {
 	margin: 0 0 0 20px;
 }
-/* ADDED BY SYNNE */
-/* NYHETER: INNHOLD */
+
+/* NEWS.HTML: CONTENT */
 .news_content{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
   position: relative;
-  left:20%;
+  left: 20%;
   margin-top: 10px;
-  margin-left: 2%;
-  width: 80%;
+  width: 76%;
 }
-.newsarticle{ /*artikkelen lol*/
+.newsarticle{ /*artikkelen obvs*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -624,10 +623,11 @@ div ul li a:not(.abtn):hover::before {
 .newsarticle p{ /*innholdet i hver artikkel*/
   font-weight: 400;
 }
-.newsarticle a{
-  color: blue;
+.newsarticle a{ /*link i artikkel-teksten*/
+  color: green;
+  text-decoration: underline;
 }
-/* NEWS HEADINGS */
+/* NEWS.HTML: HEADINGS */
 .news_heading{
   color: #2d6a37;
 }
@@ -635,10 +635,7 @@ div ul li a:not(.abtn):hover::before {
   color: black;
   font-size: 0.7em;
 }
-/* SIDENAV */
-/* TODO: Skrive nyheter på engelsk */
-/* NOTE: Burde kanskje kollapses til en hamburgermeny når skjermen blir for liten, vet ikke hvordan jeg gjøre det men har prøvd, så det kan hende det ser rart ut i html-en eller js-en til news */
-/* - Jonny: fixed? */
+/* NEWS.HTML: SIDENAV */
 .sidenav_inner{
   display: inline-block;
   position: fixed;
@@ -651,11 +648,11 @@ div ul li a:not(.abtn):hover::before {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-.news_heading h3::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
+.news_heading h2::before{ /*for at anchor linkene plasserer overskriften den viser til /under/ fixed navbar*/
   display: block;
   content: " ";
-  margin-top: -100px;
-  height: 100px;
+  margin-top: -90px;
+  height: 90px;
   visibility: hidden;
   pointer-events: none;
 }
@@ -683,8 +680,7 @@ div ul li a:not(.abtn):hover::before {
 .sidenav_inner li>a:hover{ /*link i sidenav on hover*/
   color: #2d6a37;
 }
-/* ADDED BY SYNNE */
-/* PÅMELDINGSSKJEMA */
+/* JOIN.HTML */
 .form{
   position: relative;
   padding: 20px 12px 10px 20px;
