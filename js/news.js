@@ -34,7 +34,7 @@ const articles = [
     title: "Competition qualification",
     id_3char: "competition_qualification",
     date: "10. November 2019",
-    p_text: "Congratulations to some of our members that, this weekend, qualified for the national competition at Gresstun. Thank you for an amazing weekend and race, making it really interesting for the spectators to watch. We wish you all the best with upcoming practices and the new competition."
+    p_text: "Congratulations to our members that qualified for the national competition at Gresstun! Thank you for an amazing weekend and race, making it really interesting for the spectators to watch. We wish you all the best with upcoming practices and the new competition."
   }
 ]
 
