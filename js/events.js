@@ -4,6 +4,7 @@ window.onload = skrivUtArtikkel;
 //Skrive ut alle artiklene som ligger lagret i "databasen"(data)
 function skrivUtArtikkel(event) {
 	event.preventDefault();
+
 	document.getElementById('liste').innerHTML = '';
 	for (i = 0; i < calendar.length; i++){
 		var type = calendar[i].tag;
@@ -40,14 +41,14 @@ function sorterType(tag) {
 		liPostTag.innerHTML = articleEl;
 		listeHTML.prepend(liPostTag);
 	}
-}
-var sortPracticeHTML = document.getElementById('sortPractice');
+};
+
 var sortSocialHTML = document.getElementById('sortSocial');
 var sortFundraiserHTML = document.getElementById('sortFundraiser');
 var sortCompetitionHTML = document.getElementById('sortCompetition');
 
 //Setter en funksjon til hver knapp
-sortPracticeHTML.onclick = function() {sorterType('Practice')};
+
 sortSocialHTML.onclick = function(){sorterType('Social')};
 sortFundraiserHTML.onclick = function() { sorterType('Fundraiser')};
 sortCompetitionHTML.onclick = function () {sorterType('Competition')};
@@ -61,59 +62,28 @@ for (i=0;i<calendar.length;i++){
 }
 console.log(datList);*/
 
-function sortByDate2(list) {
-	return list.sort(function (a, b) {
-		return (new Date(a.dato)) - (new Date(b.dato))
-	})
-}
-
-//Funker ikke
-function sortByDate() {
-	datList.sort();
-	datList.reverse();
-
-
-	//console.log(datList);
-
-	var liDate = [];
-	for (i = 0; i < calendar.length; i++) {
-
-		if (datList[i] ==calendar[i].tag) {
-			liDate.push(calendar[i]);
-		}
-	}
-
-	var listeHTML = document.getElementById('liste');
-	listeHTML.innerHTML = '';
-	for (j = 0; j < liDate.length; j++) {
-
-		var tag = liDate[j].tag;
-		var date = liDate[j].dato;
-		var title = liDate[j].title;
-		var mainText = liDate[j].informasjon;
-
-		var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+tag+'</p> <p class="mainText">'+mainText+'</p></article>';
-		var liPostDate = document.createElement('li');
-		liPostDate.innerHTML = articleEl;
-		listeHTML.prepend(liPostDate);
-	}
-
-}
-
-
 //funker ikke :(
-//sortDateHTML.addEventListener('click', sortByDate2(calendar));
 //Jukser, siden data nå sorteres automatisk setter jeg bare den normale laste funkjosnen
 //til å "sortere" etter dato
+function sortDDate() {
+	function sortByDate2(list) {
+		return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)));
+
+
+	}
+	sortDateHTML.addEventListener('click', sortByDate2(calendar), skrivUtArtikkel);
+
+}
+
 var sortDateHTML = document.getElementById('sortDate');
-sortDateHTML.addEventListener('click', skrivUtArtikkel);
+sortDateHTML.addEventListener('click', sortDDate);
+
 
 //sort by alphabet
-
-
 function sortByAlpha() {
+	var calendar2 = calendar;
 	//Ikke helt sikker på hvordan denne funker hehe
-calendar.sort(function (a,b) {
+calendar2.sort(function (a,b) {
 	var textA = a.title.toUpperCase();
 	var textB = b.title.toUpperCase();
 
@@ -123,11 +93,11 @@ calendar.sort(function (a,b) {
 	var liste = document.getElementById('liste');
 	liste.innerHTML = '';
 
-	for (i = 0; i < calendar.length; i++){
-		var type = calendar[i].tag;
-		var date = calendar[i].dato;
-		var title = calendar[i].title;
-		var mainText = calendar[i].informasjon;
+	for (i = 0; i < calendar2.length; i++){
+		var type = calendar2[i].tag;
+		var date = calendar2[i].dato;
+		var title = calendar2[i].title;
+		var mainText = calendar2[i].informasjon;
 
 
 		var articleEl =  '<article><h2>'+title+'</h2><br> <p class="date">WHEN: '+date+'</p> <p class="type">TAG: '+type+'</p> <p class="mainText">'+mainText+'</p></article>';
