@@ -1,7 +1,7 @@
 const imageGallery = document.getElementById('imageGallery');
 // | Bilde data her!
 // v
-const galleries = Array(12).fill({thumbnail: "img/150x150.png", image: "img/800x500.png"});
+const galleries = Array(12).fill({thumbnail: "img/150x150.png", image: "img/800x500.png", alt: "dummyImage"});
 const lightbox = document.getElementById('lightbox');
 const kryss = document.getElementById('kryss');
 kryss.onclick = () => openClose(false,lightbox);
@@ -9,6 +9,7 @@ imageGallery.innerHTML = "";
 for (gallery of galleries) {
   let image = document.createElement('img')
   image.src = gallery.thumbnail;
+  image.alt = gallery.alt;
   image.onclick = function() {
     openClose(true,lightbox);
     document.getElementById('zoom').src = gallery.image;
