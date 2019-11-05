@@ -428,9 +428,6 @@ div ul li a:not(.abtn):hover::before {
 	left: 50%;
   transform: translate(-50%,-50%);
 }
-#zoom {
-  width: 100%
-}
 #kryss {
   position: absolute;
   top: 10px;
@@ -810,6 +807,9 @@ textarea{
 @media (max-width: 900px) {
   .responsivemb {
     top: 70px !important;
+  }
+  #zoom {
+    width: 100%
   }
   #mobile li .button {
     display: block;
