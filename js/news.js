@@ -22,7 +22,7 @@ const articles = [
     title: "Rule change",
     id_3char: "rule_change",
     date: "22. October 2019",
-    p_text: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <span><a href='http://letsmow.com/rules-tech/official-rules/' target='_blank'>letsmow.com</a></span>"
+    p_text: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <span><a href='http://letsmow.com/rules-tech/official-rules/' target='_blank' rel='noopener'>letsmow.com</a></span>"
   },
   {
     title: "Have YOU seen the spooky ghost?",
