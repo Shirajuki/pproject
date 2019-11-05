@@ -23,13 +23,15 @@
             <label>Name: *
                 <br>
                 <input type="text" placeholder="First name" name="first name" id="first_name_inp" class="inputs name" required autofocus>
+            </label>
+            <label>
                 <input type="text" placeholder="Last name" name="last name" id="last_name_inp" class="inputs name" required>
             </label>
             <br>
             <label>Study: *
                 <br>
                 <select name="study" id="study_inp" class="inputs" required>
-                    <option>---</option>
+                    <option value="">---</option>
                     <option value="informatics">Informatics</option>
                     <option value="dragvoll">Dragvoll</option>
                     <option value="gløshaugen">Gløshaugen</option>
@@ -45,11 +47,13 @@
             </label>
             <br>
             <label>Phone number: *<br>
-                <input type="number" placeholder="ex: 99 92 24 44" maxlength="8" name="ph_number" id="ph_inp" class="inputs" required>
+                <input type="tel" placeholder="ex: 99 92 24 44" maxlength="8" name="ph_number" id="ph_inp" class="inputs" required>
             </label>
             <br>
-            <label>How much do you like lawnmowers on a scale from 1 to 10? *<br>
-                <input type="range" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" id="range_inp" class="inputs" required/>
+            <label>How much do you like lawnmowers on a scale from 1 to 10?<br>
+                <input type="range" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" id="range_inp" class="inputs"/>
+            </label>
+            <label>
                 <input type="number" name="amountInput" min="0" max="10" value="0" oninput="this.form.amountRange.value=this.value" id="range_out" class="inputs" disabled/>
             </label>
             <br>
