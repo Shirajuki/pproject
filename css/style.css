@@ -35,6 +35,9 @@
   white-space: nowrap;
   text-overflow: ellipsis;
 }
+#eventsHomepage li {
+	margin: 10px 0 10px 20px;
+}
 /* BODY */
 html, body {
   margin: 0;
