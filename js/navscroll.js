@@ -5,6 +5,28 @@ Date.prototype.getWeekNumber = function() {
   let yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
+// Jonny: SEO practices, kan muligens gjøre dette i modularity også :thinking:
+//  <!-- Facebook Open Graph -->
+//   <meta property="og:locale" content="nb_NO"/>
+//   <meta property="og:site_name" content="NTNUI Volleyball"/>
+//   <meta property="og:title" content="Kontakt oss | NTNUI Volleyball"/>
+//   <meta property="og:url" content="http://www.ntnuivolleyball.no/kontakt-oss/"/>
+//   <meta property="og:type" content="article"/>
+//   <meta property="og:description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
+//  <!-- Google+ / Schema.org -->
+//   <meta itemprop="name" content="Kontakt oss | NTNUI Volleyball"/>
+//   <meta itemprop="headline" content="Kontakt oss | NTNUI Volleyball"/>
+//   <meta itemprop="description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
+//   <meta itemprop="author" content="admin"/>
+//   <!--<meta itemprop="publisher" content="NTNUI Volleyball"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
+//  <!-- Twitter Cards -->
+//   <meta name="twitter:title" content="Kontakt oss | NTNUI Volleyball"/>
+//   <meta name="twitter:url" content="http://www.ntnuivolleyball.no/kontakt-oss/"/>
+//   <meta name="twitter:description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
+//   <meta name="twitter:card" content="summary_large_image"/>
+
+
+
 // Mobile Responsive dropdown navigation - JONNY CAN FIX THIS!
 function myFunction() {
   setTimeout(() => {
