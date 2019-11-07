@@ -14,14 +14,17 @@ document.getElementById("form").onsubmit = function(event){ //when the submit bu
   let exp = document.getElementById("experience_inp").value;
   let allergies = document.getElementById("allergies_inp").value;
 
-  console.log("Name: " + first_name + " " + last_name);
-  console.log("Study: " + study);
-  console.log("Date of birth: " + dateofbirth);
-  console.log("Email: " + email);
-  console.log("Phone number: " + ph_num);
-  console.log("Range: " + like_lawn);
-  console.log("Experience: " + exp);
-  console.log("Allergies: " + allergies);
+  const data = {
+    name: first_name + " " + last_name,
+    study: study,
+    dateOfBirth: dateofbirth,
+    email: email,
+    phoneNumber: ph_num,
+    range: like_lawn,
+    experience: exp,
+    allergies: allergies,
+  };
+  console.log("Dette blir sent til databasen: "+JSON.stringify(data));
 
   document.getElementById("registrationform_page_content").style.display = "none"; //the form is hidden
   document.getElementById("reg_recieved").style.display = "block"; //the submitted-message is shown
