@@ -23,7 +23,6 @@ for (gallery of galleries) {
   image.alt = gallery.alt;
   image.onclick = function() {
     openClose(true,lightbox);
-    console.log(gallery);
     document.getElementById('zoom').src = this.id;
 		document.getElementById('zoom').style.animation = 'zoom 0.5s linear';
     setTimeout(_=> document.getElementById('zoom').style.animation = '', 1000);
