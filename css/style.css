@@ -630,7 +630,7 @@ div ul li a:not(.abtn):hover::before {
   display: flex;
   flex-direction: column;
   text-align: left;
-  margin-top: 10px;
+  margin-top: 50px;
   margin-left: 0;
   margin-bottom: 30px;
 }
@@ -644,6 +644,7 @@ div ul li a:not(.abtn):hover::before {
 .newsarticle a{ /*link i artikkel-teksten*/
   color: green;
   text-decoration: underline;
+  display: inline;
 }
 /* NEWS.HTML: HEADINGS */
 .news_heading{
