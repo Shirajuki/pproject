@@ -641,6 +641,7 @@ div ul li a:not(.abtn):hover::before {
 .newsarticle a{ /*link i artikkel-teksten*/
   color: green;
   text-decoration: underline;
+  display: inline;
 }
 /* NEWS.HTML: HEADINGS */
 .news_heading{
