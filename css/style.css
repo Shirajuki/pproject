@@ -625,6 +625,13 @@ div ul li a:not(.abtn):hover::before {
   margin-top: 10px;
   width: 80%;
 }
+a.anchor {
+  position: relative;
+  top:-100px;
+  display: block;
+  height: 0;
+  width:0;
+}
 .newsarticle{ /*artikkelen obvs*/
   position: relative;
   display: flex;

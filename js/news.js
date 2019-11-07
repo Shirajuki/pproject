@@ -44,8 +44,8 @@ window.onload = function() {
   //prints the news articles: section and li-elements
   for(let i = 0; i<articles.length; i++) {
     let li_element = document.createElement("li"); //declares new local variable, creates new element: li-node
-    let sec_element = '<section class="newsarticle"><div class="news_heading"><h2 id="' + articles[i].id_3char +'">' + articles[i].title + '</h2><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section><hr>';
-    li_element.innerHTML = sec_element;  //fills the li-element with content
+    let sec_element = '<section class="newsarticle"><a id="'+articles[i].id_3char+'" class="anchor"></a><div class="news_heading"><h2>' + articles[i].title + '</h2><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section><hr>';
+    li_element.innerHTML += sec_element;  //fills the li-element with content
     document.getElementById("list_with_articles").prepend(li_element); //writes to html-element with id list_with_articles, prepends the node to the start of the list
   }
   //prints the anchor links in sidebar, only the latest news
