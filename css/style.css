@@ -463,6 +463,9 @@ div ul li a:not(.abtn):hover::before {
   width: 92%;
   margin: 0 auto;
 }
+#list_event > li {
+  margin: 0;
+}
 #event_nav > button{
   flex-basis: 25px;
   flex-grow: 1;
