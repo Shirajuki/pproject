@@ -44,13 +44,13 @@ window.onload = function() {
   //prints the news articles: section and li-elements
   for(let i = 0; i<articles.length; i++) {
     let li_element = document.createElement("li"); //declares new local variable, creates new element: li-node
-    let sec_element = '<section class="newsarticle"><div class="news_heading"><h2 id="' + articles[i].id_3char +'">' + articles[i].title + '</h2><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section>';
+    let sec_element = '<section class="newsarticle"><div class="news_heading"><h2 id="' + articles[i].id_3char +'">' + articles[i].title + '</h2><span class="span_date">' + articles[i].date + '</span></div><p>' + articles[i].p_text + '</p></section><hr>';
     li_element.innerHTML = sec_element;  //fills the li-element with content
     document.getElementById("list_with_articles").prepend(li_element); //writes to html-element with id list_with_articles, prepends the node to the start of the list
   }
   //prints the anchor links in sidebar, only the latest news
   let navbar_list = document.getElementById("navbar_list");
-  let newest = articles.slice(-3); //the 3* latest articles (added to the bottom of the list "articles")
+  let newest = articles.slice(-5); //the 3* latest articles (added to the bottom of the list "articles")
   for(let j = 0; j < newest.length; j++) {
     let li_nav_element = document.createElement("li"); //declares new local variable, creates new element: li-node
     let li_nav_anchor = document.createElement("a");
