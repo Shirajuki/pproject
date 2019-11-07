@@ -1,4 +1,4 @@
-// INGVILD
+// DOMs:
 const sortSocialHTML = document.getElementById('sortSocial');
 const sortFundraiserHTML = document.getElementById('sortFundraiser');
 const sortCompetitionHTML = document.getElementById('sortCompetition');
@@ -9,14 +9,11 @@ const filteredCalendar = calendar.filter(e => e.type != 'practice');
 // EVENTLISTENERS:
 //Assigning the function to its designated button
 sortDateHTML.addEventListener('click', sortByDate);
-//Assigning the function to its designated button
 sortAlphHTML.addEventListener('click',sortByAlpha);
-//Assigning the function to each button with its own specified parameter
 sortSocialHTML.onclick = function() { sortType('Social') };
 sortFundraiserHTML.onclick = function() { sortType('Fundraiser') };
 sortCompetitionHTML.onclick = function () { sortType('Competition') };
 
-// On page load
 window.onload = () => {
 	printArticle(filteredCalendar);
 	if (window.location.hash.length > 0) {
