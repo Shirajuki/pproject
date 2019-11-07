@@ -73,6 +73,6 @@ function sortByDate() {
 	// XXX: Jonny her, ternary operator er gitt -> statement ? true : false. Her er det nested da, dermed får vi en if-else-statement
 	// Bruk av arrow funksjon, og vi får one line! :D
 	// Det her er det samme som ovenfor, altså i funksjon sortByAlpha()
-	const liDate = filteredCalendar.sort((a,b) => new Date(b.dato) - new Date(a.dato));
+	const liDate = filteredCalendar.sort((a,b) => new Date(a.dato) - new Date(b.dato));
 	printArticle(liDate);
 }
