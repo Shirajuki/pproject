@@ -48,6 +48,6 @@ function sortByAlpha() {
 	printArticle(filteredCalendar);
 }
 function sortByDate() {
-	const liDate = sortListByDate(filteredCalendar);
+  const liDate = sortListByDate(filteredCalendar);
 	printArticle(liDate);
 }
