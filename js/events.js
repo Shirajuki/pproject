@@ -26,13 +26,12 @@ window.onload = () => {
 }
 
 function printArticle(list) {
-	if (usingList.toString() == list.toString()) {
+	if (JSON.stringify(usingList) === JSON.stringify(list)) {
 		usingList = [];
 		list = [...filteredCalendar];
 	} else {
 		usingList = [...list];
 	}
-	console.log(usingList,list, usingList.toString() == list.toString())
 	listEvent.innerHTML = '';
 	for (const article of list) {
 		const type = article.tag;
