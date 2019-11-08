@@ -16,9 +16,9 @@ document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber(
 calendarHomepage.innerHTML = "";
 let c = 0
 for (const article of calendar) {
-  if (new Date(article.dato) >= new Date()) {
+  if (new Date(article.date) >= new Date()) {
     c++;
-    calendarHomepage.innerHTML += `<p>${new Date(article.dato).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${article.type}] ${article.informasjon}</p>`;
+    calendarHomepage.innerHTML += `<p>${new Date(article.date).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${article.type}] ${article.info}</p>`;
   }
   if (c >= 5) break;
 }
@@ -26,9 +26,9 @@ for (const article of calendar) {
 eventsHomepage.innerHTML = "";
 c = 0
 for (const article of calendar) {
-  if (new Date(article.dato) >= new Date() && article.type == "event") {
+  if (new Date(article.date) >= new Date() && article.type == "event") {
     c++;
-    const info = (article.informasjon.length > 200) ? (article.informasjon.slice(0,200)+'...') : (article.informasjon);
+    const info = (article.info.length > 200) ? (article.info.slice(0,200)+'...') : (article.info);
     eventsHomepage.innerHTML += `<li><strong>${article.title}:</strong> ${info}</li>`;
   }
   if (c >= 2) break;

@@ -33,7 +33,7 @@ function printArticle(list) {
 	}
 	listEvent.innerHTML = '';
 	for (const article of list) {
-		const articleEl = `<article id="${article.link}"><h2>${article.title}</h2><br> <p class="date">WHEN: ${article.dato}</p> <p class="type">TAG: ${article.tag}</p> <p class="mainText">${article.informasjon}</p></article>`;
+		const articleEl = `<article id="${article.link}"><h2>${article.title}</h2><br> <p class="date">WHEN: ${article.date}</p> <p class="type">TAG: ${article.tag}</p> <p class="mainText">${article.info}</p></article>`;
 		const li = document.createElement('li');
 		li.innerHTML = articleEl;
 		listEvent.prepend(li);

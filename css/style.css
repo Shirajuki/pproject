@@ -487,15 +487,15 @@ div ul li a:not(.abtn):hover::before {
   height: 20%;
   width: 90%;
 }
-#event_nav{
+#eventNav{
   display: flex;
   width: 92%;
   margin: 0 auto;
 }
-#list_event > li {
+#listEvent > li {
   margin: 0;
 }
-#event_nav > button{
+#eventNav > button{
   flex-basis: 25px;
   flex-grow: 1;
   padding: 9px;
@@ -512,13 +512,13 @@ div ul li a:not(.abtn):hover::before {
   font-weight: normal;
   text-align: left;
 }
-#event_nav>button:hover{
+#eventNav>button:hover{
   background-color: #2d6a37;
 }
-#event_nav button div {
+#eventNav button div {
   transition: all .2s;
 }
-.event_nav_drop {
+.eventNavDrop {
   display: block;
   position: absolute;
   background-color: #2d6a37;
@@ -529,18 +529,18 @@ div ul li a:not(.abtn):hover::before {
   opacity: 0;
   z-index: 999;
 }
-.event_nav_drop ul li{
+.eventNavDrop ul li{
   padding: 6px 0 10px 0;
 }
-.event_nav_drop ul li>a:not(.abtn)::before {
+.eventNavDrop ul li>a:not(.abtn)::before {
 	background-color: white;
 }
-#event_nav button:hover .event_nav_drop{
+#eventNav button:hover .eventNavDrop{
   color: #f1f1f1;
   visibility: visible;
   opacity: 1;
 }
-#event_nav .event_nav_drop ul li a:hover{
+#eventNav .eventNavDrop ul li a:hover{
   color: #f1f1f1;
 }
 #liste li{
@@ -648,7 +648,7 @@ div ul li a:not(.abtn):hover::before {
 }
 
 /* NEWS.HTML: CONTENT */
-.news_content{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
+.newsContent{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
   position: relative;
   left: 20%;
   margin-top: 10px;
@@ -683,15 +683,15 @@ a.anchor {
   display: inline;
 }
 /* NEWS.HTML: HEADINGS */
-.news_heading{
+.newsHeading{
   color: #2d6a37;
 }
-.span_date{
+.spanDate{
   color: black;
   font-size: 0.7em;
 }
 /* NEWS.HTML: SIDENAV */
-.sidenav_inner{
+.sidenavInner{
   display: inline-block;
   position: fixed;
   width: 15%;
@@ -703,20 +703,20 @@ a.anchor {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-#hr_title{ /*overskriften i sidenav*/
+#hrTitle{ /*overskriften i sidenav*/
   text-decoration: underline;
 }
-.sidenav_inner a{ /*linkene i sidenav*/
+.sidenavInner a{ /*linkene i sidenav*/
   color: #2d6a37;
   line-height: 1;
   font-weight: normal;
   font-style: normal;
   text-decoration: none;
 }
-#navbar_list{
+#navbarList{
   margin-left: -10px; /*eliminerer space der punktene li tok opp plass*/
 }
-.sidenav_inner p{ /* overskriften i sidenav*/
+.sidenavInner p{ /* overskriften i sidenav*/
   color: #2d6a37;
   font-weight: bold;
   display: flex;
@@ -724,7 +724,7 @@ a.anchor {
   margin-top: 7px;
   margin-bottom: 5px;
 }
-.sidenav_inner li>a:hover{ /*link i sidenav on hover*/
+.sidenavInner li>a:hover{ /*link i sidenav on hover*/
   color: #2d6a37;
 }
 /* JOIN.HTML */
@@ -894,12 +894,12 @@ textarea{
   #header {
     background-color: black;
   }
-  div.sidenav_inner {
+  div.sidenavInner {
     position: relative;
     margin-left: auto;
     width: 100%;
   }
-  div.news_content {
+  div.newsContent {
     position: relative;
     left: 0;
     margin-top: 10px;
@@ -909,7 +909,7 @@ textarea{
   .dropdown-content {
     display: none;
   }
-  .nav_list {
+  .navList {
     display: none;
   }
   .icon {
@@ -981,7 +981,7 @@ textarea{
   #aboutarticles p{
     font-size: 0.9em;
   }
-  #event_nav {
+  #eventNav {
     flex-wrap: wrap;
     flex-direction: column;
   }
@@ -992,7 +992,7 @@ textarea{
   article li {
     margin: 0;
   }
-  #navbar_list {
+  #navbarList {
     margin: 10px 0 20px 20px;
   }
 }
