@@ -6,7 +6,7 @@ form.onsubmit = function(event){ //when the form is submitted => values are upda
   event.preventDefault();
   const firstName = document.getElementById("firstNameInp").value;
   const lastName = document.getElementById("lastNameInp").value;
-  const study = document.getElementById("studyInp").value;
+  const campus = document.getElementById("campusInp").value;
   const dateofbirth = document.getElementById("dateofbirthInp").value;
   const email = document.getElementById("emailInp").value;
   const phNum = document.getElementById("phInp").value;
@@ -15,7 +15,7 @@ form.onsubmit = function(event){ //when the form is submitted => values are upda
   const allergies = document.getElementById("allergiesInp").value;
   const data = {
     name: firstName + " " + lastName,
-    study: study,
+    campus: campus,
     dateOfBirth: dateofbirth,
     email: email,
     phoneNumber: phNum,

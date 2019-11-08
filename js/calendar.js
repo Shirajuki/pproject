@@ -20,14 +20,14 @@ function loadCalendar(calendarList) {
 		if (datecheck != date) {
 			date = datecheck;
 			wrap = document.createElement('div');
-			wrap.className = 'calendar'
+			wrap.className = 'calendar';
 			wrap.innerHTML = `<div class="calendarDate"><p>${eldate.getDate()}/${eldate.getMonth() + 1}</p></div>`;
 			wrapList = document.createElement('ul');
 		}
 		const info = (el.info.length > 40 && el.type != 'practice') ? (el.info.slice(0,40)+'...') : (el.info);
 		wrapList.innerHTML += `<li class="${el.type}"><p><b>${el.type == 'event' ? `<a href="events.html#${el.link}" class="anchorCalendar">${el.title}</a>` : el.title + "<br>"}</b>${info}</p><p class="timeAndLocation">Time: ${el.time}<br>Location: ${el.location}</p></li>`;
-		wrap.appendChild(wrapList)
-		calendarId.appendChild(wrap)
+		wrap.appendChild(wrapList);
+		calendarId.appendChild(wrap);
 	}
 };
 
