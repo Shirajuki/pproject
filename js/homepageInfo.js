@@ -17,17 +17,17 @@ document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber(
 calendarHomepage.innerHTML = "";
 let c = 0
 for (let i = 0; i < calendar.length; i++) {
-  if (new Date(calendar[i].dato) >= new Date() || true) {
+  if (new Date(calendar[i].dato) >= new Date()) {
     c++;
     calendarHomepage.innerHTML += `<p>${new Date(calendar[i].dato).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${calendar[i].type}] ${calendar[i].informasjon}</p>`;
   }
-  if (c >= 2) break;
+  if (c >= 5) break;
 }
 // Post events
 eventsHomepage.innerHTML = "";
 c = 0
 for (let i = 0; i < calendar.length; i++) {
-  if (new Date(calendar[i].dato) >= new Date("2000-1-1") && calendar[i].type == "event") {
+  if (new Date(calendar[i].dato) >= new Date() && calendar[i].type == "event") {
     c++;
     let info = calendar[i].informasjon
     if (info.length > 200) info = info.slice(0,200)+'...'

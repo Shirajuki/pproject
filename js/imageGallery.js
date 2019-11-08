@@ -1,7 +1,3 @@
-const imageGallery = document.getElementById('imageGallery');
-// | Bilde data her!
-// v
-// const galleries = Array(12).fill({thumbnail: "img/150x150.png", image: "img/800x500.png", alt: "dummyImage"});
 const galleries = [
   {thumbnail: "img/thumb_1.jpg", image: "img/gallery_1.jpg", alt: "image 1 of gallery"},
   {thumbnail: "img/thumb_2.jpg", image: "img/gallery_2.jpg", alt: "image 2 of gallery"},
@@ -12,22 +8,40 @@ const galleries = [
   {thumbnail: "img/thumb_7.png", image: "img/gallery_7.png", alt: "image 7 of gallery"},
   {thumbnail: "img/thumb_8.jpg", image: "img/gallery_8.jpg", alt: "image 8 of gallery"},
 ];
+
+const imageGallery = document.getElementById('imageGallery');
 const lightbox = document.getElementById('lightbox');
+const zoomedImage = document.getElementById('zoom')
 const kryss = document.getElementById('kryss');
+const left = document.getElementById('left');
+const right = document.getElementById('right');
+right.onclick = () => slide(1);
+left.onclick = () => slide(-1);
 kryss.onclick = () => openClose(false,lightbox);
+
 imageGallery.innerHTML = "";
-for (gallery of galleries) {
+for (let i = 0; i < galleries.length; i++) {
   let image = document.createElement('img')
-  image.src = gallery.thumbnail;
-  image.id = gallery.image
-  image.alt = gallery.alt;
+  image.src = galleries[i].thumbnail;
+  image.id = galleries[i].image
+  image.alt = galleries[i].alt;
+  image.title = i;
   image.onclick = function() {
     openClose(true,lightbox);
-    document.getElementById('zoom').src = this.id;
-		document.getElementById('zoom').style.animation = 'zoom 0.5s linear';
-    setTimeout(_=> document.getElementById('zoom').style.animation = '', 1000);
+    zoomedImage.src = this.id;
+    zoomedImage.title = this.title;
+		zoomedImage.style.animation = 'zoom 0.3s linear';
+    setTimeout(_=> zoomedImage.style.animation = '', 300);
   };
   imageGallery.append(image);
+}
+function slide(n) {
+  console.log(zoomedImage.title);
+  let slides = parseInt(zoomedImage.title) + n;
+  if (slides < 0) slides = galleries.length - 1;
+  if (slides === galleries.length) slides = 0;
+  console.log(`img[title="${slides}"]`)
+  document.querySelector(`img[title="${slides}"]`).click();
 }
 function openClose(bool,dom) {
 	if (bool) {

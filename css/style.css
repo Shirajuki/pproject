@@ -420,7 +420,7 @@ div ul li a:not(.abtn):hover::before {
 	height: 100%;
 	background: rgba(0,0,0,0.95);
 	opacity: 0;
-  transition: visibility 0.5s, opacity 0.5s ease-in-out;
+  transition: visibility 0.3s, opacity 0.3s ease-in-out;
   z-index: 9999;
   display: flex;
   justify-content: center;
@@ -431,18 +431,48 @@ div ul li a:not(.abtn):hover::before {
 	left: 50%;
   transform: translate(-50%,-50%);
 }
-#kryss {
+#left, #right, #kryss {
   position: absolute;
   top: 10px;
   right: 10px;
   color: white;
+  font-weight: bold;
   font-size: 4rem;
   z-index: 999;
   cursor: pointer;
-  transition: color .5s;
+  transition: background-color 1s ease, color 1s ease;
 }
 #kryss:hover {
   color: var(--theme-color1);
+}
+#left, #right {
+	max-width: 25px;
+	border-radius: 15px;
+	font-size: 2em;
+	color: white;
+	padding: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.kryss {
+	right: 0;
+	top: 0;
+}
+#right {
+	right: 5px;
+}
+#left {
+	left: 5px;
+}
+#left:hover, #right:hover {
+  background-color: rgba(255,255,255,.3);
+}
+.kryss:hover {
+  color: purple;
+}
+#knappForan:hover, #knappTilbake:hover{
+	color: purple;
+	background-color: #bbb;
 }
 /* EVENT PAGE */
 #event h2{
@@ -747,19 +777,14 @@ textarea{
   background: #0d4a17;
 }
 #reg_recieved{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
   text-align: center;
 	width: 42%;
-	/*
-  background-color: rgba(255,255,255,0.8);
-  width: 42%;
-  margin: 40px auto;
-  padding: 20px;
-  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);*/
+  transition: visibility .3s, opacity .3s ease-in-out;
 }
 
 /*CONTACT*/
