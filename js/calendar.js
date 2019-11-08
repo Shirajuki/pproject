@@ -3,10 +3,9 @@ const calendarId = document.getElementById("calendarElements");
 
 function loadCalendar(calendarList) {
 	calendarList = sortByDate(calendarList);
-	calendarId.innerHTML = ''
-	let week = 0;
-	let date = '';
-	let string = '';
+	calendarId.innerHTML = '';
+	let week = 0, date = '', string = '';
+	let wrap,wrapList;
 	for (el of calendarList) {
 		const eldate = new Date(el.dato);
 		if (eldate.getWeekNumber() != week) {
@@ -16,10 +15,10 @@ function loadCalendar(calendarList) {
 		const datecheck = `${eldate.getDate()}-${eldate.getMonth()}-${eldate.getFullYear()}`;
 		if (datecheck != date) {
 			date = datecheck;
-			var wrap = document.createElement('div');
+			wrap = document.createElement('div');
 			wrap.className = 'calendar'
 			wrap.innerHTML = `<div class="calendarDate"><p>${eldate.getDate()}/${eldate.getMonth() + 1}</p></div>`;
-			var wrapList = document.createElement('ul');
+			wrapList = document.createElement('ul');
 		}
 		const info = (el.informasjon.length > 40 && el.type != 'practice') ? (el.informasjon.slice(0,40)+'...') : (el.informasjon);
 		wrapList.innerHTML += `<li class="${el.type}"><p><b>${el.type == 'event' ? `<a href="events.html#${el.link}" class="anchorCalendar">${el.title}</a>` : el.title + "<br>"}</b>${info}</p>
@@ -48,13 +47,7 @@ function checkCheckboxes(calendar) {
 }
 
 function loadCheckboxes() {
-	const locationsfromdata=[]
-	for (const item of calendar){
-		const loc = item.sted
-		if (locationsfromdata.includes(loc)===false){
-			locationsfromdata.push(loc)
-		}
-	}
+	const locationsfromdata = Array.from(new Set(calendar.map(x => x.sted)))
 	for (const place of locationsfromdata){
 		const label = place.toLowerCase().replace(" ","")+"Checkbox"
 		locations.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`
