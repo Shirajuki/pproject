@@ -1,4 +1,4 @@
-// DOMs:
+// Load DOMs:
 const sortSocialHTML = document.getElementById('sortSocial');
 const sortFundraiserHTML = document.getElementById('sortFundraiser');
 const sortCompetitionHTML = document.getElementById('sortCompetition');
@@ -7,15 +7,13 @@ const sortAlphHTML = document.getElementById('sortAlph');
 const listEvent = document.getElementById('list_event');
 const filteredCalendar = calendar.filter(e => e.type != 'practice');
 let usingList = []
-// EVENTLISTENERS:
-//Assigning the function to its designated button
+// EVENTLISTENERS: Assigning the function to its designated button
 sortDateHTML.addEventListener('click', sortByDate);
-sortAlphHTML.addEventListener('click',sortByAlpha);
-sortSocialHTML.onclick = function() { sortType('Social') };
-sortFundraiserHTML.onclick = function() { sortType('Fundraiser') };
-sortCompetitionHTML.onclick = function () { sortType('Competition') };
-
-window.onload = () => {
+sortAlphHTML.addEventListener('click', sortByAlpha);
+sortSocialHTML.onclick = () => { sortType('Social') };
+sortFundraiserHTML.onclick = () => { sortType('Fundraiser') };
+sortCompetitionHTML.onclick =  () => { sortType('Competition') };
+window.addEventListener('load', () => {
 	printArticle(filteredCalendar);
 	if (window.location.hash.length > 0) {
 		setTimeout(() => {
@@ -23,9 +21,10 @@ window.onload = () => {
 			document.getElementById(hash).scrollIntoView({behavior: "smooth", block: "center", inline: "nearest"});
 		},150);
 	}
-}
+});
 
 function printArticle(list) {
+	// Checks if the same button is sorted twice, resets to default sort
 	if (JSON.stringify(usingList) === JSON.stringify(list)) {
 		usingList = [];
 		list = [...filteredCalendar];
@@ -34,18 +33,12 @@ function printArticle(list) {
 	}
 	listEvent.innerHTML = '';
 	for (const article of list) {
-		const type = article.tag;
-		const date = article.dato;
-		const title = article.title;
-		const mainText = article.informasjon;
-		const id = article.link;
-		const articleEl = `<article id="${id}"><h2>${title}</h2><br> <p class="date">WHEN: ${date}</p> <p class="type">TAG: ${type}</p> <p class="mainText">${mainText}</p></article>`;
+		const articleEl = `<article id="${article.link}"><h2>${article.title}</h2><br> <p class="date">WHEN: ${article.dato}</p> <p class="type">TAG: ${article.tag}</p> <p class="mainText">${article.informasjon}</p></article>`;
 		const li = document.createElement('li');
 		li.innerHTML = articleEl;
 		listEvent.prepend(li);
 	}
 }
-
 function sortType(tag) {
 	const liTag = filteredCalendar.filter(e => e.tag == tag);
 	printArticle(liTag);

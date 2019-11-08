@@ -13,15 +13,3 @@ const calendar = [
 	{ type: "practice", title: "Group Practice #21", informasjon: "Today: Speed. Instructor: Harald Gress", dato: "2019-10-30", tid: "18:00", sted: "Gløshaugen", link:"", tag: "Practice" },
 	{ type: "practice", title: "Group Practice #22", informasjon: "Today: Drifting. Instructor: Harald Gress", dato: "2019-11-03", tid: "18:00", sted: "Gløshaugen", link:"", tag: "Practice" },
 ];
-
-Date.prototype.getWeekNumber = function() {
-  let d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
-  let dayNum = d.getUTCDay() || 7;
-  d.setUTCDate(d.getUTCDate() + 4 - dayNum);
-  let yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
-  return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
-};
-
-function sortListByDate(list) {
-	return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)))
-};

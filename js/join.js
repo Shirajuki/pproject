@@ -1,29 +1,29 @@
 const form = document.getElementById("form");
-const content = document.getElementById("registrationform_page_content");
-const reg_recieved = document.getElementById("reg_recieved");
+const content = document.getElementById("registrationformPageContent");
+const regRecieved = document.getElementById("regRecieved");
 
 form.onsubmit = function(event){ //when the form is submitted => values are updated and shown in console
   event.preventDefault();
-  const first_name = document.getElementById("first_name_inp").value;
-  const last_name = document.getElementById("last_name_inp").value;
-  const study = document.getElementById("study_inp").value;
-  const dateofbirth = document.getElementById("dateofbirth_inp").value;
-  const email = document.getElementById("email_inp").value;
-  const ph_num = document.getElementById("ph_inp").value;
-  const like_lawn = document.getElementById("range_inp").value;
-  const exp = document.getElementById("experience_inp").value;
-  const allergies = document.getElementById("allergies_inp").value;
+  const firstName = document.getElementById("firstNameInp").value;
+  const lastName = document.getElementById("lastNameInp").value;
+  const study = document.getElementById("studyInp").value;
+  const dateofbirth = document.getElementById("dateofbirthInp").value;
+  const email = document.getElementById("emailInp").value;
+  const phNum = document.getElementById("phInp").value;
+  const likeLawn = document.getElementById("rangeInp").value;
+  const exp = document.getElementById("experienceInp").value;
+  const allergies = document.getElementById("allergiesInp").value;
   const data = {
-    name: first_name + " " + last_name,
+    name: firstName + " " + lastName,
     study: study,
     dateOfBirth: dateofbirth,
     email: email,
-    phoneNumber: ph_num,
-    range: like_lawn,
+    phoneNumber: phNum,
+    range: likeLawn,
     experience: exp,
     allergies: allergies,
   };
-  console.log("Dette blir sent til databasen: "+JSON.stringify(data));
+  console.log("Dette blir sent til databasen:",JSON.stringify(data));
   content.style.display = "none"; //the form is hidden
   // The submitted-message is shown
   reg_recieved.style.display = "block";

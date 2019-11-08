@@ -8,45 +8,50 @@ const galleries = [
   {thumbnail: "img/thumb_7.png", image: "img/gallery_7.png", alt: "image 7 of gallery"},
   {thumbnail: "img/thumb_8.jpg", image: "img/gallery_8.jpg", alt: "image 8 of gallery"},
 ];
-
+// Load DOMs and event listeners
 const imageGallery = document.getElementById('imageGallery');
 const lightbox = document.getElementById('lightbox');
 const zoomedImage = document.getElementById('zoom')
 const kryss = document.getElementById('kryss');
 const left = document.getElementById('left');
 const right = document.getElementById('right');
-right.onclick = () => slide(1);
-left.onclick = () => slide(-1);
-kryss.onclick = () => {
+right.addEventListener('click', _ => slide(1));
+left.addEventListener('click', _ => slide(-1));
+kryss.addEventListener('click', _ => {
   openClose(false,lightbox);
   zoomedImage.style.animation = '';
-}
-document.addEventListener('keyup', keyCheck);
-function keyCheck(event) {
+});
+document.addEventListener('keyup', keyCheckSlideshow);
+function keyCheckSlideshow(event) {
   if (lightbox.style.visibility === "visible") {
-    if (event.keyCode == 37) {
-      slide(1);
-    } else if (event.keyCode == 39) {
-      slide(-1);
-    } else if (event.keyCode == 27) {
+    if (event.keyCode === 37) {
+      left.click();
+    } else if (event.keyCode === 39) {
+      right.click();
+    } else if (event.keyCode === 27) {
       kryss.click();
     }
   }
 }
-imageGallery.innerHTML = "";
-for (let i = 0; i < galleries.length; i++) {
-  const image = document.createElement('img')
-  image.src = galleries[i].thumbnail;
-  image.id = galleries[i].image
-  image.alt = galleries[i].alt;
-  image.dataset.index = i;
-  image.onclick = function() {
-    openClose(true,lightbox);
-    zoomedImage.src = this.id;
-    zoomedImage.dataset.index = this.dataset.index;
-		zoomedImage.style.animation = 'zoom 0.3s linear';
-  };
-  imageGallery.append(image);
+window.addEventListener('load', () => {
+  loadGallery(galleries)
+});
+function loadGallery(list) {
+  imageGallery.innerHTML = "";
+  for (let i = 0; i < list.length; i++) {
+    const image = document.createElement('img')
+    image.src = list[i].thumbnail;
+    image.id = list[i].image
+    image.alt = list[i].alt;
+    image.dataset.index = i;
+    image.onclick = function() {
+      openClose(true,lightbox);
+      zoomedImage.src = this.id;
+      zoomedImage.dataset.index = this.dataset.index;
+      zoomedImage.style.animation = 'zoom 0.3s linear';
+    };
+    imageGallery.append(image);
+  }
 }
 function slide(n) {
   let slides = parseInt(zoomedImage.dataset.index) + n;

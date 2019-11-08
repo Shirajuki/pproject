@@ -5,10 +5,9 @@
   --theme-color: #2d6a37;
   --theme-color1: #d10000;
 }
-* {
-  margin: 0;
-  padding: 0;
-}
+* { margin: 0; padding: 0; }
+body.homepage { background: #efefef !important; }
+.homepage > main { display: none; }
 #scrollUpBtn {
   display: block;
   position: fixed;
@@ -250,7 +249,7 @@ footer>a{
   position: relative;
   height: 100%;
 }
-#fallback_image {
+#landingImage {
   display: block;
   height: auto;
   min-height: 100%;
@@ -273,13 +272,13 @@ footer>a{
   transform: skew(0deg, 3deg)
 }
 #title > form > .button {
-  border: 2px solid black;
   margin-top: 20px;
   transition: padding .5s, color .3s;
-  transform: skew(0deg, 3deg)
+  transform: skew(0deg, 3deg);
+  box-shadow: 0 7px #0d4a17;
 }
 #title > form > .button:hover, #title > form >.button:active {
-  transform: skew(0deg, 3deg) translateY(3px);
+  transform: skew(0deg, 3deg) translateY(5px);
   box-shadow: 0 2px #0d4a17;
 }
 /* BUTTONS */
@@ -753,12 +752,12 @@ textarea{
   font-family: inherit;
   width: 90%;
 }
-#range_out{
+#rangeOut{
   margin-left: 10px;
   width: 47px;
   text-align: center;
 }
-.submit_btn{
+.submitBtn{
   background: #2d6a37;
   margin-top: 20px;
 	padding: 10px;
@@ -773,10 +772,10 @@ textarea{
   font-weight: 500;
   cursor: pointer;
 }
-.submit_btn:hover{
+.submitBtn:hover{
   background: #0d4a17;
 }
-#reg_recieved{
+#regRecieved{
   /* display: none; */
   opacity: 0;
   visibility: hidden;
@@ -984,7 +983,7 @@ textarea{
     flex-wrap: wrap;
     flex-direction: column;
   }
-  #submit_btn {
+  #submitBtn {
     margin: 0 auto;
     width: 100%;
   }
