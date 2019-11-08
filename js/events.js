@@ -6,6 +6,7 @@ const sortDateHTML = document.getElementById('sortDate');
 const sortAlphHTML = document.getElementById('sortAlph');
 const listEvent = document.getElementById('list_event');
 const filteredCalendar = calendar.filter(e => e.type != 'practice');
+let usingList = []
 // EVENTLISTENERS:
 //Assigning the function to its designated button
 sortDateHTML.addEventListener('click', sortByDate);
@@ -25,6 +26,13 @@ window.onload = () => {
 }
 
 function printArticle(list) {
+	if (usingList.toString() == list.toString()) {
+		usingList = [];
+		list = [...filteredCalendar];
+	} else {
+		usingList = [...list];
+	}
+	console.log(usingList,list, usingList.toString() == list.toString())
 	listEvent.innerHTML = '';
 	for (const article of list) {
 		const type = article.tag;

@@ -66,8 +66,7 @@ function showFooter() {
 					<a href="about.html">About us</a>
 				</footer>
 			</div>
-      <form action="#">
-        <input type="submit" id="scrollUpBtn" title="Go to top" style="opacity: 0; pointer-events: none;" value="▲"/>
-      </form>`
+      <a id="scrollUpBtn" title="Go to top" href="#" style="opacity: 0;pointer-events: none;width: 30px;height: 30px;">▲</a>
+  `
 }
 showFooter()
