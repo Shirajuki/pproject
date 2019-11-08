@@ -17,9 +17,9 @@ document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber(
 calendarHomepage.innerHTML = "";
 let c = 0
 for (let i = 0; i < calendar.length; i++) {
-  if (new Date(calendar[i].dato) >= new Date()) {
+  if (new Date(calendar[i].date) >= new Date()) {
     c++;
-    calendarHomepage.innerHTML += `<p>${new Date(calendar[i].dato).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${calendar[i].type}] ${calendar[i].informasjon}</p>`;
+    calendarHomepage.innerHTML += `<p>${new Date(calendar[i].date).toLocaleDateString("nb-NO",{year: 'numeric', month: '2-digit', day: '2-digit'})} - [${calendar[i].type}] ${calendar[i].info}</p>`;
   }
   if (c >= 5) break;
 }
@@ -27,9 +27,9 @@ for (let i = 0; i < calendar.length; i++) {
 eventsHomepage.innerHTML = "";
 c = 0
 for (let i = 0; i < calendar.length; i++) {
-  if (new Date(calendar[i].dato) >= new Date() && calendar[i].type == "event") {
+  if (new Date(calendar[i].date) >= new Date() && calendar[i].type == "event") {
     c++;
-    let info = calendar[i].informasjon
+    let info = calendar[i].info
     if (info.length > 200) info = info.slice(0,200)+'...'
     eventsHomepage.innerHTML += `<li><strong>${calendar[i].title}:</strong> ${info}</li>`;
   }

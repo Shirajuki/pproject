@@ -8,7 +8,7 @@ function loadCalendar(calendarList) {
 	let date = '';
 	let string = '';
 	for (el of calendarList) {
-		const eldate = new Date(el.dato);
+		const eldate = new Date(el.date);
 		if (eldate.getWeekNumber() != week) {
 			week = eldate.getWeekNumber();
 			calendarId.innerHTML += `<h2 class="week">Week ${week}</h2>`
@@ -21,15 +21,15 @@ function loadCalendar(calendarList) {
 			wrap.innerHTML = `<div class="calendarDate"><p>${eldate.getDate()}/${eldate.getMonth() + 1}</p></div>`;
 			var wrapList = document.createElement('ul');
 		}
-		const info = (el.informasjon.length > 40 && el.type != 'practice') ? (el.informasjon.slice(0,40)+'...') : (el.informasjon);
+		const info = (el.info.length > 40 && el.type != 'practice') ? (el.info.slice(0,40)+'...') : (el.info);
 		wrapList.innerHTML += `<li class="${el.type}"><p><b>${el.type == 'event' ? `<a href="events.html#${el.link}" class="anchorCalendar">${el.title}</a>` : el.title + "<br>"}</b>${info}</p>
-		<p class="timeAndLocation">Time: ${el.tid}<br>Location: ${el.sted}</p></li>`;
+		<p class="timeAndLocation">Time: ${el.time}<br>Location: ${el.location}</p></li>`;
 		wrap.appendChild(wrapList)
 		calendarId.appendChild(wrap)
 	}
 }
 function sortByDate(list) {
-	return list.sort((a, b) => new Date(b.dato) - (new Date(a.dato)))
+	return list.sort((a, b) => new Date(b.date) - (new Date(a.date)))
 }
 function checkCheckboxes(calendar) {
 	const filter = document.querySelectorAll("#filter div input");
@@ -39,7 +39,7 @@ function checkCheckboxes(calendar) {
 			newCalendar = [...calendar];
 			for (let j = 0; j < filter.length; j++) {
 				if (!filter[j].checked) {
-					newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.sted.toLowerCase())));
+					newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.location.toLowerCase())));
 				}
 			}
 			loadCalendar(newCalendar);
@@ -50,7 +50,7 @@ function checkCheckboxes(calendar) {
 function loadCheckboxes() {
 	const locationsfromdata=[]
 	for (const item of calendar){
-		const loc = item.sted
+		const loc = item.location
 		if (locationsfromdata.includes(loc)===false){
 			locationsfromdata.push(loc)
 		}

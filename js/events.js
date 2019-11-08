@@ -35,9 +35,9 @@ function printArticle(list) {
 	listEvent.innerHTML = '';
 	for (const article of list) {
 		const type = article.tag;
-		const date = article.dato;
+		const date = article.date;
 		const title = article.title;
-		const mainText = article.informasjon;
+		const mainText = article.info;
 		const id = article.link;
 		const articleEl = `<article id="${id}"><h2>${title}</h2><br> <p class="date">WHEN: ${date}</p> <p class="type">TAG: ${type}</p> <p class="mainText">${mainText}</p></article>`;
 		const li = document.createElement('li');
@@ -57,6 +57,6 @@ function sortByAlpha() {
 }
 
 function sortByDate() {
-	const liDate = filteredCalendar.sort((a,b) => new Date(a.dato) - new Date(b.dato));
+	const liDate = filteredCalendar.sort((a,b) => new Date(a.date) - new Date(b.date));
 	printArticle(liDate);
 }
