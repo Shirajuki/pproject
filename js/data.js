@@ -23,5 +23,5 @@ Date.prototype.getWeekNumber = function() {
 };
 
 function sortListByDate(list) {
-	return list.sort((a, b) => new Date(b.dato) - (new Date(a.dato)))
+	return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)))
 };
