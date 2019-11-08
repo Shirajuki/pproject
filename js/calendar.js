@@ -32,14 +32,14 @@ function loadCalendar(calendarList) {
 };
 
 function loadCheckboxes(calendar) {
-	const locationsfromdata = Array.from(new Set(calendar.map(x => x.location)))
-	for (const place of locationsfromdata){
+	const locationsFromData = Array.from(new Set(calendar.map(x => x.location)))
+	for (const place of locationsFromData){
 		const label = place.toLowerCase().replace(" ","")+"Checkbox"
 		locations.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`;
 	}
-	const filter = document.querySelectorAll("#filter div input");
-	for (let i = 0; i < filter.length; i++) {
-		filter[i].addEventListener("change", () => {
+	const filters = document.querySelectorAll("#filter div input");
+	for (let i = 0; i < filters.length; i++) {
+		filters[i].addEventListener("change", () => {
 			let newCalendar = [...calendar];
 			for (let j = 0; j < filter.length; j++) {
 				if (!filter[j].checked) newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.sted.toLowerCase())));
