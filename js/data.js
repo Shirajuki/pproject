@@ -21,3 +21,7 @@ Date.prototype.getWeekNumber = function() {
   let yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
+
+function sortListByDate(list) {
+	return list.sort((a, b) => new Date(b.dato) - (new Date(a.dato)))
+};

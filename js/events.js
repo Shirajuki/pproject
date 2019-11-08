@@ -55,6 +55,6 @@ function sortByAlpha() {
 	printArticle(filteredCalendar);
 }
 function sortByDate() {
-	const liDate = filteredCalendar.sort((a,b) => new Date(a.dato) - new Date(b.dato));
+	const liDate = sortListByDate(filteredCalendar);
 	printArticle(liDate);
 }

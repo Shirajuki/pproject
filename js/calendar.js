@@ -1,8 +1,8 @@
-const locations = document.querySelector("#locationBox")
+const locations = document.querySelector("#locationBox");
 const calendarId = document.getElementById("calendarElements");
 
 function loadCalendar(calendarList) {
-	calendarList = sortByDate(calendarList);
+	calendarList = sortListByDate(calendarList);
 	calendarId.innerHTML = '';
 	let week = 0, date = '', string = '';
 	let wrap,wrapList;
@@ -10,7 +10,7 @@ function loadCalendar(calendarList) {
 		const eldate = new Date(el.dato);
 		if (eldate.getWeekNumber() != week) {
 			week = eldate.getWeekNumber();
-			calendarId.innerHTML += `<h2 class="week">Week ${week}</h2>`
+			calendarId.innerHTML += `<h2 class="week">Week ${week}</h2>`;
 		}
 		const datecheck = `${eldate.getDate()}-${eldate.getMonth()}-${eldate.getFullYear()}`;
 		if (datecheck != date) {
@@ -26,11 +26,14 @@ function loadCalendar(calendarList) {
 		wrap.appendChild(wrapList)
 		calendarId.appendChild(wrap)
 	}
-}
-function sortByDate(list) {
-	return list.sort((a, b) => new Date(b.dato) - (new Date(a.dato)))
-}
-function checkCheckboxes(calendar) {
+};
+
+function loadCheckboxes(calendar) {
+	const locationsfromdata = Array.from(new Set(calendar.map(x => x.sted)))
+	for (const place of locationsfromdata){
+		const label = place.toLowerCase().replace(" ","")+"Checkbox"
+		locations.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`;
+	}
 	const filter = document.querySelectorAll("#filter div input");
 	let newCalendar = [];
 	for (let i = 0; i < filter.length; i++) {
@@ -44,15 +47,7 @@ function checkCheckboxes(calendar) {
 			loadCalendar(newCalendar);
 		});
 	}
-}
+};
 
-function loadCheckboxes() {
-	const locationsfromdata = Array.from(new Set(calendar.map(x => x.sted)))
-	for (const place of locationsfromdata){
-		const label = place.toLowerCase().replace(" ","")+"Checkbox"
-		locations.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`
-	}
-}
-loadCheckboxes()
+loadCheckboxes(calendar);
 loadCalendar(calendar);
-checkCheckboxes(calendar);
