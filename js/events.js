@@ -50,12 +50,10 @@ function sortType(tag) {
 	const liTag = filteredCalendar.filter(e => e.tag == tag);
 	printArticle(liTag);
 }
-
 function sortByAlpha() {
 	const liAlpha = filteredCalendar.sort((a,b) => b.title.toUpperCase().charCodeAt(0) - a.title.toUpperCase().charCodeAt(0));
 	printArticle(filteredCalendar);
 }
-
 function sortByDate() {
 	const liDate = filteredCalendar.sort((a,b) => new Date(a.dato) - new Date(b.dato));
 	printArticle(liDate);

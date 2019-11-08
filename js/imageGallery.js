@@ -17,31 +17,42 @@ const left = document.getElementById('left');
 const right = document.getElementById('right');
 right.onclick = () => slide(1);
 left.onclick = () => slide(-1);
-kryss.onclick = () => openClose(false,lightbox);
-
+kryss.onclick = () => {
+  openClose(false,lightbox);
+  zoomedImage.style.animation = '';
+}
+document.addEventListener('keyup', keyCheck);
+function keyCheck(event) {
+  if (lightbox.style.visibility === "visible") {
+    if (event.keyCode == 37) {
+      slide(1);
+    } else if (event.keyCode == 39) {
+      slide(-1);
+    } else if (event.keyCode == 27) {
+      kryss.click();
+    }
+  }
+}
 imageGallery.innerHTML = "";
 for (let i = 0; i < galleries.length; i++) {
-  let image = document.createElement('img')
+  const image = document.createElement('img')
   image.src = galleries[i].thumbnail;
   image.id = galleries[i].image
   image.alt = galleries[i].alt;
-  image.title = i;
+  image.dataset.index = i;
   image.onclick = function() {
     openClose(true,lightbox);
     zoomedImage.src = this.id;
-    zoomedImage.title = this.title;
+    zoomedImage.dataset.index = this.dataset.index;
 		zoomedImage.style.animation = 'zoom 0.3s linear';
-    setTimeout(_=> zoomedImage.style.animation = '', 300);
   };
   imageGallery.append(image);
 }
 function slide(n) {
-  console.log(zoomedImage.title);
-  let slides = parseInt(zoomedImage.title) + n;
+  let slides = parseInt(zoomedImage.dataset.index) + n;
   if (slides < 0) slides = galleries.length - 1;
   if (slides === galleries.length) slides = 0;
-  console.log(`img[title="${slides}"]`)
-  document.querySelector(`img[title="${slides}"]`).click();
+  document.querySelector(`img[data-index="${slides}"]`).click();
 }
 function openClose(bool,dom) {
 	if (bool) {
