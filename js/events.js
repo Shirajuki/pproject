@@ -4,7 +4,7 @@ const sortFundraiserHTML = document.getElementById('sortFundraiser');
 const sortCompetitionHTML = document.getElementById('sortCompetition');
 const sortDateHTML = document.getElementById('sortDate');
 const sortAlphHTML = document.getElementById('sortAlph');
-const listEvent = document.getElementById('list_event');
+const listEvent = document.getElementById('listEvent');
 const filteredCalendar = calendar.filter(e => e.type != 'practice');
 let usingList = []
 // EVENTLISTENERS: Assigning the function to its designated button

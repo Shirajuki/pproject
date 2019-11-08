@@ -36,6 +36,7 @@ function keyCheckSlideshow(event) {
 window.addEventListener('load', () => {
   loadGallery(galleries)
 });
+
 function loadGallery(list) {
   imageGallery.innerHTML = "";
   for (let i = 0; i < list.length; i++) {

@@ -26,8 +26,8 @@ form.onsubmit = function(event){ //when the form is submitted => values are upda
   console.log("Dette blir sent til databasen:",JSON.stringify(data));
   content.style.display = "none"; //the form is hidden
   // The submitted-message is shown
-  reg_recieved.style.display = "block";
-  reg_recieved.style.opacity = 1;
-  reg_recieved.style.visibility = "visible";
-  reg_recieved.style.position = "relative";
+  regRecieved.style.display = "block";
+  regRecieved.style.opacity = 1;
+  regRecieved.style.visibility = "visible";
+  regRecieved.style.position = "relative";
 };
