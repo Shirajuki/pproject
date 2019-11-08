@@ -6,7 +6,7 @@ window.addEventListener('load', () => {
 });
 
 function loadCalendar(calendarList) {
-	calendarList = sortListByDate(calendarList);
+	calendarList = sortListByDate(calendarList).reverse();
 	calendarId.innerHTML = '';
 	let week = 0, date = '', string = '';
 	let wrap, wrapList;
