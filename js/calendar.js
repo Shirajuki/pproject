@@ -2,7 +2,7 @@ const locations = document.querySelector("#locationBox");
 const calendarId = document.getElementById("calendarElements");
 
 function loadCalendar(calendarList) {
-	calendarList = sortListByDate(calendarList);
+	calendarList = sortListByDate(calendarList).reverse();
 	calendarId.innerHTML = '';
 	let week = 0, date = '', string = '';
 	let wrap,wrapList;
