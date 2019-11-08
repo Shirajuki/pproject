@@ -753,9 +753,11 @@ textarea{
   width: 90%;
 }
 #rangeOut{
+  position: relative;
+  top: -12px;
   margin-left: 10px;
-  width: 47px;
   text-align: center;
+  font-weight: normal;
 }
 .submitBtn{
   background: #2d6a37;
