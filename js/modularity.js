@@ -13,7 +13,7 @@ Date.prototype.getWeekNumber = function() {
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
 function sortListByDate(list) {
-	return list.sort((a, b) => new Date(a.dato) - (new Date(b.dato)))
+	return list.sort((a, b) => new Date(a.date) - (new Date(b.date)))
 };
 // Jonny: SEO practices, kan muligens gjøre dette i modularity også :thinking:
 //  <!-- Facebook Open Graph -->
