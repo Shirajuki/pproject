@@ -430,7 +430,7 @@ div ul li a:not(.abtn):hover::before {
 	left: 50%;
   transform: translate(-50%,-50%);
 }
-#left, #right, #kryss {
+#left, #right, #closeX {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -441,7 +441,7 @@ div ul li a:not(.abtn):hover::before {
   cursor: pointer;
   transition: background-color 1s ease, color 1s ease;
 }
-#kryss:hover {
+#closeX:hover {
   color: var(--theme-color1);
 }
 #left, #right {
@@ -453,10 +453,6 @@ div ul li a:not(.abtn):hover::before {
   top: 50%;
   transform: translateY(-50%);
 }
-.kryss {
-	right: 0;
-	top: 0;
-}
 #right {
 	right: 5px;
 }
@@ -465,9 +461,6 @@ div ul li a:not(.abtn):hover::before {
 }
 #left:hover, #right:hover {
   background-color: rgba(255,255,255,.3);
-}
-.kryss:hover {
-  color: purple;
 }
 #knappForan:hover, #knappTilbake:hover{
 	color: purple;

@@ -32,8 +32,8 @@ function loadCalendarElements(calendarData) {
 };
 
 function loadFilterCheckboxes(calendar) {
-	const locationsfromdata = Array.from(new Set(calendar.map(x => x.location)));
-	for (const place of locationsfromdata){
+	const locationsFromData = Array.from(new Set(calendar.map(x => x.location)));
+	for (const place of locationsFromData){
 		const label = place.toLowerCase().replace(" ","") + "Checkbox";
 		locationsId.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`;
 	}
