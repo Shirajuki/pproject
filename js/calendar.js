@@ -2,12 +2,11 @@ const locationsId = document.querySelector("#locationBox");
 const calendarId = document.getElementById("calendarElements");
 window.addEventListener('load', () => {
 	loadFilterCheckboxes(calendar);
-	loadCalendarElements(calendar);
+	loadCalendar(calendar);
 });
 
-function loadCalendarElements(calendarData) { 
+function loadCalendar(calendarData) {
 	calendarData = sortListByDate(calendarData).reverse();
-	console.log(sortListByDate(calendarData))
 	calendarId.innerHTML = '';
 	let week = 0, date = '';
 	let wrapCalendarContent, wrapList;
@@ -33,8 +32,8 @@ function loadCalendarElements(calendarData) {
 };
 
 function loadFilterCheckboxes(calendar) {
-	const locationsFromData = Array.from(new Set(calendar.map(x => x.location)));
-	for (const place of locationsFromData){
+	const locationsfromdata = Array.from(new Set(calendar.map(x => x.location)));
+	for (const place of locationsfromdata){
 		const label = place.toLowerCase().replace(" ","") + "Checkbox";
 		locationsId.innerHTML += `<div class="input"><input id="${label}" type="checkbox" checked><label for="${label}">${place}</label></div>`;
 	}
@@ -43,9 +42,9 @@ function loadFilterCheckboxes(calendar) {
 		filter[i].addEventListener("change", () => {
 			let newCalendar = [...calendar];
 			for (let j = 0; j < filter.length; j++) {
-				if (!filter[j].checked) newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.location.toLowerCase())));
+				if (!filter[j].checked) newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.sted.toLowerCase())));
 			}
-			loadCalendarElements(newCalendar);
+			loadCalendar(newCalendar);
 		});
 	}
 };
