@@ -704,7 +704,7 @@ a.anchor {
   display: inline-block;
   position: fixed;
   width: 15%;
-  margin-top: 0px;
+  margin-top: -25px;
   margin-left: -1.5%;
   color: #2d6a37;
   background-color: rgba(246,246,246,0.8);
