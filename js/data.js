@@ -13,6 +13,7 @@ const calendar = [
 	{ type: "practice", title: "Group Practice #21", info: "Today: Speed. Instructor: Harald Gress", date: "2019-10-30", time: "18:00", location: "Gløshaugen", link:"", tag: "Practice" },
 	{ type: "practice", title: "Group Practice #22", info: "Today: Drifting. Instructor: Harald Gress", date: "2019-11-03", time: "18:00", location: "Gløshaugen", link:"", tag: "Practice" },
 ];
+
 const news = [
   {
     title: "Welcome, new members!",
@@ -25,4 +26,15 @@ const news = [
   { title: "Rule change", id: "rule-change", date: "2019-10-22", info: "Our organization plays by the US lawnmower racing rules. The official board has updated their (international) US rulebook. We advise every athlete, coach and member of the staff to read the updated version of the rulebook. The rulebook can be found on this site: <a href='http://letsmow.com/rules-tech/official-rules/' target='_blank' rel='noopener'>letsmow.com</a>" },
   { title: "Have YOU seen the spooky ghost?", id: "spooky-scary", date: "2019-10-31", info: "Halloween is upon us and so are the ghosts... This year, the ghost of the court, has been particularly fond of pranking us. Equipment have been 'misplaced' or hidden, mowers are starting up of their own, and one member of the staff even saw a mower taking off on its own! Even so, the most frightening sight was when a couple of our new athletes were on their way home. Taking the shortcut over the field, talking amongst each other, the wind suddenly started howling. All of a sudden they saw a ghostly shape on the court in front of them. The ghost, known as 'The Mower', sat on a ghost lawnmower, which took off faster than we have ever been able to on our own real lawnmowers, and disappeared... 'The Mower' have a history of pranking the team, and likes to freak out new members, but it has never done any real harm, so you don't need to worry! Walk safe and happy halloween!" },
   { title: "Competition qualification", id: "competition-qualification", date: "2019-11-10", info: "Congratulations to our members that qualified for the national competition at Gresstun! Thank you for an amazing weekend and race, making it really interesting for the spectators to watch. We wish you all the best with upcoming practices and the new competition." },
+];
+
+const galleries = [
+  {thumbnail: "img/thumb_1.jpg", image: "img/gallery_1.jpg", alt: "image 1 of gallery"},
+  {thumbnail: "img/thumb_2.jpg", image: "img/gallery_2.jpg", alt: "image 2 of gallery"},
+  {thumbnail: "img/thumb_3.jpg", image: "img/gallery_3.jpg", alt: "image 3 of gallery"},
+  {thumbnail: "img/thumb_4.jpg", image: "img/gallery_4.jpg", alt: "image 4 of gallery"},
+  {thumbnail: "img/thumb_5.jpg", image: "img/gallery_5.jpg", alt: "image 5 of gallery"},
+  {thumbnail: "img/thumb_6.jpg", image: "img/gallery_6.jpg", alt: "image 6 of gallery"},
+  {thumbnail: "img/thumb_7.png", image: "img/gallery_7.png", alt: "image 7 of gallery"},
+  {thumbnail: "img/thumb_8.jpg", image: "img/gallery_8.jpg", alt: "image 8 of gallery"},
 ];
