@@ -548,7 +548,7 @@ div ul li a:not(.abtn):hover::before {
   margin-right: 10px;
 }
 /* CALENDAR PAGE */
-.calendar {
+.calendarObject {
 	display: flex;
 	justify-content: space-between;
 	width: 100%;
@@ -571,7 +571,7 @@ div ul li a:not(.abtn):hover::before {
 	top: 50%;
 	transform: translateY(-50%);
 }
-.calendar ul {
+.calendarObject ul {
 	width: 80%;
 }
 .anchorCalendar {
@@ -586,7 +586,7 @@ div ul li a:not(.abtn):hover::before {
 .anchorCalendar:visited {
   color: #551A8B;
 }
-.calendar ul li {
+.calendarObject ul li {
 	display: flex;
 	justify-content: space-between;
 	list-style: disc;
@@ -604,11 +604,10 @@ div ul li a:not(.abtn):hover::before {
 	border-bottom: solid gray 1px;
 	padding: 10px;
 }
-.event {
-	background-color: #c0c0ff;
+.eventType {
+	background-color: #cfdcfa;
 }
-.practice {
-	display: none;
+.practiceType {
 	background-color: #b0ddb0;
 }
 .timeAndLocation {
@@ -948,10 +947,10 @@ textarea{
   .smallarticle{
     width:80%;
   }
-	.calendar ul li {
+	.calendarObject ul li {
 		flex-direction: column;
 	}
-	.calendar {
+	.calendarObject {
 		flex-direction: column;
 	}
 	.calendarDate > p {
@@ -964,7 +963,7 @@ textarea{
 		border-right: none;
 		border-bottom: solid gray 1px;
 	}
-	.calendar ul {
+	.calendarObject ul {
 		width: 100%;
 	}
 }
