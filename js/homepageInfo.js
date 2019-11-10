@@ -9,13 +9,15 @@ window.addEventListener('load', () => {
   },800)
   addSnippetCalendar();
   addSnippetEvents();
+  addSnippetNews();
 });
 const calendarHomepage = document.getElementById('calendarHomepage');
 const eventsHomepage = document.getElementById('eventsHomepage');
+const newsHomepage = document.getElementById('newsHomepage');
 document.getElementById('weekday').innerHTML = `Week ${new Date().getWeekNumber()} - date: ${new Date().toNorwegianLocaleDateString()}`;
 
 function addSnippetCalendar() {
-  let c = 0
+  let c = 0;
   calendarHomepage.innerHTML = "";
   for (const article of calendar) {
     if (new Date(article.date) >= new Date()) {
@@ -27,13 +29,23 @@ function addSnippetCalendar() {
 }
 function addSnippetEvents() {
   eventsHomepage.innerHTML = "";
-  let c = 0
+  let c = 0;
   for (const article of calendar) {
     if (new Date(article.date) >= new Date() && article.type == "event") {
       c++;
       const info = (article.info.length > 200) ? (article.info.slice(0,200)+'...') : (article.info);
       eventsHomepage.innerHTML += `<li><strong>${article.title}:</strong> ${info}</li>`;
     }
+    if (c >= 2) break;
+  }
+}
+function addSnippetNews() {
+  newsHomepage.innerHTML = "";
+  let c = 0;
+  for (const article of news) {
+    c++;
+    const info = (article.info.length > 200) ? (article.info.slice(0,200)+'...') : (article.info);
+    newsHomepage.innerHTML += `<li><strong>${article.title}:</strong> ${info}</li>`;
     if (c >= 2) break;
   }
 }
