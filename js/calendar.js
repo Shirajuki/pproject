@@ -42,7 +42,7 @@ function loadFilterCheckboxes(calendar) {
 		filter[i].addEventListener("change", () => {
 			let newCalendar = [...calendar];
 			for (let j = 0; j < filter.length; j++) {
-				if (!filter[j].checked) newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.sted.toLowerCase())));
+				if (!filter[j].checked) newCalendar = newCalendar.filter(el => !(filter[j].id.includes(el.type) || filter[j].id.includes(el.location.toLowerCase())));
 			}
 			loadCalendar(newCalendar);
 		});

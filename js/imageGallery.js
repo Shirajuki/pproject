@@ -36,8 +36,12 @@ function keyCheckSlideshow(event) {
 }
 window.addEventListener('load', () => {
   loadGallery(galleries)
+  zoomImage(zoomedImage,galleries[0].image,0)
 });
-
+function zoomImage(img,id,index) {
+  img.src = id;
+  img.dataset.index = index;
+}
 function loadGallery(list) {
   imageGallery.innerHTML = "";
   for (let i = 0; i < list.length; i++) {
@@ -48,8 +52,7 @@ function loadGallery(list) {
     image.dataset.index = i;
     image.onclick = function() {
       openClose(true,lightbox);
-      zoomedImage.src = this.id;
-      zoomedImage.dataset.index = this.dataset.index;
+      zoomImage(zoomedImage,this.id,this.dataset.index);
       zoomedImage.style.animation = 'zoom 0.3s linear';
     };
     imageGallery.append(image);

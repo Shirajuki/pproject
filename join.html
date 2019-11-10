@@ -60,10 +60,11 @@
                 <input type="tel" placeholder="ex: 99 92 24 44" maxlength="8" name="phNumber" id="phInp" class="inputs" required>
             </label>
             <br>
-            <label>How much do you like lawnmowers on a scale from 1 to 10?<br>
-                <input type="range" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" id="rangeInp" class="inputs"/>
-                <output type="number" name="amountInput" min="0" max="10" id="rangeOut" class="inputs">0</output>
-            </label>
+            <p>
+              <label for="amountRange">How much do you like lawnmowers on a scale from 1 to 10?<br></label>
+              <input type="range" id="amountRange" name="amountRange" min="0" max="10" value="0" oninput="this.form.amountInput.value=this.value" id="rangeInp" class="inputs"/>
+              <output id="rangeOut" name="amountInput" class="inputs">0</output>
+            </p>
             <br>
             <label>Do you have any experience with lawnmower racing? If so tell us a bit about that.<br>
                 <textarea rows="4" cols="50" maxlength="200" placeholder="Write here" name="experience" id="experienceInp" class="inputs"></textarea>

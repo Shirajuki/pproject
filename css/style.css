@@ -489,7 +489,8 @@ div ul li a:not(.abtn):hover::before {
 #listEvent > li {
   margin: 0;
 }
-#eventNav > button{
+#eventNav > .eventButton{
+  position: relative;
   flex-basis: 25px;
   flex-grow: 1;
   padding: 9px;
@@ -497,7 +498,11 @@ div ul li a:not(.abtn):hover::before {
   background-color: #4c8738;
   border: none;
   margin: 0;
+  box-shadow: 0 5px #0d4a17;
+  line-height: 1.3em;
   font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
   text-align: center;
   border-radius: 0;
   transition: background 1s;
@@ -506,10 +511,10 @@ div ul li a:not(.abtn):hover::before {
   font-weight: normal;
   text-align: left;
 }
-#eventNav>button:hover{
+#eventNav>.eventButton:hover{
   background-color: #2d6a37;
 }
-#eventNav button div {
+#eventNav .eventButton div {
   transition: all .2s;
 }
 .eventNavDrop {
@@ -525,11 +530,12 @@ div ul li a:not(.abtn):hover::before {
 }
 .eventNavDrop ul li{
   padding: 6px 0 10px 0;
+  margin: 10px 20px 10px 20px;
 }
 .eventNavDrop ul li>a:not(.abtn)::before {
 	background-color: white;
 }
-#eventNav button:hover .eventNavDrop{
+#eventNav .eventButton:hover .eventNavDrop{
   color: #f1f1f1;
   visibility: visible;
   opacity: 1;
