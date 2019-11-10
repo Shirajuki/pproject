@@ -12,15 +12,16 @@ const galleries = [
 const imageGallery = document.getElementById('imageGallery');
 const lightbox = document.getElementById('lightbox');
 const zoomedImage = document.getElementById('zoom')
-const kryss = document.getElementById('kryss');
+const closeX = document.getElementById('closeX');
 const left = document.getElementById('left');
 const right = document.getElementById('right');
 right.addEventListener('click', _ => slide(1));
 left.addEventListener('click', _ => slide(-1));
-kryss.addEventListener('click', _ => {
+closeX.addEventListener('click', _ => {
   openClose(false,lightbox);
   zoomedImage.style.animation = '';
 });
+// Adds
 document.addEventListener('keyup', keyCheckSlideshow);
 function keyCheckSlideshow(event) {
   if (lightbox.style.visibility === "visible") {
@@ -29,7 +30,7 @@ function keyCheckSlideshow(event) {
     } else if (event.keyCode === 39) {
       right.click();
     } else if (event.keyCode === 27) {
-      kryss.click();
+      closeX.click();
     }
   }
 }
