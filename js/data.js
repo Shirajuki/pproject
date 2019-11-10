@@ -35,6 +35,6 @@ const galleries = [
   {thumbnail: "img/thumb_4.jpg", image: "img/gallery_4.jpg", alt: "image 4 of gallery"},
   {thumbnail: "img/thumb_5.jpg", image: "img/gallery_5.jpg", alt: "image 5 of gallery"},
   {thumbnail: "img/thumb_6.jpg", image: "img/gallery_6.jpg", alt: "image 6 of gallery"},
-  {thumbnail: "img/thumb_7.png", image: "img/gallery_7.png", alt: "image 7 of gallery"},
+  {thumbnail: "img/thumb_7.jpg", image: "img/gallery_7.jpg", alt: "image 7 of gallery"},
   {thumbnail: "img/thumb_8.jpg", image: "img/gallery_8.jpg", alt: "image 8 of gallery"},
 ];
