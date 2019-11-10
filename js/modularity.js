@@ -29,33 +29,10 @@ Date.prototype.toNorwegianLocaleDateString = function() {
 function sortListByDate(list) {
 	return list.sort((a, b) => new Date(a.date) - (new Date(b.date)))
 };
-// Jonny: SEO practices, kan muligens gjøre dette i modularity også :thinking:
-//  <!-- Facebook Open Graph -->
-//   <meta property="og:locale" content="nb_NO"/>
-//   <meta property="og:site_name" content="NTNUI Volleyball"/>
-//   <meta property="og:title" content="Kontakt oss | NTNUI Volleyball"/>
-//   <meta property="og:url" content="http://www.ntnuivolleyball.no/kontakt-oss/"/>
-//   <meta property="og:type" content="article"/>
-//   <meta property="og:description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
-//  <!-- Google+ / Schema.org -->
-//   <meta itemprop="name" content="Kontakt oss | NTNUI Volleyball"/>
-//   <meta itemprop="headline" content="Kontakt oss | NTNUI Volleyball"/>
-//   <meta itemprop="description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
-//   <meta itemprop="author" content="admin"/>
-//   <!--<meta itemprop="publisher" content="NTNUI Volleyball"/>--> <!-- To solve: The attribute publisher.itemtype has an invalid value -->
-//  <!-- Twitter Cards -->
-//   <meta name="twitter:title" content="Kontakt oss | NTNUI Volleyball"/>
-//   <meta name="twitter:url" content="http://www.ntnuivolleyball.no/kontakt-oss/"/>
-//   <meta name="twitter:description" content="Volleyballstyret Oppmenn damelag Oppmenn herrelag"/>
-//   <meta name="twitter:card" content="summary_large_image"/>
 
-
-
-// Mobile Responsive dropdown navigation - JONNY CAN FIX THIS!
-function myFunction() {
+function mobileDropdown() {
   setTimeout(() => {
     document.getElementById('mobile').classList.toggle('responsivemb');
-    // document.getElementById('mobile').classList.toggle('hidden');
   },200)
 }
 // When the user scrolls down 20px from the top of the document, show the button
@@ -72,12 +49,19 @@ function scrollFunction() {
     }
 }
 function showNavbar() {
-  header.innerHTML=`<nav><a href="index.html"><img src="img/logo.png" alt="LMR" style="width:100%; max-width:150px;"></a><div><ul class="right"><li><a class="navList" href="index.html"><br>Home</a></li><li class="dropdown"><a href="javascript:void(0);" class="navList"><br/>Info ▼ </a><div class="dropdown-content"><a href="about.html">About</a><a href="contact.html">Contact us</a></div></li><li><a class="navList" href="gallery.html"><br/>Gallery</a></li><li><a class="navList" href="news.html"><br/>News</a></li><li><a class="navList" href="events.html"><br/>Events</a></li><li><a class="navList" href="calendar.html"><br/>Calendar</a></li><li><form action="join.html"><br/><input class="button abtn navList" type="submit" value="Join us!"/></form></li><li><a href="javascript:void(0);" class="abtn icon" onclick="myFunction()">&#9776;</a></li></ul></div></nav><div id="mobile"><ol><li><a href="index.html"><br/>Home</a></li><li class="dropdownmb"><span><label for="drop-1" class="toggle"><br/>Info ▼ </label></span><input type="checkbox" id="drop-1"><div class="dropdown-contentmb"><a href="about.html">About</a><a href="contact.html">Contact us</a></div></li><li><a href="gallery.html"><br/>Gallery</a></li><li><a href="news.html"><br/>News</a></li><li><a href="events.html"><br/>Events</a></li><li><a href="calendar.html"><br/>Calendar</a></li><li><form action="join.html"><br/><input class="button" type="submit" value="Join us!"/></form></li></ol></div>`;
+  header.innerHTML=`<nav><a href="index.html"><img src="img/logo.png" alt="LMR" style="width:100%; max-width:150px;"></a><div><ul class="right"><li><a class="navList" href="index.html"><br>Home</a></li><li class="dropdown"><a href="javascript:void(0);" class="navList"><br/>Info ▼ </a><div class="dropdown-content"><a href="about.html">About</a><a href="contact.html">Contact us</a></div></li><li><a class="navList" href="gallery.html"><br/>Gallery</a></li><li><a class="navList" href="news.html"><br/>News</a></li><li><a class="navList" href="events.html"><br/>Events</a></li><li><a class="navList" href="calendar.html"><br/>Calendar</a></li><li><form action="join.html"><br/><input class="button abtn navList" type="submit" value="Join us!"/></form></li><li><a href="javascript:void(0);" class="abtn icon" onclick="mobileDropdown()">&#9776;</a></li></ul></div></nav><div id="mobile"><ol><li><a href="index.html"><br/>Home</a></li><li class="dropdownmb"><span><label for="drop-1" class="toggle"><br/>Info ▼ </label></span><input type="checkbox" id="drop-1"><div class="dropdown-contentmb"><a href="about.html">About</a><a href="contact.html">Contact us</a></div></li><li><a href="gallery.html"><br/>Gallery</a></li><li><a href="news.html"><br/>News</a></li><li><a href="events.html"><br/>Events</a></li><li><a href="calendar.html"><br/>Calendar</a></li><li><form action="join.html"><br/><input class="button" type="submit" value="Join us!"/></form></li></ol></div>`;
 }
 function showFooter() {
+  // Socialmedia icon-set taken from https://www.iconfinder.com/iconsets/2018-social-media-logotypes
 	document.getElementById("footer").innerHTML = `
 			<div class="wrapper">
 				<footer>
+          <div class="socialMedias">
+            <a href="javascript:void(0)"><img class='socialIcons' src="img/facebook.png" alt="facebook icon"/></a>
+            <a href="javascript:void(0)"><img class='socialIcons' src="img/instagram.png" alt="instagram icon"/></a>
+            <a href="javascript:void(0)"><img class='socialIcons' src="img/twitter.png" alt="twitter icon"/></a>
+            <a href="javascript:void(0)"><img class='socialIcons' src="img/snapchat.png" alt="snapchat icon"/></a>
+          </div>
 					<p>Lawnmower Racing AS</p>
 					<p>Gressveien 14, 7010 Trondheim</p>
 					<a href="contact.html">Contact us</a>

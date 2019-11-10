@@ -1,5 +1,6 @@
 ﻿:root {
   --padding: 70px;
+  --padding-footer: 130px;
   --base-color: #000;
   --bg-color: #fff;
   --theme-color: #2d6a37;
@@ -215,23 +216,32 @@ input[id^=drop]:checked + .dropdown-contentmb {
 /* FOOTER */
 .wrapper {
   margin: 0;
-  padding-bottom: var(--padding);
+  padding-bottom: var(--padding-footer);
 }
 footer {
   position: absolute;
   bottom: 0;
-  height: var(--padding);
+  height: var(--padding-footer);
   width: 100%;
   background-color: var(--base-color);
   text-align: center;
 }
 footer>p {
   color: white;
-  font-size: 14px;
+  font-size: 1rem;
 }
 footer>a{
   color:#11a341;
 	margin: 5px;
+}
+.socialIcons {
+  width: 30px;
+  height: 30px;
+  opacity: .7;
+  margin: 10px 5px 0 5px;
+}
+.socialIcons:hover {
+  opacity: 1;
 }
 /* SCREEN/TITLE */
 .seeAllSnippet {
