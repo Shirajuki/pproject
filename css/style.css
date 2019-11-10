@@ -657,7 +657,7 @@ div ul li a:not(.abtn):hover::before {
 }
 
 /* NEWS.HTML: CONTENT */
-.newsContent{ /*fra og med "NEWS" og til og med siste artikkel, ikke med: sidenav*/
+.newsContent{ /*from title "NEWS" and all of the articles, not the sidebar*/
   position: relative;
   left: 20%;
   margin-top: 10px;
@@ -665,12 +665,12 @@ div ul li a:not(.abtn):hover::before {
 }
 a.anchor {
   position: relative;
-  top:-100px;
+  top:-100px; /*to accomodate for the height of the top navbar, it links to a place -100px above the header it points to*/
   display: block;
   height: 0;
   width:0;
 }
-.newsarticle{ /*artikkelen obvs*/
+.newsarticle{ /*articles*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -679,14 +679,14 @@ a.anchor {
   margin-left: 0;
   margin-bottom: 30px;
 }
-.newsarticle span{ /*dato-stringen i hver artikkel*/
+.newsarticle span{ /*date-string in each article*/
   font-weight: 400;
   color: #4d4d4d;
 }
-.newsarticle p{ /*innholdet i hver artikkel*/
+.newsarticle p{ /*text content in each article*/
   font-weight: 400;
 }
-.newsarticle a{ /*link i artikkel-teksten*/
+.newsarticle a{ /*link in article text*/
   color: green;
   text-decoration: underline;
   display: inline;
@@ -712,10 +712,7 @@ a.anchor {
   -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.1);
   box-shadow: 0 1px 1px rgba(0,0,0,0.3);
 }
-#hrTitle{ /*overskriften i sidenav*/
-  text-decoration: underline;
-}
-.sidenavInner a{ /*linkene i sidenav*/
+.sidenavInner a{ /*links in sidenav*/
   color: #2d6a37;
   line-height: 1;
   font-weight: normal;
@@ -723,9 +720,10 @@ a.anchor {
   text-decoration: none;
 }
 #navbarList{
-  margin-left: -10px; /*eliminerer space der punktene li tok opp plass*/
+  margin-left: -10px; /*removes space where there were list style types (dots)*/
 }
-.sidenavInner p{ /* overskriften i sidenav*/
+.sidenavInner p{ /*title in sidenav*/
+  text-decoration: underline;
   color: #2d6a37;
   font-weight: bold;
   display: flex;
@@ -733,22 +731,22 @@ a.anchor {
   margin-top: 7px;
   margin-bottom: 5px;
 }
-.sidenavInner li>a:hover{ /*link i sidenav on hover*/
+.sidenavInner li>a:hover{ /*link in sidenav on hover*/
   color: #2d6a37;
 }
 /* JOIN.HTML */
-.form{
+.form{ /*the entire form*/
   position: relative;
   padding: 20px 12px 10px 20px;
   margin: 10px auto;
 }
-.form label{
+.form label{ /*each question*/
   margin: 0 0 3px 0;
   padding: 0px;
   display: block;
   font-weight: bold;
 }
-.inputs{
+.inputs{ /*each input field*/
   position: relative;
   margin-top: 7px;
   box-sizing: border-box;
@@ -761,7 +759,7 @@ textarea{
   font-family: inherit;
   width: 90%;
 }
-#rangeOut{
+#rangeOut{ /*disabled, amount of range*/
   position: relative;
   top: -12px;
   margin-left: 10px;
@@ -786,8 +784,7 @@ textarea{
 .submitBtn:hover{
   background: #0d4a17;
 }
-#regRecieved{
-  /* display: none; */
+#regRecieved{ /*article/div shown on submit*/
   opacity: 0;
   visibility: hidden;
   position: absolute;
