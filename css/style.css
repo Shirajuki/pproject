@@ -6,7 +6,7 @@
   --theme-color1: #d10000;
 }
 * { margin: 0; padding: 0; }
-body.homepage { background: #efefef !important; }
+body.homepage { background: #fbfefc !important; }
 .homepage > main { display: none; }
 #scrollUpBtn {
   display: block;
@@ -260,7 +260,7 @@ footer>a{
   margin: 0 auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%,calc(-50% - var(--padding)*-0.25)) skew(0deg, -3deg);
+  transform: translate(-50%,calc(-50% - var(--padding)*-0.25));
   text-align: center;
   padding: 5%;
   border-radius: 100px 0 100px 0;
@@ -269,16 +269,14 @@ footer>a{
 #title > h1 {
   font-size: 6rem;
   transition: font-size .5s;
-  transform: skew(0deg, 3deg)
 }
 #title > form > .button {
   margin-top: 20px;
   transition: padding .5s, color .3s;
-  transform: skew(0deg, 3deg);
   box-shadow: 0 7px #0d4a17;
 }
 #title > form > .button:hover, #title > form >.button:active {
-  transform: skew(0deg, 3deg) translateY(5px);
+  transform: translateY(5px);
   box-shadow: 0 2px #0d4a17;
 }
 /* BUTTONS */
@@ -316,6 +314,11 @@ section {
   display: flex;
   justify-content: center;
 }
+#main section article:not(.column) {
+  border-radius: 0;
+  background: #fbfefc;
+  box-shadow: 0 0 rgba(255,255,255,0);
+}
 main section > article {
 	padding: 1%;
 	width: 92%;
@@ -326,8 +329,6 @@ main section > article {
   height: 100%;
   min-height: 300px;
   margin: 1%;
-  background: linear-gradient(185deg, rgba(255,255,255,.9) 0%, rgba(255,255,255,.9) 50%, rgba(0,255,34,.1) 100%);
-  box-shadow: 5px 5px 10px 0px rgba(20,100,54,.2);
 }
 i {
   font-style: normal;
@@ -346,7 +347,7 @@ article {
   margin: 50px auto;
   padding: 4%;
   box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
-	border-radius: 10px;
+  border-radius: 20px 0 20px 0;
 }
 .bigarticle{
   width: 80%;
